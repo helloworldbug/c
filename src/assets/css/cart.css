@@ -1,0 +1,321 @@
+/**
+  * @name 购物车样式
+  * @author yagnjian
+  * @datetime 2016-9-10
+*/
+
+@charset "utf-8";
+
+.cart-bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+/*
+* add by Mr xu 优化定位
+*/
+.cart-content {
+    width: 960px;
+    /*height: 615px;*/
+    background: #fff;
+    /*position: fixed;*/
+    position: absolute;
+    left: 50%;
+    /*margin-left: -480px;*/
+    /*margin-top: -288px;*/
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.cart-header {
+    height: 48px;
+    background: #f4f4f4;
+    padding: 12px 24px;
+    box-sizing: border-box;
+    line-height: 24px;
+    font-size: 16px;
+    color: #333;
+}
+
+.cart-header span.balance {
+    padding: 0 8px 0 12px;
+    font-size: 12px;
+    color: #999;
+}
+
+.cart-header a {
+    font-size: 12px;
+    color: #459ae9;
+}
+
+.cart-header .close {
+    width: 12px;
+    height: 12px;
+    background: url(../images/cart/close.png) center center no-repeat;
+    float: right;
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+.cart-box {
+    /*height: 541px;*/
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.cart-box-header {
+    height: 48px;
+}
+
+.cart-box-header ul li {
+    line-height: 48px;
+    float: left;
+    width: 160px;
+    text-align: center;
+    font-size:12px;
+    color: #333;
+}
+
+.cart-box-header ul li:nth-child(1), .cart-list .cart ul li:nth-child(1) {
+    width: 264px;
+    text-align: left;
+}
+
+.cart-box-header ul li:nth-child(5), .cart-list .cart ul li:nth-child(5) {
+    width: 168px;
+}
+/*
+* add by Mr xu 自动切换套餐提示
+*/
+.cart-box .popInfo{
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 48px;*/
+    /*width: 936px;*/
+    width: 912px;
+    /*width: 1170px;*/
+    height: 48px;
+    background-color: rgba(30, 30, 30, .5);
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    /*padding-left: 24px;*/
+}
+.cart-box .popInfo>div{
+    float: left;
+    height: 48px;
+}
+.cart-box .popInfo>div:first-child{
+    width: 30px;
+    margin-left: 3px;
+    background: url("../images/compatibleTips.png") no-repeat left center;
+}
+.cart-box .popInfo>div:last-child{
+    line-height: 48px;
+    color: #fff;
+}
+/*.cart-box .pop-animate{*/
+    /*-webkit-transition: top 1s cubic-bezier(0,0,0,2.5),transform 1s cubic-bezier(0,-2.5,1,3) 1.5s;*/
+    /*-moz-transition: top 1s cubic-bezier(0,0,0,2.5),transform 1s cubic-bezier(0,-2.5,1,3) 1.5s;*/
+    /*-ms-transition: top 1s cubic-bezier(0,0,0,2.5),transform 1s cubic-bezier(0,-2.5,1,3) 1.5s;*/
+    /*-o-transition: top 1s cubic-bezier(0,0,0,2.5),transform 1s cubic-bezier(0,-2.5,1,3) 1.5s;*/
+    /*transition: top 1s cubic-bezier(0,0,0,2.5),transform 1s cubic-bezier(0,-2.5,1,3) 1.5s;*/
+    /*top: 48px;*/
+    /*-webkit-transform: scale(0.8);*/
+    /*-moz-transform: scale(0.8);*/
+    /*-ms-transform: scale(0.8);*/
+    /*-o-transform: scale(0.8);*/
+    /*transform: scale(0.8);*/
+/*}*/
+
+.cart-list {
+    /*height: 424px;*/
+}
+
+.cart-list .cart {
+    padding: 16px 0;
+    height: auto;
+    overflow: hidden;
+    border-bottom: solid 1px #e7e7eb;
+}
+
+.cart-list .cart ul li {
+    line-height: 80px;
+    float: left;
+    width: 160px;
+    min-height: 80px;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+}
+
+.cart-list .cart ul li:nth-child(1) .img{
+    overflow: hidden;
+    border: solid 1px #e7e7eb;
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    float: left;
+    margin-right: 24px;
+}
+/*
+* add by 默认服务套餐的样式
+*/
+.cart-list .cart ul li.defaultService{
+    line-height: 0;
+}
+
+li.defaultService>div{
+    float: left;
+}
+
+li.defaultService>div:first-child{
+    width: 45px;
+    margin-top: 10px;
+}
+li.defaultService>div:last-child{
+    width: 160px;
+    height: 100%;
+}
+
+li.defaultService>div:last-child>span{
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+}
+
+li.defaultService>div:last-child>div{
+    color: #999;
+    height: 40px;
+    overflow: hidden;
+    line-height: 20px;
+}
+
+.cart-list .cart ul li:nth-child(5) {
+    font-size: 24px;
+    color: #d65645;
+}
+
+.cart-list .cart .sums {
+    width: 98px;
+    height: 24px;
+    margin: 0 auto;
+    margin-top: 28px;
+}
+
+.cart-list .cart .sums input {
+    height: 24px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.cart-list .cart .sums input[type="button"] {
+    width: 24px;
+    border: solid 1px #e7e7eb;
+    cursor: pointer;
+}
+
+.cart-list .cart .sums .reduce {
+    background: url(../images/cart/reduce.png) center center no-repeat #fff;
+}
+
+.cart-list .cart .sums .add {
+    background: url(../images/cart/add.png) center center no-repeat #fff;
+}
+
+.cart-list .cart .sums .disable {
+    cursor: default !important;
+}
+
+.cart-list .cart .sums .disable.add {
+    background: url(../images/cart/add-disable.png) center center no-repeat #fff;
+}
+
+.cart-list .cart .sums .disable.reduce {
+    background: url(../images/cart/reduce-disable.png) center center no-repeat #fff;
+ }
+
+.cart-list .cart .sums input[type="number"] {
+    width: 50px;
+    border: solid 1px #e7e7eb;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+}
+
+.cart-list .cart .sums input:disabled{
+    background-color: #fff;
+}
+
+.cart-list .cart .sums input::-webkit-outer-spin-button,
+.cart-list .cart .sums input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+.cart-footer {
+    box-sizing: border-box;
+    padding: 12px 24px;
+    height: 56px;
+    line-height: 32px;
+    background: #f4f4f4;
+}
+
+.cart-footer .fl {
+    font-size: 12px;
+    color: #999;
+}
+
+.cart-footer .fl p {
+    margin: 0;
+}
+
+.cart-footer .order-foot {
+    color: #333;
+}
+
+.cart-footer .order-foot p{
+    margin-top: -3px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.cart-footer .order-foot p:last-child {
+    font-size: 12px;
+}
+
+.cart-footer .fr input {
+    width: 96px;
+    height: 32px;
+    border: 0;
+    color: #fff;
+    font-size: 12px;
+    background: #d65645;
+    float: right;
+}
+
+.cart-footer .fr input:hover {
+    opacity: 0.8;
+}
+
+.cart-footer .fr span {
+    float: left;
+}
+
+.cart-footer .fr span.balance {
+    padding: 0 24px 0 8px;
+    font-size: 24px;
+    color: #d65645;
+}
+

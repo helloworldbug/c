@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="http://www.agoodme.com/vendor/fmacapi/fmacapi.interface.min.js"></script>
+<button id="testwb">testwblogin</button>
+<button id="testqq">testqqlogin</button>
+<button id="testbaidu">baidu</button>
+</body>
+
+<script>
+    alert(2)
+//  function login(data) {
+//        var unionid = data.unionid;
+//        var nickname = data.nickname;
+//        var sexual = data.sexual;
+//        var headimgurl = data.headimgurl;
+//
+//        //检索对象
+//        var User = fmacloud.Object.extend("_User");
+//        var query = new fmacloud.Query(User);
+//        query.equalTo("username", unionid);
+//        query.find({
+//            success: function (user) {
+//                if (user.length > 0) {
+//                    //用户存在则登陆绑定
+//                    fmacloud.User.logIn(unionid, "6a063e705a16e625", {
+//                        success: function (_user) {
+//
+//                            var jsonUser = JSON.stringify(_user.toJSON());
+//
+//                            if (!!jsonUser.user_nick) {
+//                                jsonUser.user_nick = jsonUser.username || "无";
+//                            }
+//
+//                            window.location.href="http://www.agoodme.com";
+//                        },
+//                        error: function (_user, error) {
+//                            console.log(error.message);
+//                        }
+//                    })
+//                } else {
+//                    //用户不存在则注册
+//                    var user = new fmacloud.User();
+//                    user.set("username", unionid);
+//                    user.set("password", "6a063e705a16e625"); //me第三方登录
+//                    user.set('user_nick', nickname);
+//                    user.set("user_pic", headimgurl);
+//                    user.set("sex", sexual);
+//                    user.signUp(null, {
+//                        success: function (user) {
+//                            //注册成功则登陆
+//                            fmacloud.User.logIn(unionid, "6a063e705a16e625", {
+//                                success: function (user) {
+//                                    var jsonUser = JSON.stringify(_user.toJSON());
+//                                    if (!!jsonUser.user_nick) {
+//                                        jsonUser.user_nick = jsonUser.username || "无";
+//                                    }
+//
+//                                    window.location.href="http://www.agoodme.com";
+//                                },
+//                                error: function (user, error) {
+//                                    console.log(error.message);
+//                                }
+//                            })
+//                        },
+//                        error: function (user, error) {
+//                            console.log(error.message);
+//                        }
+//                    })
+//                }
+//            },
+//            error: function (error) {
+//                console.log(error.message);
+//            }
+//        });
+//    }
+//   function packageWblogResults (originObj) {
+//       console.log(originObj);
+//       return {
+//            unionid: originObj.id.toString(),
+//            nickname: originObj.name || '',
+//            sexual: originObj.gender === 'm' ? 1 : originObj.gender === 'f' ? 2 : 0,
+//            headimgurl: originObj.avatar_large
+//        };
+//    }
+    window.onload=function(){
+
+//        new Promise(function (resolve, reject) {
+//            console.log(1);
+//            WB2.anyWhere(function (W) {
+//                W.widget.connectButton({
+//                    id: "testwb",
+//                    type: '3,2',
+//                    callback: {
+//                        login: resolve, //登录后的回调函数
+//                        logout: reject //退出后的回调函数
+//                    }
+//                });
+//            });
+//        }).then(function (success) {
+////            WB2.logout(()=>{})
+//                    login(packageWblogResults(success))
+////                    console.log(success);
+//                }).catch(function (error) {
+//                });
+
+        document.getElementById("testwb").onclick=function(){
+            window.open('https://api.weibo.com/oauth2/authorize?client_id=4167809094&forcelogin=true&response_type=code&redirect_uri='+ encodeURIComponent(location.origin+"/wb/wb.html?platform=wb&v="+ Math.random()) +'', '_self')
+        }
+
+                document.getElementById("testqq").onclick=function(){
+            window.open('https://graph.qq.com/oauth2.0/authorize?response_type=token&client_id=101178983&redirect_uri='+ encodeURIComponent("http://www.agoodme.com/qq/qq.html?platform=qq&v="+ Math.random()) +'', '_self')
+        }
+    }
+</script>
+</html>

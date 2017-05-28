@@ -1,0 +1,32 @@
+.notification-component {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -33px 0 0 -120px;
+    width: 240px;
+    height: 66px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, .8);
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 5px;
+    z-index: 999;
+    transition: all .5s ease-in-out;
+}
+
+.notification-component > .content {
+    width: 190px;
+    margin: 0 auto;
+    line-height: 66px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.notification-component .icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../images/main/collect_success.png") center no-repeat;
+    background-size: 24px;
+    vertical-align: sub;
+    margin-right: 10px;
+}

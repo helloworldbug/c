@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>preview</title>
+</head>
+<script src="../jquery-1.12.1.min.js"></script>
+<script src="tree.jquery.js"></script>
+<link rel="stylesheet" href="jqtree.css">
+<style>
+html,body{
+ height:100%;
+}
+body{
+    font-size:12px ;
+    margin: 0;
+       overflow: hidden;
+}
+ #catalog li{
+ position: relative;
+  list-style-type:none;
+  margin:16px 0;
+  
+ }
+  #catalog li .cata-name{
+      width: 184px;
+      height: 24px;
+      line-height: 24px;
+      font-size: 12px;
+      cursor: pointer;
+      overflow: hidden;
+     display: inline-block;
+      color: #333;
+      padding-left: 4px;
+  }  
+  #catalog li .pad{
+     border-bottom:1px dashed #cccccc;
+      height: 0;
+    width: 16px;
+    display: inline-block;
+    position: absolute;
+    top: 48%;
+    left: -16px;
+  }
+  #catalog li .cata-name.selected{
+      color: #fff; background-color: #1abc9c;
+  }
+ #catalog{
+     user-select: none;
+      padding: 0;
+    position:relative;
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+  }
+.catalog-wrapper{
+    width: 226px;
+       height: calc(100% - 39px);
+    padding-left: 24px;
+    float:left;
+}
+.catalog-wrapper .title{
+    box-sizing: border-box;
+    border-bottom: 1px solid #e7e7eb;
+    width: 202px;
+height: 32px;
+line-height: 32px;
+}
+.content{
+    width:710px;
+      height:100%;
+    padding-left: 0px;
+     border-left:1px solid #e7e7eb; 
+     box-sizing: border-box;
+     display: inline-block;
+}
+#download{
+     position: relative;
+}
+#download span{
+    position: absolute;
+    display: block;
+    width: 121px;
+    height: 143px;
+    left: 50%;
+    top: 50%;
+    background:url("./download.png") no-repeat; 
+    transform: translate(-50%,-50%);
+}
+ul.jqtree-tree .jqtree-title{
+    color: #333;
+    font-family: "Microsoft yahei";
+}
+</style>
+<body>
+    <div class="catalog-wrapper">
+        <div class="title">目录</div>
+        <ul id="catalog"></ul>
+    </div>
+     <iframe id="content-iframe" src="" class="content" frameborder="0" ></iframe>
+      <div id="download"  class="content"  style="display:none"><span ></span></div>
+</body>
+<script>
+
+    var id=getPar("id");
+    var userId = getPar("userId");
+    var server = getPar("server");
+    $.ajax({
+        url : server + "/v1/transfer/transferfile/"+id+"/preview", 
+        headers:{
+            "X-Gli-Client-Id": "MEPC",
+            "X-Gli-User-Id" : userId
+        },
+        type: "GET",
+        success: function(data){
+            // var data=serverData;
+            if(typeof data.preview==="undefined"){
+                alert("没有目录信息，请重新上传");
+                return 
+            }
+            var pre = data.preview.svr_path;
+            if( typeof data.preview.chapter == "undefined"){
+                alert("没有目录信息");
+                return  
+            }
+            var catalog = getChildRecursive(data.preview.chapter);
+            function getChildRecursive(arr){
+                if(typeof arr== "undefined"){
+                    return {}
+                }
+                if(!arr.length){
+                    return {}
+                }
+                return arr.map(function(item){
+                    var oriName=item.chapter_name;
+                    var showName=oriName;
+                    var nodisplay=false;
+                    if(oriName.indexOf("$NoDiSpLaY$_")==0){
+                        showName=oriName.substr("$NoDiSpLaY$_".length);
+                        nodisplay=true;
+                    }
+                    if(item.chapter){
+                    return  {name:showName,url:pre+item.chapter_url,children:getChildRecursive(item.chapter),nodisplay:nodisplay}  
+                 } else{
+                  return  {name:showName,url:pre+item.chapter_url,nodisplay:nodisplay}  
+                 }
+                })
+            }
+            var frame=document.getElementById("content-iframe");
+            var catalogObj=document.getElementById("catalog");
+            var $tree=$('#catalog');
+            //暂时只是显示第一章节
+              if(catalog[0].nodisplay){
+                    //显示下载提示
+                   changeDownloadDisplay(true) ;
+                }else{
+                    //显示文章内容
+                    changeDownloadDisplay(false) ;
+                    frame.src=catalog[0].url;
+                }
+            // frame.src = catalog[0].url; //pre+"index.xhtml"
+            //使用jqTree插件:http://mbraak.github.io/jqTree
+            $tree.tree({
+                 data: catalog,
+                 autoEscape:false,
+                 onCreateLi: function(node, $li) {
+           
+                    $li.attr("data-url",node.url).addClass(".linkcontent");
+            }
+            });
+           $tree.bind('tree.select',function(event) {
+                if (event.node) {
+                    // node was selected
+                    var node = event.node;
+                
+                if(node.nodisplay){
+                    //显示下载提示
+                   changeDownloadDisplay(true) ;
+                }else{
+                    //显示文章内容
+                    changeDownloadDisplay(false) ;
+                    frame.src=node.url;
+                }
+                }
+            });
+        },
+        error: function(err){
+            console.log(err);
+        }
+    });
+
+function changeDownloadDisplay(show){
+    if(show){ 
+        document.getElementById("download").style.display="inline-block";
+        document.getElementById("content-iframe").style.display="none";
+    }else{
+        document.getElementById("download").style.display="none";
+        document.getElementById("content-iframe").style.display="inline-block";
+    }
+   
+}
+  function getPar(par) {
+        //获取当前URL
+        var local_url = document.location.href;
+        //获取要取得的get参数位置
+        var get = local_url.indexOf(par + "=");
+        if (get == -1) {
+            return false;
+        }
+        //截取字符串
+        var get_par = local_url.slice(par.length + get + 1);
+        //判断截取后的字符串是否还有其他get参数
+        var nextPar = get_par.indexOf("&");
+        if (nextPar != -1) {
+            get_par = get_par.slice(0, nextPar);
+        }
+        return get_par;
+    }
+</script>
+</html>

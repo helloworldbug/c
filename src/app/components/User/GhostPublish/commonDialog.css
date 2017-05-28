@@ -1,0 +1,140 @@
+/**
+ * @description 一键出版的对话框通用页面样式
+ * @time 2016-12-2
+ * @author fishYu
+ **/
+
+.convert-common-dialog-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 9999;
+}
+
+.convert-common-dialog-wrap{
+    width: 256px;
+    min-height: 121px;
+    background: #fff;
+    padding: 24px;
+    box-sizing: border-box;
+    position: fixed;
+    /*left: 50%;
+    top: 50%;*/
+    border: 1px solid #ccc;
+}
+
+.convert-common-dialog-wrap:before{
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 7px;
+    position: absolute;
+    background: url('../../../../assets/images/user/border_up.png') center no-repeat;
+    top: -7px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+}
+
+.convert-common-dialog-content{
+    width: 100%;
+    font-size: 12px;
+    color: #333;
+}
+.convert-common-dialog-content:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.dialog-text-wrap{
+    width: 100%;
+    margin-top: 8px; 
+    text-align: center;
+}
+
+.dialog-input-wrap{
+    width: 100%;
+    margin-top: 8px; 
+    text-align: left;
+    box-sizing: border-box;
+}
+.dialog-input-wrap span{
+    margin-bottom:8px; 
+    width: 50%;
+    float: left;
+}
+.dialog-input-wrap span.err{
+    font-size: 12px;
+    color: #D65645;
+    float: right;
+    text-align: right;
+}
+
+.dialog-input-wrap input{
+    display: block;
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    box-sizing: border-box;
+    background: transparent;
+    border: 1px solid #e7e7eb;
+}
+.dialog-raido-wrap{
+    width: 50%;
+    height: 16px;
+    margin-bottom: 8px;
+    float: left;
+}
+.dialog-raido-wrap:nth-child(2n){
+    width: -webkit-calc(50% - 8px);
+    width: calc(50% - 8px);
+    margin-left: 8px;
+}
+.dialog-raido-wrap input, .dialog-raido-wrap label{
+    display: inline-block;
+    height: 16px;
+}
+.dialog-raido-wrap input{
+    vertical-align: middle;
+    width: 16px;
+    margin-right: 8px; 
+}
+.dialog-raido-wrap label{
+    line-height: 16px;
+    width: 70%;
+    vertical-align: middle;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.convert-common-dialog-bottom{
+    position: relative;
+    margin-top: 24px;
+    height: 28px;
+    width: 100%;
+}
+.convert-common-dialog-button{
+    display: inline-block; 
+    width: 96px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-sizing: border-box;
+    color: #333;
+}
+.convert-common-dialog-button:hover{
+    background-color: #333;
+    color: #fff;
+}

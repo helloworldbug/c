@@ -1,0 +1,127 @@
+.myPrivilegesView{
+    margin-top:  -16px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.myPrivilegesView .title-div{
+    height: 80px;
+    line-height: 80px;
+    padding: 0 24px;
+    border-bottom: 1px solid #e7e7eb;
+    box-sizing: border-box;
+}
+
+.myPrivilegesView .title-div .title-txt{
+    font-size: 14px;
+    color: #333333;
+    display: block;
+    float: left;
+}
+
+.myPrivilegesView .title-div .btn-view-txt a{
+    font-size: 12px;
+    color: #459ae9;
+    display: block;
+    float: right;
+}
+
+.myPrivilegesView .privilege-title-div{
+    height: 32px;
+    font-size: 12px;
+    color: #333333;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 24px;
+    margin-bottom: 0px;
+}
+.myPrivilegesView .title-name{
+    width: calc(39.14% - 24px);
+    float: left;
+    line-height: 32px;
+    text-align: left;
+    padding-left: 24px;
+}
+
+.myPrivilegesView .title-data{
+    width: 39.82%;
+    float: left;
+    line-height: 32px;
+}
+
+.myPrivilegesView .title-times{
+    width: 21.04%;
+    float: right;
+    line-height: 32px;
+}
+
+.myPrivilegesView .privilegesList{
+    margin-top: 0px;
+    padding: 0 24px;
+}
+
+.myPrivilegesView .no-privilegesList{
+    width: 100%;
+    text-align: center;
+    /*background: url("../images/membershipPrivileges/no-privilege.png") no-repeat center;*/
+    height: 280px;
+    margin: 0;
+    padding-top: 20px;
+    font-size: 12px;
+    color: #999;
+}
+
+.myPrivilegesView .privilegesList .privilege-item{
+    width: 100%;
+    height: 112px;
+    border: 1px solid #e7e7eb;
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 18px;
+    color: #333333;
+}
+.myPrivilegesView .privilegesList .privilege-item:nth-child(n+1){
+    border-top: 0;
+}
+
+.myPrivilegesView .privilegesList .privilege-item .privilege-item-name-div{
+    width: calc(39.14% - 24px);
+    float: left;
+    padding-left: 24px;
+    padding-top: 16px;
+}
+
+.myPrivilegesView .privilegesList .privilege-item .privilege-item-name-div .privilege-item-icon{
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.myPrivilegesView .privilegesList .privilege-item .privilege-item-name-div .privilege-item-desc{
+    width: calc(100% - 92px);
+    vertical-align: middle;
+    margin-left: 12px;
+    display: inline-block;
+}
+
+.myPrivilegesView .privilegesList .privilege-item .privilege-item-data{
+    width: 39.82%;
+    float: left;
+    text-align: center;
+    line-height: 112px;
+}
+
+.myPrivilegesView .privilegesList .privilege-item .privilege-item-times{
+    width: 21.04%;
+    float: right;
+    text-align: center;
+    line-height: 112px;
+}
+
+.my-privilege-page-div{
+    margin-top: 32px !important;
+    margin-bottom: 32px !important;
+    margin-right: 24px;
+    float: right;
+}

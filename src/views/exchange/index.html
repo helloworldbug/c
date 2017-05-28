@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>兑换模板</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+        window.fmawr = "0";
+        //window.fmawr = "999";
+    </script>
+    <script src="../../vendor/fmacapi/fmacapi.interface.min.js"></script>
+    <script src="js/jquery-1.12.1.min.js"></script>
+</head>
+<body>
+<header id="header">
+    <div class="contain clearfix">
+        <div id="logo" class="fl">
+            <a href="/"><img src="images/logo.png" height="35"></a>
+        </div>
+        <div id="nav"></div>
+        <div  id="topUser" class="header-ri fr">
+
+        </div>
+    </div>
+</header>
+
+<div class="exchange-activity">
+    <div class="banner">
+        <div class="center">
+            <p>
+                <a href="http://item.jd.com/11996397.html" target="_blank" class="buy">立即购买>></a>
+            </p>
+            <h3>
+                即日起至活动结束时间为止，购买《创意无间-H5微场景设计指南》<br />
+                即送价值<span>200</span>元H5精品模板！
+            </h3>
+            <p class="time">活动时间：2016年10月8日——2017年10月8日</p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="center">
+            <div class="pic fl"></div>
+            <div class="form fr">
+                <h3>输入兑换码立即领取限量模板</h3>
+                <input type="text" id="mcode" oninput="onInputHandle()" value="" class="txt"  />
+                <p id="err-tips" class="err-tips"></p>
+                <input type="button" value="立即领取" onclick="onSubmitHandle()" class="btn" />
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="contain">
+            <h3>活动规则</h3>
+            <p>活动时间：2016年10月8日——2017年10月8日</p>
+            <p>活动规则：本活动兑换码随书附赠，只有购买《创意无间-H5微场景设计指南》才能获得活动兑换码，每个兑换码只能使用一
+                次，必须持有ME账户才能领取限量模板，且只能兑换一次。</p>
+            <p>活动最终解释权在法律规定范围内归上海精灵天下数字技术有限公司所有</p>
+            <p>活动客服热线：400-8868-110</p>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="footer clearfix">
+        <div class="fl" id="foot-nav">
+
+        </div>
+        <div class="copyright fr">
+            <p>Copy Right © 2011 - 2016 gli.cn 上海精灵天下数字技术有限公司　 沪ICP备14051983号-1</p>
+        </div>
+    </div>
+</div>
+
+<div id="dialog-box"></div>
+
+<script type="text/javascript">
+
+    var host = location.origin; //协议名、主机名和端口号
+
+    var nav = document.getElementById('nav');
+    var navTpl = '<ul>'+
+            '<li><a href="'+ host +'/create">场景创作</a><span class="nav-line" style="left: -90px;"></span></li>'+
+            '<li><a href="'+ host +'/discovery">精品推荐</a><span class="nav-line" style="left: -90px;"></span></li>'+
+            '<li><a href="'+ host +'/designerTribe">设计部落</a><span class="nav-line" style="left: -90px;"></span></li>'+
+            '<li><a href="'+ host +'/helper">帮助中心</a><span class="nav-line" style="left: -90px;"></span></li>'+
+            '</ul>';
+    nav.innerHTML = navTpl;
+
+
+    var user = fmacloud.User.current();
+    var topUser = document.getElementById('topUser');
+    var tpl;
+    if(!!user) {
+        var userPic = user.attributes.user_pic || "images/defaultFace.jpg";
+        tpl = '<span class="search" id="searchIn">' +
+                '<input type="text" class="search-input" placeholder="搜索">' +
+                '<span class="searchIcon"></span>' +
+                '</span>'+
+                '<div class="end-sign fr">'+
+                '<a href="'+host+'/user" style="height: 34px; display: inline-block;"><img src="'+userPic+'" width="34" class="face" height="34"></a>' +
+                '<div class="sign-down">' +
+                '<div class="top-bg"></div>' +
+                '<div class="sign-down-lists">' +
+                '<ul>' +
+                '<li><a href="'+host+'/user">个人中心</a></li>' +
+                '<li><a href="'+host+'/invite">邀请好友</a></li>' +
+                '<li><a href="javascript:loginOutClick();">退出登录</a></li>' +
+                '</ul>' +
+                '</div>'+
+                '</div>'+
+                '</div>';
+    }else {
+        tpl = '<span class="search" id="searchIn" style="right: 208px;">' +
+                '<input type="text" class="search-input" placeholder="搜索">' +
+                '<span class="searchIcon"></span>' +
+                '</span>'+
+                '<div class="top-sign fr"><a target="_blank" href="'+ host +'/login">登录LOGIN</a><span>|</span><a href="'+ host +'/register" target="_blank">注册 SIGN UP</a></div>';
+    }
+    topUser.innerHTML = tpl;
+
+
+    var pupupTpl = '<div class="pupup">' +
+                '<span class="shade"></span>' +
+                '<div data-animation="ed" class="dialog dialog-white-skin">' +
+                '<div class="dialog-inner">' +
+                '<div class="dialog-header" style="height: 100px;">{title}</div>' +
+                ' <div class="dialog-body clearfix" style="height: 70px;">' +
+                '<a href="javascript:{sureFn};" class="dialog-btn {float}">确 定</a>{cancel}' +
+                '</div>' +
+                '</div>' +
+                ' </div>';
+
+    var footNav = document.getElementById('foot-nav');
+    var footNavTpl = '<a href="'+host+'/about/us?action=us">关于我们</a><i>-</i>' +
+            '<a href="'+host+'/about/join?action=join">加入我们</a><i>-</i>' +
+            '<a href="'+host+'/about/service?action=service">服务协议</a>';
+    footNav.innerHTML = footNavTpl;
+
+    var dialogBox = document.getElementById('dialog-box');
+
+    /**
+     * 点击退出，弹出对话框
+    */
+    function loginOutClick () {
+        var pupup = pupupTpl.replace("{title}", "确定要退出吗?")
+                .replace("{sureFn}", "loginOut()")
+                .replace("{float}", "fl")
+                .replace("{cancel}", '<a href="javascript:hideDialog();" class="dialog-btn fr">取 消</a>');
+        dialogBox.innerHTML = pupup;
+    }
+
+    /**
+     * 退出登录
+    */
+    function loginOut() {
+        fmacloud.User.logOut();
+        window.location.reload();
+    }
+
+    /**
+     * 隐藏对话框
+    */
+    function hideDialog() {
+        dialogBox.innerHTML = '';
+    }
+
+    var errTips = document.getElementById('err-tips');
+    var mcode = document.getElementById("mcode");
+    /**
+     * 表单输入时判断
+    */
+    function onInputHandle() {
+        var value = mcode.value;
+        var reg = /([^\u0000-\u00FF])/g;
+        if(reg.test(value)) {
+            value = value.replace(reg, '');
+            mcode.value = value;
+        }
+        if(!/^[0-9a-zA-Z]*$/g.test(value)) {
+            errTips.innerText = "只允许输入字母和数字"
+        }else {
+            errTips.innerText = ""
+        }
+    }
+
+    /**
+     * 跳转到登陆
+    */
+    function loginLink() {
+        window.location.href = host + '/login';
+    }
+
+    /**
+     * 点击提交
+    */
+    function onSubmitHandle() {
+        var mcodeValue = mcode.value;
+        if(mcodeValue == '') {
+            errTips.innerText = "兑换码为空";
+            return;
+        }else if(!user) {
+            var pupup = pupupTpl.replace("{title}", "您还未登录，请登录")
+                    .replace("{sureFn}", "loginLink()")
+                    .replace("{float}", '')
+                    .replace("{cancel}", '');
+            dialogBox.innerHTML = pupup;
+            return;
+        }else{
+            var opt = {};
+            opt.mcode = mcodeValue.toUpperCase();
+            opt.uid = user.id;
+            fmacloud.Cloud.run("mc_redeem", opt, {
+                success: function (res){
+                    if(!res.result) { //  兑换失败
+                        var pupup = pupupTpl.replace("{title}", res.message)
+                                .replace("{sureFn}", "hideDialog()")
+                                .replace("{float}", '')
+                                .replace("{cancel}", '');
+                        dialogBox.innerHTML = pupup;
+                    }else {
+                        tipsDialog("兑换成功", 2, function() {
+                            window.location.href = host + "/user/tab/4"
+                        });
+                    }
+                },
+                error  : function (error) { //请求失败
+                    console.log(error, "error");
+                }
+            })
+        }
+    }
+
+    /**
+     * 跳转到指定path
+    */
+    function linkToPath(path) {
+        window.location.href = host + path;
+    }
+
+    var searchIn = $('#searchIn');
+    searchIn.bind('blur',function() {
+        var self = $(this);
+        if (self.hasClass("searchOpen") && (self.children("input").val() == "")) {
+            self.removeClass("searchOpen");
+            self.children("input").attr("placeholder", "搜索");
+        }
+    });
+
+    $('.form .txt').bind('keydown', function(e) {
+        if(e.which == '13') {
+            $('.form .btn').trigger('click');
+        }
+    });
+
+    $(document)
+    　
+    $(document).bind("click",function(e){
+        if($(e.target).closest("#searchIn").length == 0){
+            if (searchIn.hasClass("searchOpen") && (searchIn.children("input").val() == "")) {
+                searchIn.removeClass("searchOpen");
+                searchIn.children("input").attr("placeholder", "搜索");
+            }
+        }
+    });
+
+    $('.search-input').bind('click', function() {
+        if (!searchIn.hasClass("searchOpen")) {
+            searchIn.addClass("searchOpen");
+            searchIn.children("input").attr("placeholder", "搜索作品、模版");
+        }
+    });
+
+    $('.searchIcon').bind('click', function() {
+        var value = $('.search-input').val();
+        if(value != ''){
+            window.location.href = host + '/search?value=' + value;
+        }
+    });
+
+    function tipsDialog(message, delay, sureFn) {
+        //如果提示框已存在，先移除
+        if((typeof smallTipsTimer == undefined) || $("#makeSmallTips").length > 0) {
+            $("#makeSmallTips").remove();
+            window.clearTimeout(smallTipsTimer);
+            smallTipsTimer = null;
+        }
+
+        var smallTips = $('<div id="makeSmallTips"></div>'),
+            messageBox = $('<div class="message"></div>');
+
+        messageBox.html(message);
+        smallTips.append(messageBox);
+
+        $("body").append(smallTips);
+        if (!delay) return;
+        smallTipsTimer = setTimeout(function () {
+            smallTips.remove();
+            smallTipsTimer = null;
+            if(sureFn) {
+                sureFn();
+            }
+        }, delay * 1000)
+    }
+
+</script>
+
+</body>
+</html>

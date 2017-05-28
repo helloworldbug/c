@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>me-passport</title>
+        <script src="http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
+        <!--<script src="https://cdn1.lncld.net/static/js/av-min-1.0.0.js"></script>-->
+        <script>
+     window.fmawr = "999"
+</script>
+        <script src="../vendor/fmacapi/fmacapi.interface.min.js"></script>
+        <style>
+            body {padding: 50px;}
+        </style> 
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var id = getQueryString('id');
+                var error = getQueryString('error');
+                if (!id || error) {
+                    onFail();
+                } else {
+                    onSuccess();
+                }
+            });
+
+            function onFail() {
+                var error = getQueryString('error');
+                var message = getQueryString('message');
+                // alert('code = ' + error + ', message = ' + message);
+                 var rst = confirm('code = ' + error + ', message = ' + message);
+                 var url = location.origin + '/user';
+                 if (rst==true){
+                    window.location.href = url;
+                 }else{
+                    window.location.href = url;
+                 }
+            }
+
+            function onSuccess() {
+                // init();
+                alert("onsuccess")
+                var user = new fmacloud.User();
+                user.id = getQueryString('id');
+                debugger;
+                console.log(user.id);
+                user._sessionToken = getQueryString('sessionToken');
+
+                var promise = fmacloud.Promise.as(fmacloud.User._saveCurrentUser(user));
+                promise.then(function(obj) {
+                        //alert("1");
+                    fmacloud.User.current().fetch().then(function(user) {
+                        //alert("2")
+                        fmacloud.Promise.as(fmacloud.User._saveCurrentUser(user));
+                        window.location.href = location.origin + '/user';
+                    }, function(err) {
+                        alert(err.message);
+                    });
+                }, function(err) {
+                    alert(err.message);
+                });
+            }
+            /*function init() {
+                // 应用 ID，用来识别应用
+                var APP_ID = 'syrskc2gecvz24qjemgzqk8me6yenon2layp11tdnskosxg9';
+
+                // 应用 Key，用来校验权限（Web 端可以配置安全域名来保护数据安全）
+                var APP_KEY = 'c56r8qz274bct8jlb924v2b05xaysxytfmt2ff0vfgulmks7';
+
+                // 初始化
+                AV.init({
+                    appId: APP_ID,
+                    appKey: APP_KEY
+                });
+            }*/
+
+            function getQueryString(name) {
+                var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                console.log(r);
+                if (r != null) {
+                    return unescape(r[2]);
+                }
+                return null;
+            }
+        </script>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>

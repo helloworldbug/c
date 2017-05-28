@@ -1,0 +1,167 @@
+/**
+  * @name 右悬浮侧边栏组件样式
+  * @author 曾文彬
+  * @datetime 2015-9-7
+*/
+
+@charset "utf-8";
+
+.fix-sidebar {
+  position: fixed;
+  right: 0;
+  bottom: 8%;
+  width: 48px;
+  /*height: 195px;*/
+  z-index: 999;
+  opacity: 0;
+  border:solid 1px #ccc;
+  box-sizing: border-box;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transition: opacity .5s ease;
+  background: #fff;
+}
+
+.fix-sidebar[data-animation="opacity"] {
+  opacity: 1;
+}
+
+.fix-sidebar .concel, .fix-sidebar .fir {
+  position: relative;
+  width: 36px; 
+  margin: 0 5px;
+  line-height: 16px;
+  padding: 8px 0;
+  height: 32px;
+  /*background: #000;
+  opacity: .2;*/
+  /*background: #fff;*/
+  border-bottom: solid 1px #ccc; 
+  font-family: "微软雅黑";
+  display: block;
+}
+
+.fix-sidebar .fir {
+  /*border: 1px;*/ 
+  background: url(../images/slider/goback.png) center no-repeat;
+  cursor: pointer;
+  /*opacity: .2;*/
+}
+
+.fix-sidebar .concel .concel-p1 {
+  /*margin-left: 14px;*/
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin: 0;
+  cursor: default;
+}
+
+.fix-sidebar .concel:last-child{
+  border-bottom: 0;
+}
+
+.fix-sidebar .ewm-group p {
+  margin-left: 0;
+} 
+
+.fix-sidebar .concel[data-changebg="ed"] {
+  /*background-color: #666;*/
+  opacity: 1;
+}
+
+/*.fix-sidebar .concel[data-changeshape="ed"]:after {
+  position: absolute;
+  content: "\0020";
+  left: -24px;
+  top: 50%;
+  margin-top: -12px;
+  border-width: 12px;
+  border-style: solid;
+  border-color: transparent #666 transparent transparent;
+}*/
+
+.fix-sidebar .ewm-group {
+  display: none;
+  position: absolute;
+  right: 50px;
+  top: 0;
+  width: 110px;
+  height: 130px;
+  background-color: #fff;
+  border: solid 1px #ccc;
+  box-sizing: border-box;
+}
+
+.fix-sidebar .concel[data-show="ed"] .ewm-group {
+  display: block;
+}
+
+.fix-sidebar .group {
+  display: none;
+  position: absolute;
+  right: 50px;
+  top: 0;
+  padding: 4px;
+  width: 110px;
+  height: 125px;
+  background-color: #fff;
+  border: solid 1px #ccc;
+  box-sizing: border-box;
+  font-size: 12px;
+  color: #666;
+}
+
+.fix-sidebar .group ul li {
+  letter-spacing: -0.8px;
+  line-height: 28px;
+  padding-left: 16px;
+}
+
+.fix-sidebar .group ul li:nth-child(1) {
+  background: url(../images/slider/tel.png) left center no-repeat;
+}
+
+.fix-sidebar .group ul li:nth-child(2) {
+  background: url(../images/slider/qq.png) left center no-repeat;
+}
+
+.fix-sidebar .group ul li:nth-child(3) {
+  background: url(../images/slider/mail.png) left center no-repeat;
+}
+
+.fix-sidebar .group ul li:nth-child(4) {
+  background: url(../images/slider/time.png) left center no-repeat;
+}
+
+.fix-sidebar .concel[data-show="ed"] .group {
+  display: block;
+}
+
+
+.fix-sidebar .ewm-group > div {
+  width: 96px;
+  height: 96px;
+  margin: 7px 0 0 7px; 
+}
+
+.fix-sidebar .ewm-group > p {
+  color: #666;
+  font-size: 12px;
+  height: 12px;
+  line-height: 12px;
+  margin-top: 3px;
+  text-align: center;
+}
+
+.fix-sidebar .follow .ewm-group > div {
+  background: url(../images/slider/look.png) no-repeat 0 0;
+}
+
+.fix-sidebar .download .ewm-group > div {
+  background: url(../images/slider/app.png) no-repeat 0 0;
+}
+
+.fix-sidebar .question .ewm-group > div {
+  background: url(../images/slider/contact.png) no-repeat 0 0/cover;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = {};
+        if (url.indexOf("?") != -1) {  //从"?"开始获取字符串不等于-1
+            var str = url.substr(1);    //获取"?"号从1的位置开始后面的字符串赋值给str
+            var strs = str.split("&");  //把获取到的字符串进行数组分割每一个"&"之后都成为一个数组赋值给strs
+            for (var i = 0; i < strs.length; i++) {     //循环数组长度
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);    //解码字符串strs[i]从中分割“=”的第一个数组赋值给theRequest变量
+            }
+        }
+        return theRequest;//getData
+    }
+    var parm = GetRequest();
+    if (parm.origin) {
+        location.href = parm.origin + "/wxlogin?code=" + parm.code
+    } else {
+        location.href = location.origin + "/wxlogin?code=" + parm.code
+    }
+
+</script>
+
+</html>

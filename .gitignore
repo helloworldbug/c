@@ -1,0 +1,10 @@
+.idea/
+dist/
+node_modules/
+*iml
+*.git/
+npm-debug.log
+
+#submodule
+#src/app/utils/render.js
+#src/assets/css/main.css

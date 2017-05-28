@@ -1,0 +1,131 @@
+/**
+ * @description 在线阅读条目样式
+ * @time 2016-12-5
+ * @author fisnYu
+ */
+#my-bookrank-record-title{
+    margin-bottom: 0 ;
+}
+.my-bookrank-item{
+    width: 50%;
+    height: 208px;
+    box-sizing: border-box;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+    box-sizing: border-box;
+    float: left;
+}
+.my-bookrank-item:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.my-bookrank-item-left{
+    float: left;
+    width: 124px;
+    height: 100%;
+    margin-right: 16px;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#my-bookrank-preview-mask{
+    position: absolute;
+    z-index: 2;
+    display: none;
+    width: 100%;
+    height: 100%;
+    line-height: 159px;
+    text-align: center;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,.5); 
+}
+
+.my-bookrank-item-left:hover > #my-bookrank-preview-mask{
+    display: inline-block;
+}
+
+#my-bookrank-preview-mask:hover{
+    display: inline-block;
+}
+
+.my-bookrank-item-right{
+    float: left;
+    width: -webkit-calc(100% - 140px);
+    width: calc(100% - 140px);
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.my-bookrank-item-name{
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.my-bookrank-item-author{
+    width: 100%;
+    font-size: 12px;
+    color: #333;
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.my-bookrank-item-read{
+    width: 70px;
+    height: 24px;
+    float: left;
+    color: #fff;
+    box-sizing: border-box;
+    border: solid 1px #e7e7eb;
+    text-align: center;
+    line-height: 22px;
+    background-color: #1abc9c;
+}
+.my-bookrank-item-read:hover{
+    opacity: .8;
+}
+
+.my-bookrank-item-option{
+    width: 100%;
+    height: 24px;
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+}
+.my-bookrank-item-option a{
+    width: 70px;
+    height: 100%;
+    display: inline-block;
+    color: #333;
+    box-sizing: border-box;
+    border: solid 1px #e7e7eb;
+    text-align: center;
+    line-height: 22px;
+    margin-right: 12px;
+}
+
+.my-bookrank-item-option a:hover{
+    opacity: .8;
+}
+
+.my-bookrank-item-option a.unDelete{
+    color: #ccc;
+}
+
+.my-bookrank-item-option a.unDelete:hover{
+    opacity: 1;
+}
+

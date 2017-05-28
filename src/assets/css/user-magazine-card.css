@@ -1,0 +1,608 @@
+/*UserMagazineCard 样式*/
+.user-magazine-card {
+    border: 1px solid rgba(4, 0, 0, .2);
+    background-color: #fff;
+}
+
+.user-magazine-card-frame {
+    float: left;
+    margin-left: 19px;
+    margin-bottom: 17px;
+    width: 218px;
+    position: relative;
+    /*overflow: hidden;*/
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+.user-magazine-card-frame:nth-child(5n+1) {
+    margin-left: 0;
+}
+
+.delete-date {
+    padding: 6px 12px;
+    padding-top: 0;
+    font-size: 12px;
+    color: #666;
+}
+
+.user-magazine-card .card-image, .user-magazine-card .card-image img {
+    display: block;
+    width: 100%;
+    height: 218px;
+    position: relative;
+    overflow: hidden;
+}
+
+.user-magazine-card .card-image img {
+    height: auto;
+}
+
+.user-magazine-card .avatar, .user-magazine-card .info {
+    display: inline-block;
+}
+
+.user-magazine-card .avatar {
+    position: relative;
+    z-index: 10;
+    left: 16px;
+    overflow: hidden;
+}
+
+.user-magazine-card .info {
+    height: 55px;
+    position: relative;
+    left: 30px;
+    width: 156px;
+}
+
+.user-magazine-card .info .author {
+    color: #333;
+    font-size: 14px;
+    margin-top: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user-magazine-card .info .name {
+    font-size: 12px;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 92%;
+    height: 16px;
+    line-height: 16px;
+}
+
+.user-magazine-card .info .name a {
+    color: #333;
+}
+
+.user-magazine-card .info .date {
+    font-size: 14px;
+}
+
+.user-magazine-card .avatar img {
+    object-fit: cover;
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    border-radius: 100%;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.user-magazine-card .card-content {
+    position: relative;
+    height: 41px;
+    margin-top: 8px;
+}
+
+.user-magazine-card .card-action {
+    padding: 0 12px;
+    margin-top: 13px;
+    margin-bottom: 14px;
+    position: relative;
+}
+
+.user-magazine-card .card-action .name {
+    font-size: 14px;
+    color: #333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    line-height: 20px;
+    border: 1px solid #fff;
+    padding: 0 5px;
+}
+
+.user-magazine-card .card-action .name:hover {
+    border: 1px solid #d0d0d0;
+    cursor: text;
+}
+
+.user-magazine-card .card-action .cannot-edit:hover {
+    border: transparent 1px solid;
+    cursor: default;
+}
+
+.user-magazine-card .card-action .editName {
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+    padding: 0 5px;
+    border: 1px solid #d0d0d0;
+    width: 180px;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+.user-magazine-card .number {
+    width: 100px;
+    margin-left: 17px;
+    background: url(../images/user/read.png) center no-repeat;
+    background-position: 1px;
+    padding-left: 20px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, .54);
+    line-height: 23px;
+    cursor: default;
+}
+
+.user-magazine-card .qr-code-image {
+    width: 100%;
+    height: 218px;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.user-magazine-card .qr-code-image.active {
+    display: block;
+}
+
+.user-magazine-card .qr-code-image canvas {
+    padding: 15px;
+    background: #fff;
+    margin: 34px;
+    box-sizing: border-box;
+}
+
+/*CardHeadBar 样式*/
+.card-head-bar {
+    width: 100%;
+    height: 34px;
+    position: relative;
+}
+
+.card-head-bar:hover {
+    margin-top: 0;
+}
+
+.card-head-bar > *:not(a) {
+    margin-top: 5px;
+    /*border-radius: 3px;*/
+    position: absolute;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.user-magazine-card .card-image:hover + .card-head-bar {
+    margin-top: 0;
+}
+
+.card-image:hover .qr-code-image, .qr-code-image:hover {
+    display: block;
+}
+
+.card-head-bar .edit {
+    margin-top: 5px;
+    /*border-radius: 3px;*/
+    position: absolute;
+    top: 0;
+    left: 8px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background: url(../images/user/edit.png) center no-repeat;
+    /*    transition: all .2s ease-in-out;*/
+    display: inline-block;
+}
+
+.card-head-bar .edit:hover {
+    background: url(../images/user/edithover.png) center no-repeat #333;
+}
+
+.card-head-bar .dataCount {
+    left: 44px;
+    background: url(../images/user/data.png) center no-repeat;
+    /*    transition: all .2s ease-in-out;*/
+    display: inline-block;
+}
+
+.card-head-bar .dataCount:hover {
+    background: url(../images/user/datahover.png) center no-repeat #333;
+}
+
+.card-head-bar .dataCount > a {
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+}
+
+.card-head-bar .create {
+    left: 74px;
+    background: url(../images/user/create.png) center no-repeat;
+    display: inline-block;
+}
+
+.card-head-bar .unpublish-create {
+    left: 98px;
+}
+.card-head-bar .create1 {
+    left: 74px;
+    background: url(../images/user/create.png) center no-repeat;
+    display: inline-block;
+    opacity:0.4;
+    cursor:default;
+}
+
+.card-head-bar .unpublish-create {
+    left: 98px;
+}
+
+.card-head-bar .create:hover {
+    background: url(../images/user/createhover.png) center no-repeat #333;
+}
+
+.card-head-bar .delete {
+    right: 6px;
+    background: url(../images/user/delete.png) center no-repeat;
+    transition: all .2s ease-in-out;
+}
+
+.card-head-bar .delete:hover {
+    background: url(../images/user/deletehover.png) center no-repeat #333;
+}
+
+.card-head-bar .recycleDelete {
+    left: 42px;
+}
+
+.card-head-bar .restore {
+    left: 8px;
+    background: url(../images/user/restore.png) center no-repeat;
+}
+
+.card-head-bar .restore:hover {
+    background: url(../images/user/restore-hover.png) center no-repeat #333;
+}
+
+.card-head-bar .fromapp {
+    background: url(../images/user/fromapp.png) left center no-repeat;
+    cursor: default;
+    width: auto;
+    margin-left: 16px;
+    border-radius: initial;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    color: #999;
+    padding-left: 21px;
+}
+
+.card-head-bar .replace {
+    background: url(../images/user/repalce.png) center no-repeat;
+    left: 42px;
+}
+
+.card-head-bar .replace:hover {
+    background: url(../images/user/repalce-hover.png) center no-repeat #333;
+}
+
+.card-head-bar span.share {
+    background: url(../images/user/share.png) 3px center no-repeat;
+    left: 112px;
+}
+
+.card-head-bar span.share:hover, .card-head-bar .share-hover {
+    background: url(../images/user/share-hover.png) 3px center no-repeat #333;
+}
+
+.card-head-bar .share-hover{
+    left: 112px;
+}
+
+.card-head-bar .down {
+    background: url(../images/user/down.png) center no-repeat;
+    left: 148px;
+}
+
+.card-head-bar .down:hover {
+    background: url(../images/user/down-hover.png) center no-repeat #333;
+}
+
+
+.share-box {
+    position: absolute;
+    left: -50px;
+    bottom: -37px;
+    width: 134px;
+    padding-top: 12px;
+    height: 28px;
+    z-index: 999;
+    background: url(../images/user/share-box.png) left bottom no-repeat;
+    display: none;
+    /*transition: opacity .1s ease-out;*/
+}
+
+.card-head-bar .share:hover .share-box {
+    display: block;
+}
+
+/*
+.share-box:after {
+    content: '';
+    position: absolute;
+    left: 54px;
+    top: -4px;
+    width: 6px;
+    height: 6px;
+    border-left: solid 1px rgba(4, 0, 0, .2);
+    border-top: solid 1px rgba(4, 0, 0, .2);
+    transform:rotate(45deg);
+    background: #fff;
+}
+*/
+
+/*分享*/
+
+.share-box .share {
+    text-align: center;
+}
+
+.share-box .share ul li {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.share-box .share ul li span {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /*border-radius: 3px;*/
+}
+
+.share-box .share ul li span:hover {
+    background-color: #333;
+}
+
+.share-box .share ul li span:hover {
+    cursor: pointer;
+}
+
+.share-box .share ul li span.baidu {
+    background-image: url(../images/make/makeFinish/baidutieba.png);
+}
+
+.share-box .share ul li span.baidu:hover {
+    background-image: url(../images/make/makeFinish/baidutieba-selected.png);
+}
+
+.share-box .share ul li.cur span.baidu {
+    background-image: url(../images/make/makeFinish/baidutieba-selected.png);
+}
+
+.share-box .share ul li span.qq-kj {
+    background-image: url(../images/make/makeFinish/qq-kongjian.png);
+}
+
+.share-box .share ul li span.qq-kj:hover {
+    background-image: url(../images/make/makeFinish/qq-kongjian-selected.png);
+}
+
+.share-box .share ul li span.qq {
+    background-image: url(../images/make/makeFinish/qq.png);
+}
+
+.share-box .share ul li span.qq:hover {
+    background-image: url(../images/make/makeFinish/qq-selected.png);
+}
+
+.share-box .share ul li span.wb {
+    background-image: url(../images/make/makeFinish/weibo.png);
+}
+
+.share-box .share ul li span.wb:hover {
+    background-image: url(../images/make/makeFinish/weibo-selected.png);
+}
+
+.share-box .share ul li span.wx {
+    background-image: url("../images/make/makeFinish/weixin.png");
+}
+
+.share-box .share ul li span.wx:hover {
+    background-image: url(../images/make/makeFinish/weixin-selected.png);
+}
+
+
+body {
+    background-color: #f4f4f4 !important;
+}
+
+.bottomLine {
+    height: 1px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.bottomFirstLine {
+    width: 214px;
+}
+
+.bottomSecondLine {
+    width: 210px;
+}
+
+.template-card-grid {
+    /*overflow: hidden;*/
+}
+
+/*列表*/
+.template-list-box {
+    background: #fff;
+    padding: 0 20px;
+}
+
+.template-list {
+    border-bottom: solid 1px #e7e7e7;
+    height: 24px;
+    line-height: 24px;
+    padding: 12px 0;
+    font-size: 12px;
+}
+
+.template-list:last-child{
+    border-bottom: none;
+}
+
+.template-list ul li {
+    float: left;
+}
+
+.template-list ul li.title {
+    width: 34%;
+    color: #333;
+}
+
+.template-list ul li.title span {
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+
+.template-list ul li.title img {
+    float: left;
+    margin-right: 12px;
+}
+
+.template-list ul li.title a {
+    color: #333;
+}
+
+.template-list ul li.time {
+    width: 20%;
+    color: #999;
+    padding-left: 6px;
+}
+
+.template-list ul li.icon {
+    width: 19%;
+    height: 24px;
+    line-height: 24px;
+    float: right;
+}
+
+.template-list ul li.card-head-bar {
+    height: 24px;
+}
+
+.template-list ul li.card-head-bar > *:not(a), .card-head-bar .edit  {
+    /*margin-top: 0;*/
+}
+
+.title-color{
+    color: #4c607a !important;
+}
+
+.template-list .line {
+    border-left: solid 1px #e7e7e7;
+}
+
+.template-list ul li.icon .delete {
+    left:190px;
+}
+
+.template-list ul li.icon .down {
+    left:152px;
+}
+.template-list ul.appeal .appeal-tips .appeal-link,.works-card .appeal-tips .appeal-link{
+    color: #459ae9;
+    cursor: pointer;
+}
+.works-card .appeal-tips{
+    margin-left: 12px;
+    padding-bottom: 10px;
+    color: #999;
+     font-size: 12px;
+}
+.template-list ul.appeal li.icon .edit,.template-list ul li.icon .restore {
+    left: 162px;
+}
+.template-list ul.appeal li.time{
+    width: auto;
+}
+.template-list ul li.icon .recycleDelete {
+    left: 190px;
+}
+
+.template-list ul li.icon .tpl-edit {
+    left: 155px;
+}
+
+/*media*/
+@media screen and (min-width: 1280px) and (max-width: 1500px) {
+    .user-magazine-card-frame:nth-child(5n+1) {
+        margin-left: 19px;
+    }
+
+    .user-magazine-card-frame:nth-child(4n+1) {
+        margin-left: 0px;
+    }
+
+    .template-list ul li.icon {
+        width: 24%;
+    }
+}
+
+@media screen and (min-width: 960px) and ( max-width: 1279px) {
+    .user-magazine-card-frame:nth-child(3n+1) {
+        margin-left: 0 !important;
+    }
+
+
+    .user-magazine-card-frame:nth-child(5n+1) {
+        margin-left: 19px;
+    }
+
+    .template-list ul li.title {
+        width: 30%;
+    }
+
+    .template-list ul li.time {
+        width: 18%;
+    }
+
+    .template-list ul li.icon {
+        width: 32%;
+    }
+}
+
+

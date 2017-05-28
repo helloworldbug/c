@@ -1,0 +1,434 @@
+#sharePreview * {
+    box-sizing: border-box;
+}
+
+#sharePreview {
+    width: 341px;
+    height: 669px;
+    background: url("../../assets/images/sharePreview/phone_bg_01.png") no-repeat;
+    float: left;
+}
+
+#sharePreview .shareArticleTitle {
+    width: 100%;
+    font-size: 16px;
+    height: 16px;
+    line-height: 16px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 72px;
+}
+
+#sharePreviewContainer {
+    width: 341px;
+    height: 510px;
+    margin-top: 16px;
+    padding-top: 14px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#sharePreview .sharePreview_pt {
+    width: 341px;
+    height: 494px;
+    margin-top: 16px;
+}
+
+/*主内容距离顶部距离*/
+/*只有一篇文章样式*/
+#shareArticleOne {
+    width: 286px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background: #ffffff;
+    padding: 0px 8px;
+    margin: 0 auto;
+}
+
+#shareArticleOne .title {
+    font-size: 15px;
+    color: #333333;
+    margin-top: 14px;
+    cursor: pointer;
+    word-wrap: break-word;
+}
+
+#shareArticleOne .timeStr {
+    font-size: 12px;
+    color: #8d8d8d;
+    margin-top: 8px;
+}
+
+#shareArticleOne .effectImg {
+    width: 270px;
+    height: 150px;
+    margin: 12px auto 0 auto;
+    cursor: pointer;
+}
+
+#shareArticleOne .desc {
+    width: 270px;
+    font-size: 12px;
+    color: #8d8d8d;
+    margin-top: 12px;
+    line-height: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+#shareArticleOne .footer {
+    width: 270px;
+    height: 29px;
+    border-top: 1px solid #e7e7eb;
+    line-height: 29px;
+    font-size: 12px;
+    color: #333333;
+    background: url("../../assets/images/sharePreview/icon01.png") no-repeat 262px center;
+    cursor: pointer;
+}
+
+#sharePreviewMenu {
+    width: 120px;
+    height: 210px;
+    display: block;
+    list-style: none;
+    float: left;
+    margin-left: 16px;
+    margin-top: 114px;
+}
+
+#sharePreviewMenu li {
+    width: 120px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 12px;
+    background: #ffffff;
+    color: #333333;
+    text-align: center;
+    border: 1px solid #e7e7eb;
+    border-bottom: 0;
+    cursor: pointer;
+}
+
+#sharePreviewMenu li:nth-child(5) {
+    border-bottom: 1px solid #e7e7eb;
+}
+
+#sharePreviewMenu .li_ck {
+    background: #333333;
+    color: #ffffff;
+}
+
+#sharePreview #shareArticleList {
+    width: 286px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background: #ffffff;
+    padding: 0px 8px;
+    margin: 0px auto 14px auto;
+}
+
+#shareArticleList .effectImg {
+    width: 270px;
+    height: 150px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#shareArticleList .title {
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    background: rgba(0, 0, 0, .5);
+    font-size: 15px;
+    color: #ffffff;
+    padding: 0 8px;
+    margin-top: 118px;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+}
+
+#shareArticleList .articleSecond {
+    width: 270px;
+    height: 62px;
+    border-top: 1px solid #e7e7eb;
+    padding-top: 12px;
+}
+
+#shareArticleList .articleSecondTitle {
+    font-size: 15px;
+    color: #333333;
+    float: left;
+    cursor: pointer;
+    width: 217px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box
+}
+
+#shareArticleList .articleSecondImg {
+    width: 45px;
+    height: 45px;
+    float: right;
+    cursor: pointer;
+}
+
+#sharePreview #shareArticleText {
+    width: 288px;
+    margin: 0 auto 14px auto;
+    text-align: left;
+}
+
+#shareArticleText .title {
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #333333;
+}
+
+#shareArticleText .time {
+    margin-bottom: 12px;
+    font-size: 12px;
+    color: #8d8d8d;
+}
+
+#shareArticleText .time_sp {
+    margin-right: 6px;
+}
+
+#shareArticleText .time_author {
+    margin-right: 6px;
+    width: 200px;
+    white-space: normal;
+}
+
+#shareArticleText .desc_sp {
+    color: #607fa6;
+}
+
+#shareArticleText .effectImg {
+    width: 288px;
+    height: 160px;
+    margin-bottom: 12px;
+}
+
+#shareArticleText .content {
+    font-size: 16px;
+    line-height: 20px;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+#shareArticleText .content img {
+    max-width: 100%
+}
+
+#sharePreview #shareWeChat {
+    width: 282px;
+    margin: 0 auto;
+}
+
+#shareWeChat .headImg {
+    width: 34px;
+    height: 34px;
+    float: left;
+    margin-right: 8px;
+}
+
+#shareWeChat .weChatRight {
+    width: 240px;
+    float: left;
+}
+
+#shareWeChat .desc_p {
+    color: #607fa6;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+#shareWeChat .data_info {
+    width: 240px;
+    height: 46px;
+    line-height: 36px;
+    padding: 6px;
+    background: #f3f3f5;
+}
+
+#shareWeChat .effectImg {
+    width: 34px;
+    height: 34px;
+    margin-right: 8px;
+    float: left;
+    cursor: pointer;
+}
+
+#shareWeChat .title {
+    width: 186px;
+    height: 34px;
+    float: left;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #333333;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+}
+
+#sharePreview #shareSina {
+    width: 313px;
+    margin: -14px auto auto auto;
+    font-size: 0px;
+    overflow: hidden;
+}
+
+#shareSina #shareSina_con {
+    width: 313px;
+    border-top: 2px solid #e7e7eb;
+    border-bottom: 2px solid #e7e7eb;
+    padding: 12px 12px 0 12px;
+    overflow: hidden;
+    background: #ffffff;
+    font-size: 14px;
+}
+
+#shareSina_con .headImg {
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+    margin-right: 10px;
+    float: left;
+}
+
+#shareSina_con .p1 {
+    color: #333333;
+}
+
+#shareSina_con .p2 {
+    color: #999999;
+    font-size: 12px;
+}
+
+#shareSina_con .p3 {
+    color: #333333;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+#shareSina_con .sp1 {
+    color: #607fa6;
+}
+
+#shareSina_con .effectImg {
+    width: 260px;
+    height: 144px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#sharePreview #shareFriend {
+    width: 282px;
+    margin: 0 auto;
+}
+
+#shareFriend .headImg {
+    width: 34px;
+    height: 34px;
+    float: left;
+    margin-right: 3px;
+}
+
+#shareFriend .friendInfo {
+    width: 245px;
+    height: 85px;
+    background: url("../../assets/images/sharePreview/icon05.png") no-repeat;
+    float: left;
+    padding: 8px 10px 0 10px;
+}
+
+#shareFriend .title {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #333333;
+    line-height: 14px;
+    height: 15px;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+}
+
+#shareFriend .effectImg {
+    width: 50px;
+    height: 50px;
+    margin-right: 6px;
+    float: left;
+    cursor: pointer;
+}
+
+#shareFriend .brief {
+    color: #999999;
+    font-size: 12px;
+    line-height: 18px;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+}
+
+/*取消发现页标签的滚动条*/
+/* 设置滚动条的样式 */
+#sharePreviewContainer::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+}
+
+/* 滚动槽 */
+#sharePreviewContainer::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0);
+    border-radius: 0px;
+}
+
+/* 滚动条滑块 */
+#sharePreviewContainer::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background: rgba(0, 0, 0, 0);
+    -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0);
+}
+
+#sharePreviewContainer::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255, 0, 0, 0);
+}
+
+.nowrapTxt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.wrapTxt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+}

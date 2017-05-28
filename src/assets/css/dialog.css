@@ -1,0 +1,154 @@
+/**
+  * @name 对话框样式
+  * @author 曾文彬
+  * @datetime 2015-9-10
+*/
+
+@charset "utf-8";
+
+/*********** 对话框动画样式 ***********/
+
+@keyframes flipInX-X {
+  0% {
+/*    -webkit-transform: perspective(400px) rotateX(90deg);
+    -ms-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);*/
+    opacity: 0;
+  }
+
+/*  40% {
+    -webkit-transform: perspective(400px) rotateX(-10deg);
+    -ms-transform: perspective(400px) rotateX(-10deg);
+    transform: perspective(400px) rotateX(-10deg);
+  }
+
+  70% {
+    -webkit-transform: perspective(400px) rotateX(10deg);
+    -ms-transform: perspective(400px) rotateX(10deg);
+    transform: perspective(400px) rotateX(10deg);
+  }*/
+
+  100% {
+/*    -webkit-transform: perspective(400px) rotateX(0deg);
+    -ms-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);*/
+    opacity: 1;
+  }
+}
+
+.shade {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background: #000;
+  opacity: .5;
+}
+
+.dialog {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 8px;
+  z-index: 9999;
+}
+.dialog{
+    width:384px!important;
+    margin-left:-156px!important;
+    border-radius: 0px!important;
+}
+
+.dialog[data-animation="ed"] {
+  animation-name: flipInX-X;
+  animation-duration: .3s;
+}
+
+.dialog .head {
+  background-color: #f4f4f4;
+  width: 100%;
+  height: 48px;
+  padding: 12px 24px;
+  box-sizing: border-box;
+  line-height: 24px;
+  font-size: 16px;
+  color: #333;
+}
+
+.dialog .head .close {
+  margin: 5px 0;
+  width: 16px;
+  height: 16px;
+  float: right;
+  background: url(../images/user/close_2.png) center center no-repeat;
+  cursor: pointer;
+}
+
+.dialog .dialog-inner .dialog-header,
+.dialog .dialog-inner .dialog-body {
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+.dialog-header p {
+  margin: 0;
+  letter-spacing: 0;
+  line-height: 32px;
+}
+
+.dialog-header p img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.dialog .dialog-inner .dialog-header {
+  padding: 0 28px;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  line-height: 20px;
+  font-size: 16px;
+  /*border-bottom: 1px solid #cfcfcf;*/
+  color: #000;
+  text-align: center;
+  letter-spacing: 1.8px;
+}
+
+.dialog .dialog-inner .dialog-body {
+  height: 64px!important;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.dialog .dialog-btn {
+  margin: 0 6px;
+  display: block;
+  display: inline-block;
+  width: 108px;
+  height:32px;
+  line-height: 32px;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #333;
+}
+
+.dialog .dialog-btn[data-hidebtn="ed"] {
+  display: none;
+}
+
+.dialog .dialog-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.dialog-white-skin {
+  background: #fff;
+}
+.dialog-body.clearfix{
+  height:64px;
+}

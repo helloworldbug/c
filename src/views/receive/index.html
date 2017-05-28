@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>免费领取</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+        window.fmawr = "0";
+        //window.fmawr = "999";
+        var convertApi = "http://api.test.agoodme.com";     //"http://192.168.6.212"  "http://api.test.agoodme.com"
+        if(window.fmawr == "999"){
+            convertApi = "http://api.agoodme.com";
+        }
+    </script>
+    <script src="../../vendor/fmacapi/fmacapi.interface.min.js"></script>
+    <script src="js/jquery-1.12.1.min.js"></script>
+</head>
+<body>
+<header id="header">
+    <div class="contain clearfix">
+        <div id="logo" class="fl">
+            <a href="/"><img src="images/logo.png" height="35"></a>
+        </div>
+        <div id="nav"></div>
+        <div  id="topUser" class="header-ri fr">
+
+        </div>
+    </div>
+</header>
+
+<div class="receive">
+    <div class="banner-wrapper">
+        <div class="banner">
+            <div>ME BOOK<span>『一键出版』</span>免费试用</div>
+            <div>不玩套路，福利简单直接</div>
+            <div>2016年12月15日起至2017年6月30日止，ME平台注册会员可免费领取10次『一键出版』转档服务。</div>
+            <div class="mac"></div>
+            <button id="receive-count" class="btn-hover" >立即领取</button>
+        </div>
+    </div>
+    <div class="main-wrapper">
+        <div class="main">
+            <p>活动规则</p>
+            <div>申领对象：ME注册用户</div>
+            <div>活动时间：2016年12月15日——2017年6月30日</div>
+            <div>试用范围：ME Book一键转档功能</div>
+            <div>发放方式：点击『立即领取』后，系统会自动把10次权限发放到用户帐户。</div>
+            <div>（用户可通过“个人中心-出版管理-转档管理”模块查看）</div>
+            <div>试用期限：即领即用，永久有效</div>
+        </div>
+    </div>
+    <div class="foot-wrapper">
+        <div class="foot">
+            <div>• 免费赠送的转档次数使用完后，用户可在会员特权页购买“转档次数加油卡”。</div>
+            <div>• 本活动最终解释权归上海精灵天下数字技术有限公司所有。</div>
+            <div>• 活动客服热线：400- 8868- 110</div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="footer clearfix">
+        <div class="fl" id="foot-nav">
+
+        </div>
+        <div class="copyright fr">
+            <p>Copy Right © 2011 - 2016 gli.cn 上海精灵天下数字技术有限公司　 沪ICP备14051983号-1</p>
+        </div>
+    </div>
+</div>
+
+<div id="dialog-box"></div>
+
+<script type="text/javascript">
+
+    var host = location.origin; //协议名、主机名和端口号
+    var nav = document.getElementById('nav');
+    var navTpl = '<ul>'+
+            '<li><a href="'+ host +'/create">场景创作</a><span class="nav-line" style="left: -90px;"></span></li>'+
+            '<li><a href="'+ host +'/discovery">精品推荐</a><span class="nav-line" style="left: -90px;"></span></li>'+
+            '<li><a href="'+ host +'/designerTribe">设计部落</a><span class="nav-line" style="left: -90px;"></span></li>'+
+            '<li><a href="'+ host +'/helper">帮助中心</a><span class="nav-line" style="left: -90px;"></span></li>'+
+            '</ul>';
+    nav.innerHTML = navTpl;
+
+
+    var user = fmacloud.User.current();
+    var topUser = document.getElementById('topUser');
+    var tpl;
+    if(!!user) {
+        var userPic = user.attributes.user_pic || "images/defaultFace.jpg";
+        tpl = '<span class="search" id="searchIn">' +
+                '<input type="text" class="search-input" placeholder="搜索">' +
+                '<span class="searchIcon"></span>' +
+                '</span>'+
+                '<div class="end-sign fr">'+
+                '<a href="'+host+'/user" style="height: 34px; display: inline-block;"><img src="'+userPic+'" width="34" class="face" height="34"></a>' +
+                '<div class="sign-down">' +
+                '<div class="top-bg"></div>' +
+                '<div class="sign-down-lists">' +
+                '<ul>' +
+                '<li><a href="'+host+'/user">个人中心</a></li>' +
+                '<li><a href="'+host+'/invite">邀请好友</a></li>' +
+                '<li><a href="javascript:loginOutClick();">退出登录</a></li>' +
+                '</ul>' +
+                '</div>'+
+                '</div>'+
+                '</div>';
+    }else {
+        tpl = '<span class="search" id="searchIn" style="right: 208px;">' +
+                '<input type="text" class="search-input" placeholder="搜索">' +
+                '<span class="searchIcon"></span>' +
+                '</span>'+
+                '<div class="top-sign fr"><a target="_blank" href="'+ host +'/login">登录LOGIN</a><span>|</span><a href="'+ host +'/register" target="_blank">注册 SIGN UP</a></div>';
+    }
+    topUser.innerHTML = tpl;
+
+
+    var pupupTpl = '<div class="pupup">' +
+                '<span class="shade"></span>' +
+                '<div data-animation="ed" class="dialog dialog-white-skin">' +
+                '<div class="dialog-inner">' +
+                '<div class="dialog-header" style="height: 100px;">{title}</div>' +
+                ' <div class="dialog-body clearfix" style="height: 70px;">' +
+                '<a href="javascript:{sureFn};" class="dialog-btn {float}">确 定</a>{cancel}' +
+                '</div>' +
+                '</div>' +
+                ' </div>';
+
+    var footNav = document.getElementById('foot-nav');
+    var footNavTpl = '<a href="'+host+'/about/us?action=us">关于我们</a><i>-</i>' +
+            '<a href="'+host+'/about/join?action=join">加入我们</a><i>-</i>' +
+            '<a href="'+host+'/about/service?action=service">服务协议</a>';
+    footNav.innerHTML = footNavTpl;
+
+    var dialogBox = document.getElementById('dialog-box');
+
+    /**
+     * 点击退出，弹出对话框
+    */
+    function loginOutClick () {
+        var pupup = pupupTpl.replace("{title}", "确定要退出吗?")
+                .replace("{sureFn}", "loginOut()")
+                .replace("{float}", "fl")
+                .replace("{cancel}", '<a href="javascript:hideDialog();" class="dialog-btn fr">取 消</a>');
+        dialogBox.innerHTML = pupup;
+    }
+
+    /**
+     * 退出登录
+    */
+    function loginOut() {
+        fmacloud.User.logOut();
+        window.location.reload();
+    }
+
+    /**
+     * 隐藏对话框
+    */
+    function hideDialog() {
+        dialogBox.innerHTML = '';
+    }
+
+    var errTips = document.getElementById('err-tips');
+    var mcode = document.getElementById("mcode");
+
+    /**
+     * 跳转到登陆
+    */
+    function loginLink() {
+        window.localStorage.setItem("referer", location.href);
+        window.location.href = host + '/login';
+    }
+    /**
+     * 点击提交
+    */
+    var receiveBtn = $("#receive-count");
+    var flag = true;
+    $(document).ready(function(){
+        //需要先查询是否已经领取，领取过了，就不能点击
+        checkIsReceived(function(data){
+            console.log(data, 82222);
+            if(data && data.result) { //没有领取过
+                receiveBtn.removeClass("over").addClass("btn-hover").text("立刻领取");
+                receiveBtn.on("click", onSubmitHandle);
+            }else{ //领取过
+                receiveBtn.removeClass("btn-hover").addClass("over").text("已经领取");
+                receiveBtn.off("click");
+            }
+        }, function (error) { //请求失败
+            console.log("查询用户是否领取过转档福利失败信息是：" + error);
+        });
+        
+    });
+    /**
+     * 检测用户是否领取过
+     */
+    function checkIsReceived(cbok, cberr) {
+        if(user) {
+            $.ajax({
+                url: convertApi + "/v1/useritem/exchange/Receive_Svc_BookTransferCount",  //领取转档次数的地址
+                type: "GET", //提交方式
+                contentType: "application/json", //很重要，指定为false才能形成正确的Content-Type
+                headers: {
+                    "X-Gli-User-Id": user.id,
+                    "X-Gli-Client-Id": "MEPC"
+                },
+                success : cbok,
+                error : cberr
+            });
+        }else{
+            cbok({result: true});
+            cberr("用户没有登录");
+        }
+    }
+    /**
+     * 点击提交
+    */
+    function onSubmitHandle() {
+        if(!user) {
+            var pupup = pupupTpl.replace("{title}", "您还未登录，请登录")
+                    .replace("{sureFn}", "loginLink()")
+                    .replace("{float}", '')
+                    .replace("{cancel}", '');
+            dialogBox.innerHTML = pupup;
+            return;
+        }else{
+            //测试用
+            // tipsDialog("领取成功<br/>即将进入转档制作", 2, function() {
+            //     window.location.href = host + "/dataProcessing"    //直接跳转到我的特权
+            // });
+            // return;
+            var obj = {
+                "receive_code": "Receive_Svc_BookTransferCount",
+                "background_query": true
+            };
+            $.ajax({
+                url: convertApi + "/v1/useritem/exchange",  //领取转档次数的地址
+                type: "POST", //提交方式
+                contentType: "application/json", //很重要，指定为false才能形成正确的Content-Type
+                data : JSON.stringify(obj),
+                headers: {
+                    "X-Gli-User-Id": user.id,
+                    "X-Gli-Client-Id": "MEPC"
+                },
+                success : function(data){
+                    if(data && data.result) { //  领取成功
+                        receiveBtn.removeClass("btn-hover").addClass("over").text("已经领取");
+                        receiveBtn.off("click");
+                        tipsDialog("领取成功<br/>即将进入转档制作", 2, function() {
+                            window.location.href = host + "/dataProcessing"    //直接跳转到我的特权
+                        });
+                    }else if(data && data.err){ //领取失败的情况
+                        var pupup = pupupTpl.replace("{title}", data.err.message)
+                                .replace("{sureFn}", "hideDialog()")
+                                .replace("{float}", '')
+                                .replace("{cancel}", '');
+                        dialogBox.innerHTML = pupup;
+                    } 
+                },
+                error : function (error) { //请求失败
+                    console.log(error, "error");
+                }
+            });
+        }
+    }
+    /**
+     * 跳转到指定path
+    */
+    function linkToPath(path) {
+        window.location.href = host + path;
+    }
+
+    var searchIn = $('#searchIn');
+    searchIn.bind('blur',function() {
+        var self = $(this);
+        if (self.hasClass("searchOpen") && (self.children("input").val() == "")) {
+            self.removeClass("searchOpen");
+            self.children("input").attr("placeholder", "搜索");
+        }
+    });
+
+    $('.form .txt').bind('keydown', function(e) {
+        if(e.which == '13') {
+            $('.form .btn').trigger('click');
+        }
+    });
+
+    $(document)
+    　
+    $(document).bind("click",function(e){
+        if($(e.target).closest("#searchIn").length == 0){
+            if (searchIn.hasClass("searchOpen") && (searchIn.children("input").val() == "")) {
+                searchIn.removeClass("searchOpen");
+                searchIn.children("input").attr("placeholder", "搜索");
+            }
+        }
+    });
+
+    $('.search-input').bind('click', function() {
+        if (!searchIn.hasClass("searchOpen")) {
+            searchIn.addClass("searchOpen");
+            searchIn.children("input").attr("placeholder", "搜索作品、模版");
+        }
+    });
+
+    $('.searchIcon').bind('click', function() {
+        var value = $('.search-input').val();
+        if(value != ''){
+            window.location.href = host + '/search?value=' + value;
+        }
+    });
+
+    function tipsDialog(message, delay, sureFn) {
+        //如果提示框已存在，先移除
+        if((typeof smallTipsTimer == undefined) || $("#makeSmallTips").length > 0) {
+            $("#makeSmallTips").remove();
+            window.clearTimeout(smallTipsTimer);
+            smallTipsTimer = null;
+        }
+
+        var smallTips = $('<div id="makeSmallTips"></div>'),
+            messageBox = $('<div class="message"></div>');
+
+        messageBox.html(message);
+        smallTips.append(messageBox);
+
+        $("body").append(smallTips);
+        if (!delay) return;
+        smallTipsTimer = setTimeout(function () {
+            smallTips.remove();
+            smallTipsTimer = null;
+            if(sureFn) {
+                sureFn();
+            }
+        }, delay * 1000)
+    }
+
+</script>
+
+</body>
+</html>

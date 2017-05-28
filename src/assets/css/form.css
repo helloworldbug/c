@@ -1,0 +1,414 @@
+/**
+  * @name 表单样式
+  * @descriptions 适应于表单组件，比如登录、注册、密码查找等
+  * @author 曾文彬
+  * @datetime 2015-9-7
+*/
+
+html {
+    min-height: 100%;
+}
+
+.signup-forms {
+    position: relative;
+    width: 408px;
+    margin: 100px auto 0;
+    z-index: 10;
+}
+
+.signup-forms.login-part {
+    margin-top: 165px;
+}
+
+@media screen and (max-height: 820px) {
+    .signup-forms.login-part {
+        margin-top: 145px;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .signup-forms.login-part {
+        margin-top: 125px;
+    }
+}
+
+@media screen and (max-height: 780px) {
+    .signup-forms.login-part {
+        margin-top: 105px;
+    }
+}
+
+@media screen and (max-height: 760px) {
+    .signup-forms.login-part {
+        margin: 85px auto 0;
+    }
+}
+
+@media screen and (max-height: 740px) {
+    .signup-forms.login-part {
+        margin: 75px auto 0;
+    }
+}
+
+.signup-forms input {
+    width: 180px;
+    border: 0;
+    padding-top: 18px;
+    background: none;
+    color: #fff !important;
+    font: 14px "Microsoft YaHei", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    outline: 0;
+}
+
+.signup-forms .input-group {
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 300px;
+    height: 44px;
+    /*  margin-bottom: 10px;*/
+    margin: 0 auto 12px;
+    position: relative;
+}
+
+.signup-forms .input-vertifycode-group {
+    width: 300px;
+    background: none;
+}
+
+.signup-forms .input-control {
+    margin: 0 0 0 60px;
+    /*  padding: 10px 12px;*/
+    padding: 12px 0;
+    /*  text-align: center;*/
+    letter-spacing: 1px;
+}
+
+.signup-forms .service-protocol {
+    position: relative;
+    margin: 20px 0;
+    /*  height: 30px;*/
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.signup-forms .protocol {
+    position: relative;
+    display: inline-block;
+    margin-left: 125px;
+    float: left;
+    height: 20px;
+}
+
+.signup-forms .img-notagree {
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+.signup-forms .img-agree {
+    z-index: 2;
+    position: absolute;
+    left: 5px;
+    bottom: -1px;
+    width: 20px;
+    height: 16px;
+    background: url(../images/form/agree.png) no-repeat 0 0;
+    cursor: pointer;
+    background-size: 10px 10px;
+}
+
+.signup-forms .txt-agreeprotocol {
+    line-height: 20px;
+    margin-left: 12px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.signup-forms .txt-agreeprotocol u {
+    color: #fff;
+}
+
+.signup-forms .btn-vertifycode {
+    margin-left: 12px;
+    width: 108px;
+    height: 44px;
+    padding-top: 0;
+    background: rgba(0, 0, 0, .5);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    position: absolute;
+    color: #fff;
+}
+
+.signup-forms .input-vertifycode {
+    /*margin: 8px 16px 0 20px;*/
+    padding: 10px 24px;
+    box-sizing: border-box;
+    width: 180px;
+    height: 44px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    /*  text-align: center;*/
+    padding-left: 60px;
+}
+
+.signup-forms .btn-submit, .signup-forms .submit.disable {
+    position: relative;
+    width: 300px;
+    height: 44px;
+    background: rgba(0, 0, 0, .7);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 auto 20px auto;
+}
+
+.signup-forms .submit.disable {
+    display: block;
+    background: rgba(0, 0, 0, .5);
+    color: #777;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: not-allowed;
+}
+
+.signup-forms .btn-animation {
+    position: relative;
+    display: block;
+    opacity: .999;
+    background: rgba(0, 0, 0, .5);
+    overflow: hidden;
+}
+
+.signup-forms .btn-animation:hover {
+    background: rgba(0, 0, 0, .65);
+}
+
+/* .signup-forms .btn-animation:before,
+.signup-forms .btn-animation:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: all .5s;
+}
+
+.signup-forms .btn-animation:before {
+  top: 50%;
+}
+
+.signup-forms .btn-animation:after {
+  bottom: 50%;
+}
+
+.signup-forms .btn-animation:hover:before,
+.signup-forms .btn-animation:hover:after {
+  height: 50%;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, .3);
+} */
+
+.signup-forms .btn-reg-submit {
+    margin-bottom: 24px;
+}
+
+.signup-forms .btn-reg-submit {
+    margin: 8px 0 25px;
+}
+
+.signup-forms .btn-submit span {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.signup-forms .btn-reg-submit span {
+    letter-spacing: 0;
+}
+
+.signup-forms .img-ico {
+    position: absolute;
+    margin-left: 22px;
+    margin-top: 12px;
+}
+
+.signup-forms .or {
+    margin-top: 20px;
+    margin-left: 130px;
+    font-size: 14px;
+}
+
+.signup-forms .register-or {
+    margin-top: 0;
+}
+
+.signup-forms .btn-weixinsubmit {
+    width: 300px;
+    height: 44px;
+    background: rgba(88, 187, 32, .6);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    display: block;
+    margin: 20px auto 0;
+    padding: 0px;
+
+}
+
+.signup-forms .btn-weixinsubmit .img-weixin {
+    vertical-align: middle;
+}
+
+.signup-forms .btn-weixinsubmit .txt-weixin {
+    position: relative;
+    top: 3px;
+    margin-left: 32px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.signup-forms .target-link {
+    margin-left: 70px;
+    padding: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.signup-forms .suggest {
+    /*padding-left: 20px;*/
+    color: #999;
+    font-size: 14px;
+    margin: 30px 0 0 -75px;
+    white-space: nowrap;
+}
+
+.signup-forms .suggest-h {
+    font-weight: 700;
+}
+
+.signup-forms .suggest-colorwhite {
+    color: #fff;
+}
+
+/*.submit[data-loading="visible"] {
+  cursor: wait;
+}
+*/
+.submit[data-loading="visible"] i {
+    margin: -13px 0 0 -13px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    content: '';
+    -webkit-border-radius: 24px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 24px;
+    -moz-background-clip: padding;
+    border-radius: 24px;
+    background-clip: padding-box;
+    border: rgba(255, 255, 255, 0.25) 2px solid;
+    border-top-color: #fff;
+    -webkit-animation: animation-rotate 750ms linear infinite;
+    -moz-animation: animation-rotate 750ms linear infinite;
+    -o-animation: animation-rotate 750ms linear infinite;
+    animation: animation-rotate 750ms linear infinite;
+}
+
+.button--loading span,
+.button--loading:hover span,
+.button--loading:active span {
+    color: transparent;
+    text-shadow: none;
+}
+
+.third-party {
+    text-align: center;
+    margin-top: 32px;
+    overflow: hidden;
+}
+
+.third-party a {
+    height: 32px;
+    display: inline-block;
+    float: left;
+    padding-top: 36px;
+    margin: 0 12px 0 12px;
+}
+
+.third-party a.qq {
+    width: 99px;
+    background: url(../images/login/qq_login.png) top center no-repeat;
+}
+
+.third-party a.weibo {
+    width: 113px;
+    background: url(../images/login/weibo.png)  top center no-repeat;
+
+}
+
+#wb_connect_btn {
+    margin-top: -66px;
+    background: none;
+    height: 68px;
+}
+
+.third-party a.weimob {
+    width: 110px;
+    background: url(../images/login/Weimob.png) top center no-repeat;
+}
+
+.third-party a span {
+    opacity: 0;
+    display: block;
+    height: 30px;
+    line-height:30px;
+    font-size: 14px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
+}
+
+.third-party a:hover span {
+    opacity: 1;
+}
+
+/*微博登陆图标样式调整*/
+.WB_loginButton a {
+    width: 132px;
+    height: 32px;
+}
+
+.WB_loginButton a img {
+    display: none !important;
+}
+
+.changePass {
+    margin-bottom: 0px !important;
+}
+
+.forgetPassword {
+    margin-left: 66px !important;
+}
+
+.registerImmediate {
+    margin-left: 81px !important;
+}
+.line.horizontal>label,.line.horizontal>div{
+    float: left;
+}
+.line::after{
+    content:' ';
+    display: block;
+    height: 0;
+    clear: both;
+}

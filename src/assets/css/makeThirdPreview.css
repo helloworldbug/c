@@ -1,0 +1,70 @@
+
+#makePreviewThird_ul{width:120px; height:210px;display:block; list-style: none; position:absolute; top:125px; left:376px;}
+#makePreviewThird_ul li{width:120px; height:42px; line-height: 42px; font-size: 12px; background: #ffffff; color:#333333; text-align: center; border:1px solid #e7e7eb; border-bottom: 0; cursor:pointer;}
+#makePreviewThird_ul li:nth-child(5){border-bottom:1px solid #e7e7eb;}
+#makePreviewThird_ul .li_ck{ background: #333333; color:#ffffff;}
+
+#makePreviewThird{ margin:6px auto auto 14px;}
+#makePreviewThird *{box-sizing: border-box;}
+#makePreviewThird{ width:359px;  height:685px; background:url("../images/make/preview/bg_white.png") no-repeat; float:left;}
+#makePreviewThird .shareArticleTitle{ width:100%; font-size: 16px; height: 16px; line-height:16px;color:#ffffff; text-align: center; margin-top: 72px; }
+#makePreviewThirdContainer{width:359px; height: 510px; margin-top: 16px; padding-top: 14px; overflow-x:hidden; overflow-y: scroll;}
+#makePreviewThird .sharePreview_pt{width:359px; height: 494px; margin-top: 16px;}  /*主内容距离顶部距离*/
+
+
+#makePreviewThird #makeWeChat{width:282px; margin:14px auto auto auto;}
+#makeWeChat .headImg{width:34px; height:34px; float:left; margin-right: 8px;}
+#makeWeChat .weChatRight{width:240px; float:left;}
+#makeWeChat .desc_p{color:#607fa6; font-size: 12px; line-height: 26px;}
+#makeWeChat .data_info{width:240px; height:46px; line-height: 36px; padding:6px; background: #f3f3f5;}
+#makeWeChat .effectImg{width:34px; height:34px; margin-right: 8px; float:left; }
+#makeWeChat .title{width:186px; height:34px; float:left; vertical-align: middle; font-size: 14px; color:#333333;
+    text-overflow: ellipsis;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;  display: -webkit-box;}
+
+
+#makePreviewThird #makeFriend{width:282px; margin:14px auto auto auto;}
+#makeFriend .headImg{width:34px; height:34px; float:left; margin-right: 3px;}
+#makeFriend .friendInfo{width:245px; height:85px; background: url("../images/make/preview/icon05.png") no-repeat; float:left; padding:8px 10px 0 10px;}
+#makeFriend .title{ font-size:14px;margin-bottom: 6px; color:#333333; line-height: 14px; height:15px;
+    text-overflow: ellipsis;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;  display: -webkit-box; }
+#makeFriend .effectImg{width:50px; height:50px; margin-right: 6px;float:left;}
+#makeFriend .brief{color:#999999; font-size: 12px; line-height: 18px;text-overflow: ellipsis;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;  display: -webkit-box;}
+
+/*取消发现页标签的滚动条*/
+/* 设置滚动条的样式 */
+#makePreviewThirdContainer::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+}
+/* 滚动槽 */
+#makePreviewThirdContainer::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0);
+    border-radius: 0px;
+}
+/* 滚动条滑块 */
+#makePreviewThirdContainer::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background: rgba(0,0,0,0);
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0);
+}
+
+#makePreviewThirdContainer::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255,0,0,0);
+}
+
+.nowrapTxt {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    -webkit-text-overflow:ellipsis;
+    -moz-text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.wrapTxt{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    -webkit-text-overflow:ellipsis;
+    -moz-text-overflow:ellipsis;
+}

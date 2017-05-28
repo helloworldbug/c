@@ -1,0 +1,29 @@
+.tag-label-wrapper {
+    padding: 10px;
+    padding-bottom: 5px;
+}
+.tag-label-wrapper:after{
+    content: '';
+    font-size: 0;
+    height: 0;
+    display: block;
+    clear: both;
+}
+
+.tag-label {
+    float: left;
+    font-size: 14px;
+    padding: 3px 6px;
+    position: relative;
+    margin: 0 1px;
+    cursor: pointer;
+}
+
+.tag-wrapper {
+    clear: both;
+}
+
+.tag-label-active ,.tag-label-wrapper .tag-label:hover{
+    background-color: rgb(102, 102, 102);
+    color: #fff
+}

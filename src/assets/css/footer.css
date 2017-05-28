@@ -1,0 +1,71 @@
+/**
+  * @name 底部样式
+  * @author 曾文彬
+  * @datetime 2015-10-19
+*/
+
+@charset "utf-8";
+
+#footer {
+  padding: 16px 0;
+  background: #333;
+}
+
+.footer {
+  width: 1408px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 30px;
+  color: #fff;
+  position: relative;
+}
+
+#footer .nav {
+  height: 30px; 
+}
+
+#footer a{
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  font-size: 13px;
+  color: #fff;
+}
+
+#footer .footer-info {
+  line-height: 30px;
+}
+
+#footer p {
+  margin: 0;
+}
+
+#footer .copyright {
+  text-align: center;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px; 
+}
+
+#footer .footer .fr {
+  text-align: right;
+}
+
+#footer .footer i {
+  font-style: normal;
+  padding: 0 8px;
+}
+
+/*media*/
+@media screen and (min-width: 1280px) and (max-width: 1500px) {
+  #footer .footer{
+    width: 1170px; 
+  }
+} 
+ 
+@media screen and (min-width: 960px) and ( max-width: 1279px) {
+  #footer .footer{
+    width: 932px;
+  }
+
+}

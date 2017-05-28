@@ -1,0 +1,436 @@
+/**
+  * @name       designer.css
+  * @author     misterY
+  * @datetime   2015-10-19
+  * @descript   设计师申请 首页式样
+*/
+.designer-module{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff; 
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  background-image: url('../images/designer/designer_bg.jpg');
+  background-size: cover;
+}
+
+.designer-module h1{
+    font-weight: 100;
+    font-size: 48px;
+    margin: 0px auto 26px auto;
+}
+
+.designer-module-content{
+    padding-top:15%;
+    width:362px;
+    margin:auto;
+}
+
+.designer-module-content p {
+    margin:0;
+}
+
+.designer-module-content p:nth-child(2){
+    margin-top: 30px;
+}
+
+
+.designer-button{
+    margin-top:90px;
+}
+
+.designer-module ul li{ 
+    overflow:hidden; 
+    width: 170px;
+    height: 52px;
+    float: left;
+    text-align: center;
+}  
+
+.designer-module li a{
+  display: inline-block;
+  width: 156px; 
+  height: 52px;
+  line-height: 52px;
+  color: #fff; 
+  border-radius: 25px;
+  margin: 0 13px;
+  cursor: pointer;
+  position: relative;
+  opacity: .999;
+  box-sizing: border-box;
+}
+
+.designer-module li a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: rgba(0,0,0, .5); 
+}
+
+.designer-module li a:hover {
+  background: rgba(0,0,0, .8); 
+}
+
+/* 申请流程 */
+.applyHeader{
+    margin-top:58px;
+    height: 69px;
+    background-color:#fff;
+}
+.applyHeader .nav{
+    width:500px;
+}
+.applyHeader .nav li em{
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    background-color:#ccc;
+    margin: auto;
+    color:#fff;
+}
+.applyHeader .nav li span{
+    color: #ccc;
+    line-height: 42px;
+}
+.applyHeader .nav li{
+    color: #fff;
+}
+
+.nav_ul_1_active li:nth-child(1),.nav_ul_2_active li:nth-child(2),.nav_ul_3_active li:nth-child(3){
+    color:#fff;
+}
+
+/* 选择作品 */
+.template-card.designer-seach-card .card-image img:hover{
+    -moz-transform: initial;
+    -webkit-transform: initial;
+    -o-transfrom: initial;
+    transfrom: initial;
+}
+
+.template-card .card-image{
+    display: block;
+    width: 188px;
+    height: 188px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+ .template-card .card-image img {
+  width: 188px;
+  height: auto;
+ }
+
+.template-card.designer-seach-card{
+    height: initial;
+    box-shadow: initial;
+}
+.template-card.designer-seach-card .card-box{
+    box-sizing: border-box;
+    width: 188px;
+    height: 188px;
+    /*padding: 6px;*/
+}
+.card-box img {
+    /*object-fit:cover;*/
+}
+.template-card.designer-seach-card .card-box.active{
+    /* border: 2px solid #000;
+    padding: 4px; */
+}
+.card-mask{
+    display: none;
+    position: relative;
+    width: 100%;height: 100%;
+    top: -100%;left: 0;
+}
+.card-box.active .card-mask{
+    display: block;
+    background-color: rgba(0,0,0,.5);
+}
+.card-mask .radius_h{ 
+    background: url(../images/designer/check.png) center center no-repeat;
+    width: 40px;height: 40px;
+    position: relative;
+    top: 40%;
+    margin: auto;
+}
+.next-progres{
+    position: absolute;
+    bottom: -82px;
+    left: 50%;
+    margin-left: -79px;
+    display: block;
+    width: 158px;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1.4px;
+    background: rgba(0,0,0, .5);
+    border-radius: 26px;
+    opacity: .999;
+    transition: background .3s ease-in-out; 
+}
+.next-progres:hover{
+    /*color: #000;*/
+    background: rgba(0,0,0, .8); 
+}
+
+.designer_content .inviteCode{
+    width: 233px;
+    float: left;
+}
+.designer_content .getCode{
+    width: 128px;
+    height: 42px;
+    font: 14px/42px 'Microsoft YaHei';
+    color: #fff;
+    background: transparent;
+    border: solid 1px #9b9c9d;
+    border-radius: 21px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 7px;
+}
+
+
+
+.speed {
+  width: 100%;
+  position: absolute;
+  top: 13%;  
+  text-align: center;
+  background: url(../images/designer/line.png) top center no-repeat;
+}
+
+.speed ul {
+    width: 100%;
+}
+
+.speed ul li {
+  list-style: none;
+  display: inline-block;
+  float: none;
+  color: rgba(255,255,255, 0.26);
+  font-size: 12px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 25px;
+  margin-top: -3px;
+  background: url(../images/designer/dian.png) 50% 2px no-repeat;
+}
+
+.speed ul li:nth-child(2) {
+  padding: 0 228px;
+}
+
+.section-title {
+  position: absolute;
+  top: 23%;
+  width: 100%;
+  text-align: center; 
+  margin: 0;
+}
+
+.paragraph {
+  position: absolute;
+  top: 28.5%;
+  width: 100%;
+  letter-spacing: .7px;
+  font-size: 14px;
+  color: rgba(255,255,255, .56);
+  text-align: center;
+  margin: 0;
+}
+
+.ds-works { 
+  padding: 15px;
+  padding-right: 0;
+  width: 889px;
+  height: 43.8%; 
+  position: absolute;
+  top: 32.4%;
+  left: 50%;
+  margin-left: -451px;
+  background: rgba(30,30,30, .8);
+} 
+
+.ds-works ul li {
+  list-style: none;
+  float: left;
+  width: 188px;
+  height: 188px;
+  margin: 15px;
+  position: relative;
+}
+
+.ds-works ul li div{
+  width: 100%;
+  height: 100%; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3; 
+  /*background: url(../images/apply/check.png) center center no-repeat rgba(0,0,0, .54) ;*/
+  display: none;
+}
+
+.ds-works ul li.check div{
+  display: block;
+}
+
+
+/* 滚动栏 */  
+#scrollbar1 {
+  width: 889px;
+}
+
+#scrollbar1 .viewport {
+  width: 889px;
+  height: 100%;
+  overflow-y: scroll;
+  position: relative;
+} 
+
+#scrollbar1 .viewport::-webkit-scrollbar {
+  width: 6px;
+  cursor: pointer;
+} /* 这是针对缺省样式 (必须的) */
+
+#scrollbar1 .viewport::-webkit-scrollbar-track {
+  background-color: #202021;
+} /* 滚动条的滑轨背景颜色 */
+
+#scrollbar1 .viewport:hover::-webkit-scrollbar-thumb{
+  background-color: rgba(255,255,255,.5);
+}
+#scrollbar1 .viewport::-webkit-scrollbar-thumb {
+  background-color: #28292a;
+} /* 滑块颜色 */
+
+#scrollbar1 .viewport::-webkit-scrollbar-button {
+  background-color: #1f2021;
+} /* 滑轨两头的监听按钮颜色 */
+
+#scrollbar1 .viewport::-webkit-scrollbar-corner {
+  background-color: #28292a;
+} /* 横向滚动条和纵向滚动条相交处尖角的颜色 */
+
+
+
+
+/*认证*/
+
+
+.invite-p-link {
+  padding-top: 45px;
+  height: 52px; 
+  text-align: center;
+}
+
+.invite-p-link a{
+  display: inline-block;  
+  color: #fff; 
+  border-radius: 25px;
+  margin: 0 13px; 
+  width: 154px; 
+  height: 52px;
+  line-height: 52px;
+  background: rgba(0,0,0, .5);
+  position: relative;
+  opacity: .999;
+  transition: background .3s ease-in-out;
+}
+
+.invite-p-link a:hover {
+  background: rgba(0, 0, 0, .8);
+}
+
+/*设计师邀请码认证*/
+.ds-invite {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+}
+
+.invite-tab {
+  width: 600px;
+  padding: 0 0 0 200px;
+  margin: 0 auto;
+}
+
+.invite-tab p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+.invite-tab p span.error {
+  padding-left: 12px;
+  color: rgba(255, 255, 255, .54);
+  font-size: 12px;
+}
+
+.invite-tab p input[type="text"] {
+  width: 370px;
+  padding: 0 14px;
+  height: 42px;
+  line-height: 42px;
+  border:solid 1px #9b9c9d;
+  color: #fff;
+  font: 14px 'Microsoft YaHei';
+  border-radius: 21px;
+  background: none;
+  outline: none;
+}
+
+.invite-tab input[type="text"].verify {
+  width: 230px;
+}
+
+.invite-tab p input.send-verify {
+  width: 128px;
+  height: 42px;
+  font:14px/42px 'Microsoft YaHei';
+  color: #fff;
+  background: transparent;
+  border: solid 1px #9b9c9d;
+  border-radius: 21px;
+  cursor: pointer;
+  outline: none;
+  margin-left: 7px;
+}
+
+.invite-tab p input.submit {
+  margin-top: 16px;
+  height: 52px; 
+  font: 14px/52px 'Microsoft YaHei';
+  color: #fff;
+  width: 400px;
+  letter-spacing: 1.4px;
+  border: none;
+  border-radius: 26px;
+  background: rgba(0,0,0, .26);
+  outline: none;
+  cursor: pointer;
+  transition: background .3s ease-in-out;
+}
+
+.invite-tab p input.submit:hover {
+  background: rgba(0,0,0, .36);
+}
+
+.ds-invite .p-link {
+  padding-top: 130px;
+}
+
+
+.designer_content .template-card:nth-child(4n+1){
+  margin-left: 15px;
+}

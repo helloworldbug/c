@@ -1,0 +1,11 @@
+ueditor有些功能没有实现，在满足产品要求的情况下对ueditor最小程度上，升级时注意
+ueditor.config.js 配置保留
+自动保存修改了代码 ueditor.all.min.js
+// plugins/autosave.js
+    UE.plugin.register('autosave', function () {
+24342 行增加
+    if (!me.getOpt('enableAutoSave')) {
+                        return;
+                    }
+
+ueditor.config文件whitList里修改了section，img

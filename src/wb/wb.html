@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta property="qc:admins" content="3453345054617774556375"/>
+    <title></title>
+    <!--script src="http://code.jquery.com/jquery-2.1.0.js"></script-->
+<script>
+     window.fmawr = "999"
+</script>
+    <!--script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" charset="utf-8" data-callback="true"></script-->
+    <script src="http://www.agoodme.com/vendor/fmacapi/fmacapi.interface.min.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            var code = getParam(location.search, "code");
+            fmacloud.Cloud.run('getWbOauthData', {code: code}, {
+                success: function (obj) {
+                    var platform = getParam(location.search, 'platform');
+                    //loginuser(afreshPackageData(obj, platform));
+                    afreshPackageData(obj, platform)
+                },
+                error  : function (err) {
+                    console.log(err.message);
+                }
+            });
+
+        });
+
+        function afreshPackageData(obj, platform) {
+            platform || (platform = 'wb');
+
+            var retObj = {},
+                    originObj = obj;
+
+            if (platform === 'wb') {
+                retObj.unionid = obj.idstr;
+                retObj.nickname = originObj.name || '';
+                retObj.sexual = originObj.gender ? originObj.gender === 'm' ? 1 : 2 : 0;
+                retObj.headimgurl = originObj.avatar_hd ? originObj.avatar_hd.replace(/\\\//g, function (str) {
+                    return '/';
+                }) : '';
+            }
+            /*
+            * 验证账号是否冻结  --konghuachao-2017-0508--start
+            * */
+            fmacloud.Cloud.run('userCheck',{'val':retObj.unionid,'type':"login"},{
+                success:function(data){
+                    debugger;
+                    //status=data.result.status;
+                    //debugger;
+                    return data.status;
+                },
+                error:function(err){
+                    //console.log("error")
+                    debugger;
+                    return false;
+                }
+            }).then(function(data){
+                //debugger;
+                var str;
+                if(data.status){
+                    if(data.end){
+                        var time=formattime(data.end,"yyyy-MM-dd HH:mm:ss");
+                        str="该账户已被冻结，冻结截止时间:"+time+"。"
+                                +"\n如有问题请联系客服。"
+                        //return false;
+                    }else{
+                        str="该账号已被永久冻结。";
+                    }
+                    alert(str);
+                    window.location.href = 'http://www.agoodme.com/' + 'login';
+                    return false;
+                }else{
+                    debugger;
+                    loginuser(retObj)
+                }
+            }).catch(function(error){
+                debugger;
+                loginuser(retObj)
+            })
+            /*
+             * 验证账号是否冻结  --konghuachao-2017-0508--end
+             * */
+            //return retObj;
+        }
+
+        /**
+         * 时间格式化
+         *
+         * @params time {Date} 时间对象
+         * @params format {string} 格式化字符
+         * @return {string}
+         */
+        function formattime(time, format) {
+            var t = new Date(time);
+
+            var tf = function (i) {
+                return (i < 10 ? '0' : '') + i
+            };
+
+            return format.replace(/yyyy|MM|dd|HH|mm|ss/g, function (a) {
+                switch (a) {
+                    case 'yyyy':
+                        return tf(t.getFullYear());
+                        break;
+                    case 'MM':
+                        return tf(t.getMonth() + 1);
+                        break;
+                    case 'mm':
+                        return tf(t.getMinutes());
+                        break;
+                    case 'dd':
+                        return tf(t.getDate());
+                        break;
+                    case 'HH':
+                        return tf(t.getHours());
+                        break;
+                    case 'ss':
+                        return tf(t.getSeconds());
+                        break;
+                }
+            });
+        }
+        /**
+         * query string 转换成 query object
+         *
+         * @params querystring {string} 查询字符串
+         * @return {string}
+         */
+        function getQueryObject(querystring) {
+            var ret = {},
+                    querys = querystring.split('&'), splitters;
+
+            querys.forEach(function (_query) {
+                splitters = _query.split('=');
+                splitters.length > 1 && (ret[splitters[0]] = splitters[1]);
+            });
+
+            return ret;
+        }
+
+        /**
+         * 获取url参数值
+         *
+         * @params url {string} url
+         * @params name {string} 参数名
+         * @return {string}
+         */
+        function getParam(url, name) {
+            var match = new RegExp('(^&)*' + name + '=([^&])*(&$)?', "i").exec(url),
+                    queryObj = match ? this.getQueryObject(match[0]) : {};
+
+            return queryObj[name];
+        }
+
+
+        //获取请求url参数值
+        function GetRequest() {
+            var theRequest = [];
+            var url = location.href; //获取url中"?"符后的字串
+            var re_url = (url.substring(url.indexOf("#"), url.length)).substr(2);
+            var strs = re_url.split("&");  //把获取到的字符串进行数组分割每一个"&"之后都成为一个数组赋值给strs
+            for (var i = 0; i < strs.length; i++) {     //循环数组长度
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);    //解码字符串strs[i]从中分割“=”的第一个数组赋值给theRequest变量
+            }
+            return theRequest;
+        }
+        function loginuser(data) {
+            var unionid = data.unionid;
+            var nickname = data.nickname;
+            var sexual = data.sexual;
+            var headimgurl = data.headimgurl;
+            //检索对象
+            var User = fmacloud.Object.extend("_User");
+            var query = new fmacloud.Query(User);
+            query.equalTo("username", unionid);
+            query.find({
+                success: function (user) {
+                    if (user.length > 0) {
+                        //用户存在则登陆绑定
+                        fmacloud.User.logIn(unionid, "6a063e705a16e625", {
+                            success: function (_user) {
+
+                                var jsonUser = JSON.stringify(_user.toJSON());
+
+                                if (!!jsonUser.user_nick) {
+                                    jsonUser.user_nick = jsonUser.username || "无";
+                                }
+
+                                window.location.href = location.origin + '/user';
+                            },
+                            error  : function (_user, error) {
+                                console.log(error.message);
+                            }
+                        })
+                    } else {
+                        //用户不存在则注册
+                        var user = new fmacloud.User();
+                        user.set("username", unionid);
+                        user.set("password", "6a063e705a16e625"); //me第三方登录
+                        user.set('user_nick', nickname);
+                        user.set("register_third", 4);
+                        user.set("user_pic", headimgurl);
+                        user.set("sex", sexual);
+                        user.signUp(null, {
+                            success: function (user) {
+                                //注册成功则登陆
+                                fmacloud.User.logIn(unionid, "6a063e705a16e625", {
+                                    success: function (user) {
+                                        var jsonUser = JSON.stringify(_user.toJSON());
+                                        if (!!jsonUser.user_nick) {
+                                            jsonUser.user_nick = jsonUser.username || "无";
+                                        }
+
+                                        window.location.href = location.origin + '/user';
+                                    },
+                                    error  : function (user, error) {
+                                        console.log(error.message);
+                                    }
+                                })
+                            },
+                            error  : function (user, error) {
+                                console.log(error.message);
+                            }
+                        })
+                    }
+                },
+                error  : function (error) {
+                    console.log(error.message);
+                }
+            });
+        }
+        ;
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

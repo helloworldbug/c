@@ -1,0 +1,303 @@
+/**
+ * @description 转换记录界面样式
+ * @time 2016-11-9
+ * @author fisnYu
+ */
+
+.convert-records-container{
+    width: 100%;
+    position: relative;
+    background: #fff;
+}
+.convert-records-container:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.convert-records-hint{
+    font-size: 12px;
+    color: #999;
+    margin-top: -3px !important;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+}
+.convert-records-container-left{
+    width: -webkit-calc(100% - 144px);
+    width: calc(100% - 144px);
+    position: relative;
+    padding-top: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+    float: left;
+    box-sizing: border-box;
+}
+.convert-records-container-left:after{
+    content: "";
+    height: calc(100% - 24px);
+    height: -webkit-calc(100% - 24px);
+    border-right: 1px solid #e7e7eb;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0px;
+}
+.convert-records-container-right{
+    width: 144px;
+    float: left;
+    box-sizing: border-box;
+}
+.convert-records-opration-container{
+    width: 100%;
+    text-align: right;
+    height: 48px;
+    margin-bottom: 24px;
+    position: relative;
+    box-sizing: border-box;
+    
+}
+.convert-records-opration-container:after{
+    content: "";
+    width: calc(100% + 48px);
+    width: -webkit-calc(100% + 48px);
+    border-bottom: 1px solid #e7e7eb;
+    display: block;
+    position: absolute;
+    left: -24px;
+    bottom: 0;
+
+}
+.convert-records-title{
+    width: 100%;
+    background: #f4f4f4;
+    height: 32px;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+    line-height: 32px;
+}
+.convert-records-title-name{
+    width: 28.28%;
+    text-align: left;
+    position: relative;
+    float: left;
+}
+.convert-records-title-name span{
+    /*display: inline-block;*/
+}
+
+.convert-records-title-name input{
+    margin: 0 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.text-nowrap{
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.convert-record-item-name{
+    width: -webkit-calc(100% - 100px);
+    width: calc(100% - 100px);
+    float: right;
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.convert-records-title-time, .convert-records-title-type{
+    float: left;
+    width: 22.17%;
+    
+}
+.convert-records-title-size, .convert-records-title-option{
+    float: left;
+    width: 13.69%;
+}
+
+.convert-records-title-option a{
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin: 0 7px;
+    cursor: pointer;
+}
+.convert-records-title-option .replace-cover{
+    /*pointer-events: none;*/
+    background: url('../../../../assets/images/user/repalce.png')  center no-repeat;
+}
+
+.convert-records-title-option .replace-cover:hover{
+    background: url("../../../../assets/images/user/repalce-hover.png") center no-repeat #333;
+}
+.convert-records-title-option .delete{
+    background: url('../../../../assets/images/user/delete.png')  center no-repeat;
+}
+
+.convert-records-title-option .delete:hover{
+    background: url("../../../../assets/images/user/deletehover.png") center no-repeat #333;
+}
+
+.convert-records-title-option .download{
+    background: url('../../../../assets/images/user/down.png')  center no-repeat;
+}
+.convert-records-title-option .download:hover{
+    background: url("../../../../assets/images/user/down-hover.png") center no-repeat #333;
+}
+
+.convert-records{
+    width: 100%;
+}
+.convert-records:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.convert-record-item{
+    width: 100%;
+    height: 112px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e7e7eb;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 12px;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    color: #333;
+    text-align: center;
+    line-height: 112px;
+}
+
+.convert-record-cover{
+    display: inline-block;
+    width: 62px;
+    height: 80px;
+    vertical-align: middle;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; 
+}
+.hover-preview-mask{
+    position: absolute;
+    z-index: 2;
+    display: none;
+    width: 62px;
+    height: 80px;
+    line-height: 82px;
+    text-align: center;
+    top: 18px;
+    left: 29px;
+    color: #fff;
+    background-color: rgba(0,0,0,.5); 
+    cursor: pointer;
+}
+
+.convert-record-cover:hover + .hover-preview-mask{
+    display: inline-block;
+}
+
+.hover-preview-mask:hover{
+    display: inline-block;
+}
+.convert-records-bottom{
+    width: 100%;
+    padding-top: 24px;
+    padding-right: 8px;
+}
+
+.convert-records-name{
+    float: left;
+    font-size: 14px;
+    color: #333;
+    line-height: 35px;
+}
+.convert-records-download, .convert-records-download1{
+    width: 102px;
+    height: 32px;
+    display: inline-block;
+    margin-left: 12px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 30px;
+    box-sizing: border-box;
+    border: solid 1px #ccc;
+    cursor: pointer; 
+}
+.convert-records-download{
+    color: rgb(34, 34, 34);
+}
+.convert-records-download1{
+    color: #CCC;
+}
+.convert-records-download:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+.no-records{
+    margin-top: 70px;
+    height: 100px;
+    padding-top: 148px;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    background: url('../../../../assets/images/user/11.png') top center no-repeat;
+}
+
+.convert-records-preview{
+    top: 0;
+    left: 0;
+}
+
+.buy-convert-count{
+    color: #459ae9;
+    cursor: pointer;
+}
+
+.convert-group-item{
+    width: 100%;
+    position: relative;
+    height: 32px;
+    box-sizing: border-box;
+    line-height: 32px;
+    padding: 0 12px;
+    font-size: 12px;
+    color: #333;
+    cursor: pointer;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.convert-group-item:hover{
+    background-color: rgba(102,102,102,.2); 
+}
+.group-item-selected{
+    background-color: rgba(0,0,0,.2); 
+}
+
+.group-item-bubble{
+    color: #999;
+}
+
+.group-item-delete{
+    width: 10px;
+    display: none;
+    position: absolute;
+    height: 10px;
+    background: url('../../../../assets/images/user/close_3.png') top center no-repeat;
+    right: 12px;
+    top: 11px;
+    cursor: pointer;
+}
+
+.group-item-selected .group-item-delete, .group-item-delete:hover{
+    display: inline-block;
+}
+
+.add-group-item{
+    text-indent: 16px;
+    background: url('../../../../assets/images/user/add.png')  12px center no-repeat;
+}

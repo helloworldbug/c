@@ -1,0 +1,189 @@
+/**
+  * @name 分享组件样式
+  * @author 曾文彬
+  * @datetime 2015-10-13
+*/
+
+@charset "utf-8";
+
+.preview-nav .share-navigation {
+  position: absolute;
+  width: 480px;
+  right: -480px;
+  top: 0;
+  text-align: center;
+  transition: all .5s;
+}
+
+.preview-nav .show-animation-nav .share-navigation{
+  right: 0; 
+}
+
+.preview-nav .share-ico {
+  display: block;
+  width: 60px;
+  height: 32px;
+  margin: 17px auto;
+  padding: 22px 0 0;
+}
+
+.preview-nav .share-ico:hover > .share-box {
+  display: block;
+}
+
+.preview-nav .share-box {
+  display: none;
+  line-height: 1;
+  position: relative;
+}
+
+.preview-nav .share-ico em {
+  display: inline-block;
+  color: #fff;
+  border-radius: 5px;
+  padding: 6px;
+  margin-top: 30px;
+}
+
+.preview-nav .share-ico:hover em {
+  font-size: 12px;
+  font-style: normal;
+  background-color: #333;
+}
+
+.preview-nav .share-ico .slide-up {
+  position: absolute;
+  width: 12px;
+  height: 6px;
+  left: 50%;
+  margin-left: -6px;
+  bottom: 24px;
+  background: url(../images/preview/up-slide.png) no-repeat 0 0;
+}
+
+.preview-nav .share-cqq {
+  background: url(../images/preview/qq.png) no-repeat center;
+}
+
+.preview-nav .share-cqq:hover {
+  background-image: url(../images/preview/qq-select.png);
+}
+
+.preview-nav .share-tieba {
+  background: url(../images/preview/baidu.png) no-repeat center;
+}
+
+.preview-nav .share-tieba:hover {
+  background-image: url(../images/preview/baidu-select.png);
+}
+
+.preview-nav .share-kaixin {
+  background: url(../images/preview/kaixin.png) no-repeat center;
+}
+
+.preview-nav .share-kaixin:hover {
+  background-image: url(../images/preview/kaixin-select.png);
+}
+
+.preview-nav .share-renren {
+  background: url(../images/preview/renren.png) no-repeat center;
+}
+
+.preview-nav .share-renren:hover {
+  background-image: url(../images/preview/renren-select.png);
+}
+
+.preview-nav .share-tsina {
+  background: url(../images/preview/xinlang.png) no-repeat center;
+}
+
+.preview-nav .share-tsina:hover {
+  background-image: url(../images/preview/xinlang-select.png);
+}
+
+.preview-nav .share-tqq {
+  background: url(../images/preview/tengxunweibo.png) no-repeat center;
+}
+
+.preview-nav .share-tqq:hover {
+  background-image: url(../images/preview/tengxunweibo-select.png);
+}
+
+.preview-nav .share-tqzone {
+  background: url(../images/preview/zone.png) no-repeat center;
+}
+
+.preview-nav .share-tqzone:hover {
+  background-image: url(../images/preview/zone-select.png);
+}
+
+.preview-nav .share-weixin {
+  background: url(../images/preview/weixin.png) no-repeat center;
+}
+
+.preview-nav .share-weixin:hover {
+  background-image: url(../images/preview/weixin-select.png);
+}
+
+.preview-nav .share a {
+  background-image: url(../images/preview/share.png);
+}
+
+.preview-nav .share .active {
+  background-image: url(../images/preview/share-select.png);
+}
+
+.preview-nav .collects a {
+  background-image: url(../images/preview/collect.png);
+}
+
+.preview-nav .collects .active {
+  background-image: url(../images/preview/re-collect.png);
+}
+
+.preview-nav .reports a {
+  background-image: url(../images/preview/report.png);
+}
+
+.preview-nav .reports .active {
+  background-image: url(../images/preview/re-report.png);  
+}
+
+.preview-view .wemcn {
+  display: none;
+  position: absolute;
+  top: -16px;
+  padding: 5px;
+  border-radius: 5px;
+  right: 54px;
+  width: 298px;
+  height: 130px;
+  background-color: #ccc;
+  font-size: 14px;
+  z-index: 2;
+  opacity: 1;
+/*  transition: all .5s;*/
+}
+
+.preview-view .wemcn-animation {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  padding: 0;
+}
+
+.preview-view .wemcn .ewm-img {
+  width: 120px;
+  height: 120px;
+  box-sizing: content-box;
+  padding: 5px;
+  background-color: #fff;
+}
+
+.preview-view .wemcn .ewm-text {
+  line-height: 3em;
+}
+
+.preview-view .wemcn .ewm-text p {
+  margin: 0;
+}

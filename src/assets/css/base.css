@@ -1,0 +1,15 @@
+.small-white-scroll::-webkit-scrollbar-button {
+    background-color: #ccc;
+}
+.small-white-scroll::-webkit-scrollbar {
+    width: 4px;
+    cursor: pointer;
+}
+.small-white-scroll::-webkit-scrollbar-track {
+    background-color: #ccc;
+}
+.small-white-scroll::-webkit-scrollbar-thumb {
+    background-color: #d8d8d8;
+    border-radius: 3px;
+}
+

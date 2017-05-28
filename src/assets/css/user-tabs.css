@@ -1,0 +1,660 @@
+/*UserTabs 样式*/
+.user-tabs {
+    padding-top: 16px;
+    position: relative;
+}
+.user-tabs .segment-container {
+    max-width: 100%;
+}
+.user-tabs .tab-header-bar {
+    height: 92px;
+    width: 100%;
+    position: absolute;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+.no-works {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    background-color: #f4f4f4;
+    position: absolute;
+}
+.no-works a:hover{
+    text-decoration: none
+}
+.no-works .word {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    padding-top: 230px;
+    display: inline-block;
+}
+.no-works .word a{
+    color:#336699;
+}
+.myTemplateOptions{
+    max-width:100%;
+    height:54px;
+}
+.myTemplateOptions>span{
+    width:104px;
+    height:32px;
+    line-height: 30px;
+    border: solid 1px #ccc;
+    border-right:none;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    display:inline-block;
+    cursor:pointer;
+    color:#333;
+    font-size: 14px;
+    text-align: center;
+}
+.myTemplateOptions>span.last {
+    border-right: solid 1px #ccc;
+}
+.myTemplateOptions>span.selected{
+    background-color: #3e3e3e;
+    border-color: #3e3e3e;
+    color:#fff;
+}
+
+.myTemplateOptions .view {
+    float: right;
+    padding-top: 3px;
+}
+
+.myTemplateOptions .view ul li {
+    width: 16px;
+    height: 16px;
+    margin-left: 12px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.myTemplateOptions .view ul li:nth-child(1) {
+    background: url(../images/user/view.png) center center no-repeat;
+}
+
+.myTemplateOptions .view ul li:nth-child(1).on {
+    background: url(../images/user/viewon.png) center center no-repeat;
+}
+
+.myTemplateOptions .view ul li:nth-child(2) {
+    background: url(../images/user/list.png) center center no-repeat;
+}
+
+.myTemplateOptions .view ul li:nth-child(2).on {
+    background: url(../images/user/liston.png) center center no-repeat;
+}
+
+.load-more{
+    max-width: 100%;
+    font-size: 16px;
+    color:#999;
+    background-color: #ececec;
+    height:46px;
+    text-align: center;
+    line-height: 46px;
+    cursor:pointer;
+}
+
+.load-more:hover{
+    color: #333;
+}
+
+.tabs-container>div>div{
+    margin-top: 10px;
+}
+.dataRow{
+    height:80px;
+    line-height: 80px;
+    max-width:1170px;
+    background-color: #fff;
+    padding-left:10px;
+    padding-right:70px;
+    box-sizing:border-box;
+    font-size: 14px;
+    color:#7b8da0;
+    position: relative;
+    margin-bottom: 1px;
+    box-shadow: 0px 2px 1px 0px rgba(136,156,176,.1);
+}
+.dataRow.pointer{
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+.tabs-container>div>div:nth-child(1){
+    margin-top:0px;
+}
+.dataRow .dataImgSpan{
+    height:50px;
+    display:inline-block;
+    vertical-align:middle;
+    overflow: hidden;
+}
+.dataRow .dataImgSpan img{
+    width:50px;
+    height:50px;
+    object-fit: cover;
+    position: relative;
+    margin-right:40px;
+}
+.dataRow .dataTextSpan{
+/*    width:570px;
+    display:inline-block;*/
+    position: absolute;
+    left:110px;
+}
+.dataRow .dataReadCountSpan{
+    background: url(../images/user/read.png) center no-repeat;
+    background-position:1px; 
+    padding-left:23px;
+    font-size: 12px;
+    position: absolute;
+    left:932px;
+}
+.dataRow .creatData{
+    position: absolute;
+    right:70px;
+    font-size: 12px;
+}
+.createArrow{
+    width:10px;
+    height:10px;
+    position: absolute;
+    right:24px;
+    top:37px;
+    background: url(../images/user/arrow.png) center no-repeat;
+    cursor: pointer;
+}
+.dataframe.beHide{
+    height:0px;
+}
+.dataframe{
+    height: auto;
+    overflow: hidden;
+    transition:all 2s ease-in-out;
+    -moz-transition:all 2s ease-in-out;
+    -webkit-transition:all 2s ease-in-out;
+    -o-transition:all 2s ease-in-out; 
+}
+.template-card-grid{
+    width:100%!important;
+}
+.chartselect>select{
+    background-color: #fff;
+}
+
+@keyframes loading-boll-rotate {
+    0% {
+        -webkit-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1); }
+
+    50% {
+        -webkit-transform: rotate(180deg) scale(0.6);
+        transform: rotate(180deg) scale(0.9); }
+
+    100% {
+        -webkit-transform: rotate(360deg) scale(1);
+        transform: rotate(360deg) scale(1); }
+}
+
+
+/*new user end*/
+ 
+/*media*/
+@media screen and (min-width: 1500px){
+    .dataRow .dataReadCountSpan{
+        position: absolute;
+        left:920px;
+    }
+} 
+@media screen and (min-width: 1279px) and (max-width: 1500px){
+        .dataRow .dataReadCountSpan{
+        left:638px;
+        position: absolute;
+    }
+} 
+
+@media screen and (min-width: 960px) and ( max-width: 1279px){
+    .dataRow .dataReadCountSpan{
+        left:445px;
+        position: absolute;
+    }
+}
+
+/* add by gli-cq-gonglong 2017-04-20 内容仓库 Start */
+.gli-warehouse .title, .gli-mycontent .title {
+    border-bottom: solid 3px #e7e7e7;
+}
+
+.gli-warehouse .content, .gli-mycontent .content{
+    padding-top: 30px;
+    background-color: #fff;
+}
+
+.gli-warehouse .content .setting-item, .gli-mycontent  .content .setting-item{
+
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 10px auto;
+}
+
+.gli-warehouse .content .setting-item .item-name, .gli-mycontent .content .setting-item .item-name {
+    float: left;
+    width: 260px;
+    text-align: right;
+    line-height: 50px;
+}
+
+.gli-warehouse .content .setting-item .item-context, .gli-mycontent .content .setting-item .item-context {
+    float: left;
+    padding-left: 30px;
+    text-align: left;
+    line-height: 50px;
+}
+
+ .gli-mycontent .content .setting-item .item-context img {
+     width: 100px;
+     height: 150px;
+ }
+
+.gli-warehouse .content .setting-item .item-context input[type='radio'], .gli-mycontent .content .setting-item .item-context input[type='radio'] {
+    margin-right: 50px;
+}
+
+.gli-warehouse .content .setting-item label[for], .gli-mycontent .content .setting-item label[for] {
+    cursor:pointer;
+}
+
+.gli-warehouse .comm-btn {
+    width: 96px;
+    height: 30px;
+    line-height: 28px !important;
+    text-align: center;
+    border: solid 1px #d0d0d0;
+    cursor: pointer;
+    font: 14px "Microsoft YaHei";
+    box-sizing: border-box;
+    background: #fff;
+    outline: none;
+    transition: none !important;
+    color: #333;
+    margin: 15px 0 0 12px;
+}
+
+.gli-warehouse .comm-btn:hover,
+.gli-warehouse .tbl-list .body .sm-btn:hover {
+    background: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+.gli-warehouse .tbl-list {
+    position:relative;
+    border: 1px solid #7D7D7D;
+    box-sizing: border-box;
+}
+
+.gli-warehouse .tbl-list .head {
+    color: #fff;
+    background-color: #7D7D7D;
+    height: 40px;
+    line-height:40px;
+}
+
+.gli-warehouse .tbl-list .head .item{
+    float:left;
+    width: 20%;
+    display:block;
+    text-align:center;
+    font-size:bold;
+    border-right: 1px solid #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.gli-warehouse .tbl-list .head .item:last-child{
+    border-right: none;
+}
+
+.gli-warehouse .tbl-list .body .warn-txt{
+    color: red;
+}
+
+.gli-warehouse .tbl-list .body .sm-btn{
+    display:inline-block;
+    margin-left: 10px;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    text-align:center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    
+    cursor: pointer;
+    font: 14px "Microsoft YaHei";
+    box-sizing: border-box;
+    background: #fff;
+    outline: none;
+    transition: none !important;
+    color: #333;
+}
+
+.gli-warehouse .tbl-list .body .row-data{
+    border-bottom: 1px solid #7D7D7D;
+    height: 35px;
+}
+
+.gli-warehouse .tbl-list .body .row-data:hover{
+    background-color: #dddddd;
+}
+
+.gli-warehouse .tbl-list .body .row-data:last-child{
+    border-bottom: none;
+}
+
+.gli-warehouse .tbl-list .body .item{
+    float:left;
+    width: 20%;
+    height: 35px;
+    line-height: 35px;
+    display:block;
+    text-align:center;
+    border-right: 1px solid #7D7D7D;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.gli-warehouse .tbl-list .body .item:last-child{
+    border-right: none;
+}
+
+.gli-warehouse .process-bar {
+    position:relative;
+    margin:0 auto;;
+    width: 100%;
+    height: 30px;
+    text-align:center;
+    background-color: #dddddd;
+}
+
+.gli-warehouse .process-bar .process-txt{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+}
+
+.gli-warehouse .process-bar .process-done{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 50%;
+    height:30px;
+    line-height:30px;
+    background-color: #FF9800;
+}
+
+/* add by gli-cq-gonglong 2017-04-20 内容仓库 End */
+
+/* add by gli-cq-gonglong 2017-04-24 我的内容/合成作品 Start */
+
+.gli-mycontent .title{
+  
+}
+
+.gli-mycontent .title .input-txt {
+    margin-left: 30px;
+    margin-right: 10px;
+    width: 200px;
+    height: 30px;
+}
+
+
+.gli-mycontent .content .oparate-bar {
+    position:relative;
+    height: 50px;
+    width: 100%;
+    box-sizing:border-box;
+    
+}
+
+.gli-mycontent .content .oparate-bar .btn-groups {
+    position:relative;
+    float:left;
+    width: 250px;
+    height:50px;
+    
+    padding-top:15px;
+    box-sizing: border-box;
+}
+
+.gli-mycontent .content .oparate-bar .select-pagesize {
+    position:relative;
+    float:left;
+    width: 200px;
+    height:40px;
+    margin-left:20px;
+    padding-top:15px;
+}
+
+.gli-mycontent .content .oparate-bar .paging-plug{
+    position:relative;
+    float:right;
+    min-width:200px;
+    height:45px;
+    padding-top: 10px;
+    box-sizing:border-box;
+}
+
+
+
+
+.gli-mycontent .comm-btn {
+    min-width: 50px;
+    min-height: 30px;
+    line-height: 28px !important;
+    text-align: center;
+    border: solid 1px #d0d0d0;
+    cursor: pointer;
+    font: 14px "Microsoft YaHei";
+    box-sizing: border-box;
+    background: #fff;
+    outline: none;
+    transition: none !important;
+    color: #333;
+    margin: 15px 0 0 12px;
+}
+
+.gli-mycontent .comm-btn:hover{
+    background: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+.gli-mycontent .btn-size-50x30 {
+    width: 50px;
+    height: 30px;
+}
+
+.gli-mycontent .btn-size-100x30 {
+    width: 100px;
+    height: 30px;
+}
+
+.gli-mycontent .sm-btn{
+    display:inline-block;
+    margin-right: 10px;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    text-align:center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    
+    cursor: pointer;
+    font: 14px "Microsoft YaHei";
+    box-sizing: border-box;
+    background: #fff;
+    outline: none;
+    transition: none !important;
+    color: #FF5722;
+}
+
+.gli-mycontent .sm-btn:hover{
+    background: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+.gli-mycontent .sm-txt-btn{
+    display:inline-block;
+    margin-right: 10px;
+    
+    height: 25px;
+    line-height: 25px;
+    text-align:center;
+    border-radius: 5px;
+    
+    cursor: pointer;
+    font: 14px "Microsoft YaHei";
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    transition: none !important;
+    color: #FF5722;
+    text-decoration: underline;
+}
+
+.gli-mycontent .comm-tbl {
+    position:relative;
+    border: 1px solid #7D7D7D;
+    box-sizing: border-box;
+    clear:both;
+}
+
+.gli-mycontent .comm-tbl .head {
+    color: #fff;
+    background-color: #7D7D7D;
+    height: 40px;
+    line-height:40px;
+    overflow:hidden;
+}
+
+.gli-mycontent .comm-tbl .head .item {
+    float:left;
+    width: 10%;
+    min-width:20px;
+    height:40px;
+    display:block;
+    text-align:center;
+    font-size:bold;
+    border-right: 1px solid #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.gli-mycontent .comm-tbl .head .item:last-child{
+    border-right: none;
+}
+
+.gli-mycontent .comm-tbl .body .row-data {
+    border-bottom: 1px solid #7D7D7D;
+    height: 35px;
+}
+
+.gli-mycontent .comm-tbl .body .row-data:last-child {
+    border-bottom:none;
+}
+
+.gli-mycontent .comm-tbl .body .row-data:hover {
+    background-color: #dddddd;
+}
+
+.gli-mycontent .comm-tbl .body .row-data .item {
+    float:left;
+    min-width:20px;
+    height: 35px;
+    line-height: 35px;
+    display:block;
+    text-align:center;
+    border-right: 1px solid #7D7D7D;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.gli-mycontent .comm-tbl .body .row-data .item:last-child{
+    border-right:none;
+}
+
+.gli-mycontent .comm-tbl .body .row-data .item input[type='checkbox'] {
+    width: 16px;
+    height:16px;
+    cursor: pointer;
+}
+
+.gli-mycontent .comm-tbl .icon {
+    position:relative;
+    float:left;
+    width: 15px;
+    height:20px;
+    margin-right:8px;
+    
+}
+
+.gli-mycontent .comm-tbl .icon:hover {
+    width: 15px;
+    height:21px;
+}
+
+.gli-mycontent .comm-tbl .icon-up {
+  
+    background: url(../images/user/up.png) center no-repeat;
+    cursor: pointer;
+}
+
+.gli-mycontent .comm-tbl .icon-down {
+  
+    background: url(../images/user/dm.png) center no-repeat;
+    cursor: pointer;
+}
+
+.gli-mycontent .comm-tbl .icon-del {
+
+    background: url(../images/user/delete.png) center no-repeat;
+    cursor: pointer;
+}
+
+
+
+/* pagination-翻页 */
+.gli-paging a {
+    position: relative;
+    float: left;
+    margin: 2px;
+    text-decoration: blink;
+    border: 1px solid #7D7D7D;
+    color: #7D7D7D;
+    padding: 5px 10px;
+    box-sizing: border-box;
+
+}
+
+.gli-paging a:hover{
+    background-color: #b0afaf;
+    color:#fff;
+}
+
+.gli-paging a.active{
+    background-color: #7D7D7D;
+    color:#fff;
+}
+
+/* add by gli-cq-gonglong 2017-04-24 我的内容/合成作品 End */

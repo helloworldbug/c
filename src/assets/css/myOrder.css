@@ -1,0 +1,242 @@
+.myOrderView{
+    margin-top:  -16px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.myOrderView .title-div{
+    height: 80px;
+    line-height: 80px;
+    padding: 0 24px;
+    border-bottom: 1px solid #e7e7eb;
+    box-sizing: border-box;
+}
+
+.myOrderView .title-div span{
+    width: 104px;
+    height: 32px;
+    font-size: 12px;
+    color: #999;
+    border: 1px solid #e7e7eb;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 32px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.myOrderView .title-div .selected{
+    color: #ffffff;
+    background-color: #333333;
+}
+
+.myOrderView .menu-title-div{
+    margin: 24px;
+    margin-bottom: 0px;
+    height: 32px;
+    font-size: 12px;
+    color: #333333;
+    background-color: #f4f4f4;
+    line-height: 32px;
+    text-align: center;
+}
+
+.myOrderView .menu-title-div .menu-title-date{
+    width: 16.96%;
+    float: left;
+    text-align: left;
+}
+
+.myOrderView .menu-title-div .menu-title-select .rc-select-selection{
+    background-color: rgba(0,0,0,0);
+    border: 0px;
+    width: 94px;
+}
+
+.myOrderView .menu-title-div .menu-title-select .rc-select-selection >div{
+    margin-left: 24px;
+}
+
+.myOrderView .menu-title-div .menu-title-detail{
+    width: 22.17%;
+    float: left;
+}
+
+.myOrderView .menu-title-div .menu-title-total{
+    width: 19.9%;
+    float: left;
+}
+
+.myOrderView .menu-title-div .menu-title-status{
+    width: 19.9%;
+    float: left;
+}
+
+.myOrderView .menu-title-div .menu-title-operate{
+    width: 21.07%;
+    float: left;
+}
+
+.myOrderView .my-order-list{
+    margin: 0 24px;
+}
+
+.myOrderView .my-order-list .my-order-item{
+    margin-top: 16px;
+    border-bottom: 1px solid #e7e7eb;
+}
+
+.my-order-item .order-item-title{
+    height: 32px;
+    font-size: 12px;
+    color: #333333;
+    background-color: #f4f4f4;
+    line-height: 32px;
+    padding: 0 24px;
+}
+
+.my-order-item .order-item-title-name{
+    margin-left: 40px;
+    border-left: 1px solid #e7e7eb;
+    border-right: 1px solid #e7e7eb;
+}
+
+.my-order-item .my-order-item-content{
+    border-left: 1px solid #e7e7eb;
+    border-right: 1px solid #e7e7eb;
+    box-sizing: border-box;
+    position: relative;
+    font-size:12px;
+    color: #333333;
+    line-height: 18px;
+}
+
+.my-order-item .my-order-item-content .my-order-item-head-list{
+    width: 39.13%;
+    float: left;
+    border-right: 1px solid #e7e7eb;
+    box-sizing: border-box;
+}
+
+.my-order-item .my-order-item-content .order-header-item{
+    padding: 16px 24px;
+    border-bottom: 1px solid #e7e7eb;
+    box-sizing: border-box;
+}
+
+.my-order-item .my-order-item-content .order-header-item:last-child{
+    border-bottom: 0;
+}
+
+
+.my-order-item .my-order-item-content .order-header-item .order-header-icon{
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.my-order-item .my-order-item-content .order-header-item .order-header-desc{
+    width: calc(100% - 152px);
+    vertical-align: middle;
+    margin-left: 12px;
+    display: inline-block;
+    word-break: break-all;
+}
+
+.my-order-item .my-order-item-content .order-header-item .order-header-count{
+    width: 48px;
+    vertical-align: middle;
+    margin-left: 12px;
+    display: inline-block;
+}
+
+.my-order-item .my-order-item-content .order-item-price{
+    width: 19.9%;
+    left: 39.13%;
+    text-align: center;
+    line-height: 112px;
+    border-right: 1px solid #e7e7eb;
+    box-sizing: border-box;
+    position: absolute;
+    height: 100%;
+}
+
+.my-order-item .my-order-item-content .order-item-status{
+    width: 19.9%;
+    left: 59.03%;
+    text-align: center;
+    line-height: 112px;
+    border-right: 1px solid #e7e7eb;
+    box-sizing: border-box;
+    position: absolute;
+    height: 100%;
+}
+
+.my-order-item .my-order-item-content .order-item-btn-buy{
+    width: 21.07%;
+    right: 0;
+    text-align: center;
+    line-height: 112px;
+    position: absolute;
+    height: 100%;
+}
+
+.my-order-item .my-order-item-content .order-item-btn-buy .btn-buy-again,.my-order-item .my-order-item-content .order-item-btn-buy .btn-buy{
+    width: 104px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 32px;
+    border: 1px solid #e7e7eb;
+    cursor: pointer;
+}
+.my-order-item .my-order-item-content .order-item-btn-buy .btn-buy-again:hover,.my-order-item .my-order-item-content .order-item-btn-buy .btn-buy:hover{
+background-color:#333;
+color: #fff;
+}
+
+.my-order-item .my-order-item-content .order-item-btn-buy .btn-cancel-div{
+    display: block;
+    height: 112px;
+    line-height: 64px;
+}
+
+.my-order-item .my-order-item-content .order-item-btn-buy .btn-buy-cancel {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 104px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.my-order-item .my-order-item-content .order-item-btn-buy .btn-cancel-div .btn-buy-cancel {
+    display: block;
+    width: 104px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+
+.my-order-page-div{
+    margin-top: 32px !important;
+    margin-bottom: 32px !important;
+    margin-right: 24px;
+    float: right;
+}
+
+.no-order-list{
+    width: 100%;
+    height: 280px;
+    margin: 0;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+}

@@ -1,0 +1,27 @@
+FROM registry.gli.space:5000/mepc_node:latest
+
+WORKDIR /mepc
+ADD . .
+
+RUN chmod +x ./scripts/*.sh
+
+RUN ./scripts/update_submodule.sh
+
+RUN sed -e "s/npm/cnpm/g" -i ./display_engine/scripts/build.sh
+RUN sed -e "s/npm/cnpm/g" ./scripts/build.sh > ./scripts/entrypoint.sh
+RUN chmod +x ./scripts/entrypoint.sh
+
+RUN cd ./display_engine && cnpm install
+RUN cnpm install
+RUN ./display_engine/scripts/build.sh
+
+RUN rm -rf ./.npm
+RUN npm cache clean
+
+# ENTRYPOINT ./scripts/entrypoint.sh
+
+# CMD ["serve"]
+
+VOLUME ["/mepc/dist"]
+
+EXPOSE 8080

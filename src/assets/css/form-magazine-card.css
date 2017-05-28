@@ -1,0 +1,130 @@
+/*FormMagazineCard 样式*/
+.form-magazine-card {
+    float: left;
+    margin-left: 30px;
+    margin-right: 24px;
+    margin-bottom: 17px;
+    width: 270px;
+    height: 559px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 3px 7px 2px rgba(4, 0, 0, .2);
+}
+
+.form-magazine-card .card-image, .form-magazine-card .card-image img {
+    display: block;
+    width: 100%;
+    height: 425px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-magazine-card .avatar, .form-magazine-card .info {
+    display: inline-block;
+}
+
+.form-magazine-card .avatar {
+    position: relative;
+    z-index: 10;
+    left: 10px;
+    top: -10px;
+}
+
+.form-magazine-card .info {
+    position: relative;
+    top: -24px;
+    left: 24px;
+}
+
+.form-magazine-card .info .author {
+    color: #0064B8;
+    font-size: 16px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.form-magazine-card .info .date {
+    font-size: 14px;
+}
+
+.form-magazine-card .avatar img {
+    object-fit: cover;
+    display: inline-block;
+    padding: 3px;
+    width: 62px;
+    height: 62px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+
+.form-magazine-card .card-content {
+    position: relative;
+}
+
+.form-magazine-card .magazine-qr-code {
+    width: 32px;
+    height: 32px;
+    background: url(../images/main/code_mini.png) center/32px 32px no-repeat;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.form-magazine-card .card-divider {
+    height: 1px;
+    width: 87%;
+    margin: 0 10px 15px;
+    background-color: #D5D5D5;
+}
+
+.form-magazine-card .card-action {
+    padding: 0 10px;
+}
+
+.form-magazine-card .card-action .name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.form-magazine-card .card-action .statistics {
+    margin-top: 10px;
+}
+
+.form-magazine-card .card-action .number {
+    float: left;
+}
+
+.form-magazine-card .card-action .data-count {
+    float: right;
+    text-align: center;
+    font-size: 15px;
+    width: 80px;
+    padding: 6px;
+    cursor: pointer;
+    margin-top: -8px;
+}
+
+.form-magazine-card .qr-code-image {
+    width: 100%;
+    height: 425px;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.form-magazine-card .qr-code-image.active {
+    display: block;
+}
+
+.form-magazine-card .qr-code-image canvas {
+    padding: 15px;
+    background: #fff;
+    margin-top: 80px;
+}

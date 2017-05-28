@@ -1,0 +1,219 @@
+/*UserMagazineCard 样式*/
+.user-magazine-card {
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 17px;
+    width: 270px;
+    height: 559px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 3px 7px 2px rgba(4, 0, 0, .2);
+}
+
+.user-magazine-card:nth-child(4n+1) {
+    margin-left: 0;
+}
+
+.user-magazine-card .card-image, .user-magazine-card .card-image img {
+    display: block;
+    width: 100%;
+    height: 425px;
+    position: relative;
+    overflow: hidden;
+}
+
+.user-magazine-card .avatar, .user-magazine-card .info {
+    display: inline-block;
+}
+
+.user-magazine-card .avatar {
+    position: relative;
+    z-index: 10;
+    left: 12px;
+    top: -12px;
+    overflow: hidden;
+}
+
+.user-magazine-card .info {
+    position: relative;
+    top: -20px;
+    left: 24px;
+}
+
+.user-magazine-card .info .author {
+    color: #0064B8;
+    font-size: 16px;
+    margin-top: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user-magazine-card .info .date {
+    font-size: 14px;
+}
+
+.user-magazine-card .avatar img {
+    object-fit: cover;
+    display: inline-block;
+    padding: 3px;
+    width: 62px;
+    height: 62px;
+    background-color: #fff;
+    border-radius: 100%;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.user-magazine-card .card-content {
+    position: relative;
+    height: 56px;
+}
+
+.user-magazine-card .magazine-qr-code {
+    width: 32px;
+    height: 32px;
+    background: url(../images/main/code_mini.png) center/32px 32px no-repeat;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.user-magazine-card .card-divider {
+    height: 1px;
+    width: 87%;
+    margin: 0 10px 10px;
+    background-color: #eee;
+}
+
+.user-magazine-card .card-action {
+    padding: 0 10px;
+}
+
+.user-magazine-card .card-action .name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.user-magazine-card .card-action .statistics {
+    margin-top: 10px;
+}
+
+.user-magazine-card .card-action .number {
+    float: left;
+}
+
+.user-magazine-card .card-action .data-count {
+    float: right;
+    text-align: center;
+    font-size: 15px;
+    width: 80px;
+    padding: 6px;
+    border: 1px solid;
+    cursor: pointer;
+    margin-top: -8px;
+}
+
+.user-magazine-card .card-action .data-count a {
+    color: inherit;
+}
+
+.user-magazine-card .card-action .data-count:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.user-magazine-card .qr-code-image {
+    width: 100%;
+    height: 425px;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.user-magazine-card .qr-code-image.active {
+    display: block;
+}
+
+.user-magazine-card .qr-code-image canvas {
+    padding: 15px;
+    background: #fff;
+    margin-top: 80px;
+}
+
+/*CardHeadBar 样式*/
+.card-head-bar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 40px;
+    background-color: rgba(255, 255, 255, .8);
+    transition: all .4s ease-in-out;
+    margin-top: -40px;
+}
+
+.card-head-bar:hover {
+    margin-top: 0;
+}
+
+.user-magazine-card .card-image:hover + .card-head-bar {
+    margin-top: 0;
+}
+
+.card-head-bar .edit {
+    margin-top: 5px;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 16px;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    background: url(../images/user/edit.png) center no-repeat;
+    transition: all .2s ease-in-out;
+}
+
+.card-head-bar .edit:hover {
+    background: url(../images/user/edithover.png) center no-repeat #333;
+}
+
+.card-head-bar .create {
+    color: #333;
+    font-size: 14px;
+    letter-spacing: +1.4px;
+    margin: 5px auto;
+    display: block;
+    width: 105px;
+    text-align: center;
+    line-height: 29px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.card-head-bar .create:hover {
+    color: #fff;
+    background-color: #333;
+}
+
+.card-head-bar .delete {
+    margin-top: 5px;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    right: 16px;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    background: url(../images/user/delete.png) center no-repeat;
+    transition: all .2s ease-in-out;
+}
+
+.card-head-bar .delete:hover {
+    background: url(../images/user/deletehover.png) center no-repeat #333;
+}
+

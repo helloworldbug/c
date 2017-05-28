@@ -1,0 +1,161 @@
+.appeal #header{
+	background-color:#27282b; 
+	position:relative;
+}
+
+.appeal.extra-top{
+	padding-top: 54px;
+}
+.appeal #footer{
+	position: fixed;
+	bottom:0;
+	width: 100%;
+}
+.appeal #logo{
+	position: relative;
+}
+.appeal .content-wrapper{
+	margin-top:40px; 
+	padding-bottom: 32px;
+	margin-bottom: 100px;
+	background-color: #fff;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+}
+.appeal #logo::after,.appeal #logo::before{
+	display: block;
+	position: absolute;
+	font-size: 16px;
+	color: #fff;
+	font-family: 'Microsoft YaHei';
+}
+.appeal #logo::before{
+	content:".";
+	top: 11px;
+    right: -10px;
+}
+.appeal #logo::after{
+	content:"申诉";
+	top: 16px;
+    right: -47px;
+}
+.appeal form{
+	overflow: hidden;
+	width: 570px;
+	margin: 0 auto;
+}
+.appeal form h1,.appeal form h2,.appeal-success h1{
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+.appeal form h1,.appeal-success h1{
+	text-align: center;
+	font-size: 18px;
+	margin:32px 0;
+}
+.appeal form .input-line{
+	margin-top: 24px;
+	position: relative;
+}
+.appeal form legend{
+	margin-top: 28px;
+}
+.appeal form .input-line label{
+	color: #999;
+	height: 32px;
+    line-height: 32px;
+}
+.appeal form .input-line input[disabled]{
+	color: #999;
+}
+.appeal form .input-line input,.appeal form textarea,.appeal form .input-line select{
+	border:1px solid #e7e7eb;
+	padding-left: 5px;
+	box-sizing: border-box;
+}
+.appeal form .input-line input,.appeal form .input-line select{
+	height: 32px;
+	float:right;
+	width: 462px;
+}
+.appeal form textarea{
+	resize: none;
+	margin-top: 12px;
+	width: 570px;
+	height: 150px;
+	margin-bottom: 20px;
+}
+.appeal form .tips{
+	color:#d65645;
+}
+.appeal form button{
+	background-color: #1abc9c;
+	color: #fff;
+	width: 96px;
+	height: 32px;
+	border: none;
+	float:right;
+}
+.appeal form button.disabled{
+	background-color: #ccc;
+}
+.appeal form .input-line .tips{
+	position: absolute;
+	margin-top: 4px;
+	left: 103px;
+	font-size:12px; 
+}
+.appeal form .reason{
+	position: relative;
+}
+.appeal form .reason .tips{
+	position: absolute;
+	bottom: 0px;
+	font-size:12px; 
+}
+.appeal-success .content-wrapper{
+	background-color: transparent;
+	box-shadow: 	none;
+}
+.appeal-success .content-wrapper h1{
+	margin: 46px 0;
+	font-size: 20px;
+}
+.appeal-success .content-wrapper .text{
+	border-radius: 4px;
+	width: 290px;
+	height: 466px;
+	background-color: #fff;
+	margin: 0 auto;
+	position: relative;
+}
+.appeal-success .content-wrapper  .tips{
+	padding-top: 200px;
+	text-align: center;
+	color: #999;
+}
+.appeal-success .content-wrapper  .text .icon{
+	position: absolute;
+	display: block;
+	width: 88px;
+	height: 88px;
+	top: 88px;
+	left:102px;
+}
+.appeal-success .content-wrapper  .text .success{
+	background: url('../images/success.png')
+}
+.appeal-success .content-wrapper  .text .expired{
+	background: url('../images/404/delete-icon.png')
+}
+.appeal-success .content-wrapper .other-work{
+	position: absolute;
+	bottom: 22px;
+	width: 100%;
+	text-align: center;
+	color: #459ae9;
+
+}
+.appeal-success .content-wrapper .other-work a{
+	color: #459ae9;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>book-preview</title>
+		<link rel="stylesheet" href="../../assets/css/reader/readerAll.css" />
+	</head>
+	<style>
+		html,body{
+		 height:100%;
+		}
+		.reader-box{
+			width:710px;
+			height:100%;
+			padding-left: 0px;
+			border-left:1px solid #e7e7eb; 
+			box-sizing: border-box;
+		}
+	</style>
+	<body>
+		<div id="reader-wrap" class="reader-box"></div>
+	</body>
+	<script type="text/javascript" charset="utf-8" src="/vendor/underscore/underscore-min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/vendor/matchjax/MathJax.js?config=MML_SVG"></script>
+    <script type="text/javascript" charset="utf-8" src="/vendor/reader/reader.dev.js"></script>
+	<script>
+		function getPar(par) {
+			//获取当前URL
+			var local_url = document.location.href;
+			//获取要取得的get参数位置
+			var get = local_url.indexOf(par + "=");
+			if (get == -1) {
+				return false;
+			}
+			//截取字符串
+			var get_par = local_url.slice(par.length + get + 1);
+			//判断截取后的字符串是否还有其他get参数
+			var nextPar = get_par.indexOf("&");
+			if (nextPar != -1) {
+				get_par = get_par.slice(0, nextPar);
+			}
+			return get_par;
+		}
+		var id=getPar("id");
+		var userId = getPar("userId");
+		var server = getPar("server");
+		var readerPC = new Reader({
+			// 阅读器 DOM节点 
+			domWrapId: "#reader-wrap",
+			hostUrl: server + "/v1/transfer/readonline",
+			// 可选, 比如: 未登录状态-试读  
+			user_id: userId,
+			// 必选 ，书籍id
+			book_id: id,
+			/* *** *** *** */
+			// 绑定事件,  true:手机/pad(默认), false: PC;
+			isMobile: false,
+			// 阅读器布局类型: PC, PAD, MOBILE
+			clientType: "PC",
+			// true: APP, 小精灵客户端(默认); false: 网页浏览器;
+			isClient: false,
+			/* *** *** *** */
+			// true: 开启版权保护(默认); false: 关闭版权保护
+			usePublish: false,
+			//  {Number} 定义页面格式, 1: 一页版; 2: 两页版; 
+			pageColumn: 2,
+			// 重要. true: 不分页,直接读取 epub源文件; false: 需要分页计算(默认).
+			useEpubFile: false,
+			// 是否使用书签 true:默认使用
+			useBookmark: false,
+			// 是否使用笔记 true:默认使用
+			useNote: false,
+			/**
+			 * custom_nav_menus 为自定义导航栏。最多增加两个。
+			 * 
+			 * 考虑iphone5及其以下尺寸手机时,显示文字（text）不要超过两个字（在4寸手机以下，显示不下）
+			 */
+			// custom_nav_menus: [{ // 自定义导航菜单，显示在目录、笔记、书签，之后
+			//     text: "自定义", // 显示文字
+			//     name: "custom", // 自定义书签名称
+			//     prompt: "自定义111111", // 无自定义内容时显示
+			//     cbFunc: function(bodyObj) { // 点击自定义书签后就执行
+					
+			//         var dataVal = new Date().getTime();
+			//         console.info("%c 自定义111导航的函数被点击了->" + dataVal, "color:white;background:black;");
+			//         bodyObj.html(dataVal);
+			//     },
+			// }
+			// ],
+			
+			probotionCb: function(){
+				console.log("DEMO-->试读结束!");
+			},
+			
+			exitReaderCb:function(){
+				console.log("DEMO-->退出阅读器!");
+			},
+			getDisableChaptCb:function(){
+				console.log("DEMO-->无权限 点击章节阅读!");
+			},
+			
+			// 分享笔记--参数配置.
+			note_share_conf : {
+				"flag" : true,
+				"share_items" : [{
+						// 微信好友
+						"type" : "wx",
+						//  开关(是否使用该分享). false: 关闭(默认); true: 打开,此时必须注册回调函数!
+						"flag" : true,
+						// 回调函数--分享逻辑
+						"share_cb" : function(data){
+							// 包括: book_id, chapter_id, note_txt
+							console.log("微信好友 AAA--> 回调函数!");
+							console.log(data);
+						}
+					}, {
+						// 微信朋友圈
+						"type" : "wx_moments",
+						"flag" : false,
+						"share_cb" : null
+					}, {
+						// 新浪微博
+						"type" : "sina_weibo",
+						"flag" : true,
+						"share_cb" : function(data){
+							console.log("新浪微博--> 回调函数!");
+						}
+					}, {
+						// qq好友
+						"type" : "qq",
+						"flag" : true,
+						"share_cb" : null
+					}, {
+						// qq空间
+						"type" : "qq_zone",
+						"flag" : false,
+						"share_cb" : null
+					}
+				]
+			}
+		});
+	</script>
+</html>

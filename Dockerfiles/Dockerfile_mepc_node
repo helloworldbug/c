@@ -1,0 +1,12 @@
+FROM node:4.4
+
+RUN npm install -g cnpm 
+RUN cnpm install -g grunt grunt-cli gulp
+
+RUN echo root:User1234 | chpasswd
+RUN useradd -ms /bin/bash -G root,sudo user
+RUN echo user:User1234 | chpasswd
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+RUN apt-get update && apt-get upgrade --assume-yes
+RUN apt-get install -y git curl python python-all-dev

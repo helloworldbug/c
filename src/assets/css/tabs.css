@@ -1,0 +1,28 @@
+ .react-tabs.tabs-h40 [role=tablist]{
+       background-color: rgb(211, 212, 214);
+        border-bottom:none;
+        margin:0;
+        padding-top: 4px;
+}
+.react-tabs.tabs-h40 [role=tab]{
+    width:100px;
+    font-size: 14px;
+    text-align: center;
+    border-radius:0;
+    border: none;
+    bottom:-1px;
+    box-sizing: border-box;
+    height: 36px;
+}
+.react-tabs.tabs-h40 [role="tab"][aria-selected="true"]{
+   background-color: #f4f4f4;
+}
+.react-tabs.tabs-h32 [role=tab]{
+    width:62px;
+    text-align: center;
+    border-radius:0;
+    border: none;
+    bottom:-1px;
+    box-sizing: border-box;
+    height: 30px;
+}

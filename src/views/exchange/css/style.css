@@ -1,0 +1,691 @@
+
+/**
+  * @name 新书兑换模板样式
+  * @author yangjian
+  * @datetime 2016-09-19
+*/
+
+*{ padding: 0; margin: 0; }
+body { font-family: "Microsoft YaHei"; background: #fff;}
+
+.clearfix {
+    display: block;
+}
+
+.clearfix:after {
+    display: block;
+    content: "\0020";
+    clear: both;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+input,
+textarea,
+select,
+button {
+    outline: none;
+    font-family: "Microsoft YaHei";
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+/** v3.0 **/
+#header {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    height: 54px;
+    background-color: rgb(30, 30, 30);
+    /*box-shadow:0px 2px 3px rgba(39,39,43, .5);*/
+}
+
+#header .contain {
+    width: 1408px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#logo {
+    padding: 10px 0 9px;
+}
+
+.header-ri {
+    width: 30%;
+    height: 34px;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+#nav {
+    height: 34px;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    margin-left: -194px;
+    overflow: hidden;
+}
+
+#nav ul li {
+    position: relative;
+    height: 34px;
+    list-style: none;
+    text-align: center;
+    margin: 0 12px;
+    display: inline-block;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+#nav ul li a {
+    display: block;
+    padding: 0 8px;
+    line-height: 34px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#nav ul li .nav-line {
+    width: 72px;
+    height: 2px;
+    position: absolute;
+    left: -90px;
+    bottom: 0;
+    background: #5f686e;
+    transition: left .3s ease-in-out;
+    /*opacity: 0;*/
+}
+
+#nav ul li:hover .nav-line {
+    left: 0 !important;
+}
+
+.top-sign {
+    height: 34px;
+    line-height: 34px;
+    color: #fff;
+}
+
+.top-sign span {
+    padding: 0 14px;
+}
+
+.top-sign a {
+    color: #fff;
+}
+
+.top-sign a:hover {
+    text-decoration: none;
+}
+
+.end-sign {
+    width: 34px;
+    height: 34px;
+    margin-right: 10px;
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+}
+
+.end-sign img.face {
+    border-radius: 17px;
+    object-fit: cover;
+}
+
+.end-sign .point {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background: #f33;
+}
+
+.end-sign .sign-down {
+    position: absolute;
+    right: -4px;
+    z-index: 11;
+    top: 22px;
+    width: 110px;
+    /*opacity: 0;*/
+    height: 0px;
+    overflow: hidden;
+    transition: height .25s ease-out;
+}
+
+.end-sign:hover .sign-down {
+    opacity: 1;
+    height: 124px;
+}
+
+/*.end-sign .sign-down:after {
+    position: absolute;
+    content: "\0020";
+    border-left: 0;
+    top: 17px;
+    right: 20px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #27272B;
+}*/
+
+.top-bg {
+    height: 22px;
+}
+
+.sign-down-lists {
+    /*border-radius: 3px;*/
+}
+
+.bg_black .sign-down-lists {
+    background: rgb(30, 30, 30);
+}
+
+.sign-down-lists ul li {
+    list-style: none;
+    height: 34px;
+    line-height: 34px;
+    background: rgba(30, 30, 30, 1);
+}
+
+.sign-down-lists ul li a {
+    display: block;
+    outline: none;
+    font-size: 12px;
+    color: #999;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    padding-left: 35px;
+
+}
+
+.sign-down-lists ul li:nth-child(1) a{
+    background: url(../images/user.png) 12px center no-repeat;
+}
+
+.sign-down-lists ul li:nth-child(2) a{
+    background: url(../images/invite_icon.png) 12px center no-repeat;
+}
+
+
+.sign-down-lists ul li:nth-child(3) a{
+    background: url(../images/back.png) 12px center no-repeat;
+}
+
+.sign-down-lists ul li a:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.sign-down-lists ul li:nth-child(1) a:hover{
+    background-image: url(../images/user_hover.png);
+
+}
+
+.sign-down-lists ul li:nth-child(2) a:hover{
+    background-image: url(../images/invite_icon_hover.png);
+}
+
+.sign-down-lists ul li:nth-child(3) a:hover{
+    background-image: url(../images/back_hover.png);
+}
+
+
+/*.sign-down-lists ul li:nth-child(1) a:hover {
+   border-top-left-radius: 3px;
+   border-top-right-radius: 3px;
+}
+
+.sign-down-lists ul li:nth-child(3) a:hover {
+   border-bottom-left-radius: 3px;
+   border-bottom-right-radius: 3px;
+}*/
+
+.bg_black {
+    background-color: #1e1e1e !important;
+    box-shadow: none !important
+}
+
+.search {
+    position: absolute;
+    right: 64px;
+    top: 13px;
+}
+
+.search input {
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    box-sizing: border-box;
+    border: 0px;
+    background-color: #333;
+    border-radius: 14.5px;
+    padding-left: 10px;
+    color: #ccc;
+    font-size: 12px;
+    transition: all .5s ease-in-out;
+    padding-right: 30px;
+}
+
+.searchOpen input {
+    width: 160px;
+    background-color: white;
+    color: #333;
+}
+
+.searchOpen input::-webkit-input-placeholder { /* WebKit browsers */
+    color: #333 !important;
+}
+
+.searchOpen input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #333 !important;;
+}
+
+.searchOpen input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #333 !important;;
+}
+
+.searchOpen input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #333 !important;;
+}
+
+.searchOpen .searchIcon {
+    background: url(../images/searchTopBlack.png) no-repeat;
+}
+
+.searchIcon {
+    width: 16px;
+    height: 16px;
+    background: url(../images/searchTopWhite.png) no-repeat;
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.hid {
+    display: none;
+}
+
+.searchOpacity {
+    opacity: 1;
+}
+
+
+.exchange-activity {
+
+}
+
+.exchange-activity .banner {
+    height: 670px;
+    background-image: url(../images/banner.jpg);
+    background-position: top center;
+    background-size: cover;
+}
+
+.exchange-activity .banner .center {
+    width: 1170px;
+    margin: 0 auto;
+    padding-top: 332px;
+}
+
+.exchange-activity .banner .center p {
+    margin: 0;
+}
+
+.exchange-activity .banner a.buy {
+    width:226px;
+    height: 56px;
+    line-height: 56px;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    border-radius: 28px;
+    display: inline-block;
+    background-color: rgba(248, 48, 48, 1);
+    position: relative;
+    bottom:20px;
+}
+
+.exchange-activity .banner a.buy:hover {
+    background-color: rgba(248, 48, 48, 0.8);
+}
+
+.exchange-activity .banner h3 {
+    /*padding-top: 28px;*/
+    margin: 0;
+    line-height: 48px;
+    font-size: 24px;
+    color: #333;
+    font-weight: normal;
+}
+
+.exchange-activity .banner h3 span {
+    font-size: 40px;
+    color: #ef9c00;
+}
+
+.exchange-activity .banner p.time {
+    line-height: 48px;
+    font-size: 18px;
+    color: #666;
+}
+
+.exchange-activity .main {
+    height: 530px;
+    background-color: #fff;
+}
+
+.exchange-activity .main .center {
+    width: 1290px;
+    padding-right: 120px;
+    margin: 0 auto;
+}
+
+.exchange-activity .main .form {
+    width: 514px;
+    position: relative;
+}
+
+.exchange-activity .main .pic {
+    width: 701px;
+    height: 452px;
+    background: url(../images/model.png);
+}
+
+.exchange-activity .main .form h3 {
+    font-size: 24px;
+    line-height: 24px;
+    padding-bottom: 40px;
+    color: #333;
+    font-weight: normal;
+    margin: 0;
+    margin-top: 110px;
+}
+
+.exchange-activity .main input.txt {
+    width: 514px;
+    height:58px;
+    line-height: 40px;
+    font-size: 40px;
+    color: #333;
+    padding: 8px;
+    border: solid 1px #ccc;
+    box-sizing: border-box;
+    ime-mode:disabled;
+}
+
+.exchange-activity .main input.btn {
+    width:226px;
+    height: 56px;
+    line-height: 54px;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    border-radius: 28px;
+    display: inline-block;
+    background-color: rgba(248, 48, 48, 1);
+    border: none;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.exchange-activity .main .err-tips {
+    position: absolute;
+    left: 0;
+    top:238px;
+    height: 24px;
+    line-height:24px;
+    font-size: 12px;
+    color: #f83030;
+}
+
+
+.exchange-activity .main input.btn:hover {
+    background-color: rgba(248, 48, 48, 0.8);
+}
+
+
+.exchange-activity .foot {
+    padding-top: 40px;
+    height: 404px;
+    background-color: #f2f2f2;
+    font-size: 18px;
+    color: #666;
+    line-height: 32px;
+}
+
+.exchange-activity .foot .contain {
+    width: 954px;
+    margin: 0 auto;
+}
+
+.exchange-activity .foot p, .exchange-activity .foot h3{
+    margin: 9px 0;
+}
+
+.exchange-activity .foot h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    font-weight: normal;
+    margin-bottom: 24px;
+}
+
+#footer {
+    padding: 16px 0;
+    background: #333;
+}
+
+.footer {
+    width: 1408px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 30px;
+    color: #fff;
+    position: relative;
+}
+
+#footer .nav {
+    height: 30px;
+}
+
+#footer a{
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    font-size: 13px;
+    color: #fff;
+}
+
+#footer .footer-info {
+    line-height: 30px;
+}
+
+#footer p {
+    margin: 0;
+}
+
+#footer .copyright {
+    text-align: center;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+#footer .footer .fr {
+    text-align: right;
+}
+
+#footer .footer i {
+    font-style: normal;
+    padding: 0 8px;
+}
+
+
+.shade {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    background: #000;
+    opacity: .5;
+}
+
+.dialog {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    z-index: 9999;
+    transform: translateY(-50%);
+}
+.dialog{
+    width:336px!important;
+    margin-left:-156px!important;
+    border-radius: 0px!important;
+}
+
+.dialog[data-animation="ed"] {
+    animation-name: flipInX-X;
+    animation-duration: .3s;
+}
+
+.dialog .dialog-inner .dialog-header,
+.dialog .dialog-inner .dialog-body {
+    padding: 0 32px;
+    box-sizing: border-box;
+}
+
+.dialog .dialog-inner .dialog-header {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    line-height: 20px;
+    font-size: 16px;
+    border-bottom: 1px solid #cfcfcf;
+    color: #000;
+    text-align: center;
+    letter-spacing: 1.8px;
+}
+
+.dialog .dialog-inner .dialog-body {
+    height: 64px!important;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.dialog .dialog-btn {
+    display: block;
+    display: inline-block;
+    width: 108px;
+    height:32px;
+    line-height: 32px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #333;
+}
+
+.dialog .dialog-btn[data-hidebtn="ed"] {
+    display: none;
+}
+
+.dialog .dialog-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.dialog-white-skin {
+    background: #fff;
+}
+.dialog-body.clearfix{
+    height:64px;
+}
+
+#makeSmallTips {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+#makeSmallTips .message {
+    padding: 14px 38px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(30, 30, 30, .9);
+    color: #fff;
+    font-size: 14px;
+}
+
+/*media*/
+@media screen and (min-width: 1280px) and (max-width: 1500px) {
+    .exchange-activity .banner {
+        height: 640px;
+    }
+
+    .exchange-activity .main .center {
+        width: 1250px;
+        padding-right: 100px;
+    }
+
+    #header .contain {
+        width: 1170px;
+    }
+
+    #footer .footer{
+        width: 1170px;
+    }
+}
+
+@media screen and ( max-width: 1279px) {
+
+    #header .contain {
+        width: 932px;
+    }
+
+    .exchange-activity .banner {
+        height: 446px;
+    }
+
+    .exchange-activity .banner .center {
+        padding-top: 220px;
+    }
+
+    .exchange-activity .banner h3 {
+        padding-top: 18px;
+        line-height: 42px;
+    }
+
+    #footer .footer{
+        width: 932px;
+    }
+
+}

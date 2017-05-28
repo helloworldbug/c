@@ -1,0 +1,429 @@
+/**推送消息管理**/
+.weixinManager{
+    margin-top: -16px;
+    background-color: #ffffff;
+}
+
+.weixinManagerTitleDiv{
+    width: 100%;
+    height: 80px;
+    font-size: 14px;
+    color: #333333;
+    border-bottom: 1px solid #e7e7eb;
+}
+
+.weixinManagerTitle{
+    padding-left: 24px;
+    height: 100%;
+    line-height: 80px;
+    float: left;
+}
+
+.btnNewMessage{
+    width: 102px;
+    height: 32px;
+    font-size: 12px;
+    border: solid 1px #ccc;
+    margin-right: 24px;
+    margin-top: 24px;
+    line-height: 30px;
+    text-align: center;
+    cursor :pointer;
+    float: right;
+}
+
+.btnNewMessage:hover{
+    background-color:#3e3e3e;
+    border-color : #3e3e3e;
+    color: #ffffff;
+}
+
+.weixinManagerOption{
+    margin-top: 24px !important;
+    padding-left: 24px;
+    float: left;
+}
+
+.weixinManagerOption>span{
+    width: 104px;
+    height: 32px;
+    line-height: 30px;
+    border: solid 1px #ccc;
+    border-right:none;
+    display:inline-block;
+    cursor:pointer;
+    color: #333333;
+    font-size: 14px;
+    text-align:center;
+}
+
+.weixinManagerOption>span.selected{
+    background-color: #3e3e3e;
+    border-color: #3e3e3e;
+    color: #ffffff;
+}
+
+.weixinManagerOption>span:last-child {
+    border-right: solid 1px #ccc;
+}
+
+.weixinViewOption{
+    margin-top: 32px !important;
+    margin-right: 24px;
+    float: right;
+}
+
+.weixinViewOption>span{
+    width: 16px;
+    height: 16px;
+    display:inline-block;
+    cursor:pointer;
+}
+
+.weixinBtnView{
+    margin-right: 12px;
+    background: url("../images/user/view.png")
+}
+
+.weixinBtnView.selected {
+    background: url("../images/user/viewon.png")
+}
+
+.weixinBtnList{
+    background: url("../images/user/list.png")
+}
+
+.weixinBtnList.selected {
+    background: url("../images/user/liston.png")
+}
+
+.weixinMsgContent{
+    padding-top: 16px;
+    padding-left: 24px;
+    clear: both;
+}
+
+
+.weixinListMenu{
+    height: 28px;
+}
+
+.weixinListMenu>span{
+    height: 28px;
+    font-size: 12px;
+    line-height: 28px;
+    color: #4c607a;
+    display: inline-block;
+    border-right: 1px solid #CCCCCC;
+    box-sizing: border-box;
+}
+
+.weixinListMenu>span:last-child{
+    border-right: 0px;
+}
+
+.weixinMenuName{
+    width: 250px;
+}
+
+.weixinMenuCreate{
+    padding-left: 10px;
+    width: 134px;
+}
+
+.weixinMenuPushTime{
+    padding-left: 10px;
+    width: 134px;
+}
+
+.weixinMenuPlatform{
+    padding-left: 10px;
+}
+
+.msgListItem{
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 12px 0;
+    font-size: 12px;
+}
+.msgListItemImage{
+    width: 36px;
+    height: 24px;
+    display: inline-block;
+}
+
+.msgListItemTitle{
+    margin-left: 12px;
+    width: 202px;
+    height: 24px;
+    line-height: 24px;
+    color: #333;
+    display: inline-block;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    -webkit-text-overflow:ellipsis;
+    -moz-text-overflow:ellipsis;
+}
+
+.msgListItemCreate{
+    color: #999;
+    width: 124px;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 10px;
+    display: inline-block;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    -webkit-text-overflow:ellipsis;
+    -moz-text-overflow:ellipsis;
+}
+
+.msgListItemPush{
+    color: #999;
+    width: 124px;
+    padding-left: 10px;
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    -webkit-text-overflow:ellipsis;
+    -moz-text-overflow:ellipsis;
+}
+
+.msgListItemPlatform{
+    padding-left: 10px;
+    height: 20px;
+    display: inline-block;
+}
+
+.msgListItem-btns{
+    float: right;
+}
+
+.msgListItem-btns>div{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    cursor: pointer;
+    /*border-radius: 3px;*/
+    margin-left: 12px;
+}
+
+.msgListItem-btnDel{
+    margin-right: 24px;
+}
+
+.msgViewItem{
+    width: 212px;
+    display: inline-block;
+    font-size: 12px;
+    margin-right: 12px;
+    margin-bottom: 24px;
+    float: left;
+}
+
+.msgViewItem-div{
+    height: 194px;
+    padding: 12px;
+    border: 1px solid rgba(4, 0, 0, .2);
+    position: relative;
+}
+
+.msgViewItem-image-div{
+    width: 188px;
+    height: 120px;
+}
+
+.msgViewItem-image{
+    width: 100%;
+    height: 100%;
+}
+
+.msgViewItem-image-div:hover .msgViewItem-code-image, .msgViewItem-code-image:hover{
+    display: block;
+}
+
+.msgViewItem-code-image{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 188px;
+    height: 120px;
+    text-align:center;
+    background-color: rgba(0, 0, 0, .8);
+    cursor: pointer;
+    display: none;
+}
+
+.msgViewItem-code-image canvas{
+    width: 78px;
+    height: 78px;
+    margin: 9px auto;
+    padding: 12px;
+    background-color: #ffffff;
+}
+
+.msgViewItem-name{
+    width: 100%;
+    height: 20px;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #333333;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    -webkit-text-overflow:ellipsis;
+    -moz-text-overflow:ellipsis;
+    white-space:nowrap;
+
+}
+
+.msgViewItem-btns{
+    margin-top: 20px;
+}
+
+.msgViewItem-btns>div{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    cursor: pointer;
+    /*border-radius: 3px;*/
+}
+
+.msgViewItem-btnShare{
+    margin-right: 8px;
+}
+
+.msgViewItem-btnShare, .msgListItem-btnShare{
+    background: url("../images/user/msg_send.png") no-repeat center;
+}
+
+.msgViewItem-btnShare:hover, .msgListItem-btnShare:hover{
+    background: url("../images/user/msg_send_over.png") no-repeat center;
+    background-color: #333333;
+}
+
+.msgViewItem-btnEdit, .msgListItem-btnEdit{
+    background: url("../images/user/edit.png") no-repeat center;
+}
+
+.msgViewItem-btnEdit:hover, .msgListItem-btnEdit:hover{
+    background: url("../images/user/edithover.png") no-repeat center;
+    background-color: #333333;
+}
+
+.msgViewItem-btnRestore, .msgListItem-btnRestore{
+    background: url("../images/user/restore.png") no-repeat center;
+}
+
+.msgViewItem-btnRestore:hover, .msgListItem-btnRestore:hover{
+    background: url("../images/user/restore-hover.png") no-repeat center;
+    background-color: #333333;
+}
+
+.msgViewItem-btnDel, .msgListItem-btnDel{
+    background: url("../images/user/delete.png") no-repeat center;
+    float: right;
+}
+
+.msgViewItem-btnDel:hover, .msgListItem-btnDel:hover{
+    background: url("../images/user/deletehover.png") no-repeat center;
+    background-color: #333333;
+}
+
+.msgViewItem-share-div{
+    margin-top: 12px;
+    padding: 0 12px;
+    height: 16px;
+}
+
+.msgViewItem-share-title{
+    margin-right: 12px;
+    float: left;
+    font-size: 12px;
+    color: #999999;
+}
+
+/**已发送的平台**/
+.msgPlatformItem{
+    margin-right: 12px;
+    height: 16px;
+    float: left;
+}
+
+.msgPlatform_weixin{
+    width: 16px;
+    height: 16px;
+    background: url("../images/user/weixin_small.png") no-repeat center;
+    float: left;
+}
+
+.msgPlatform_weibo{
+    width: 16px;
+    height: 16px;
+    background: url("../images/user/weibo_small.png") no-repeat center;
+    float: left;
+}
+
+.msgPlatformNum{
+    font-size: 12px;
+    color: #999999;
+    height: 16px;
+    float: left;
+    padding: 0 4px;
+}
+
+.wxNoWorks{
+    font-size: 16px;
+    text-align:center;
+    width: calc( 100% - 20px );
+    padding: 230px 0;
+    display: inline-block;
+}
+
+.wxNoWorks a{
+    color: #336699;
+}
+
+
+@media screen and (min-width:1501px){
+    .msgViewItem:nth-child(5n) {
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width:1280px) and ( max-width: 1500px) {
+    .msgViewItem:nth-child(4n) {
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 960px) and ( max-width: 1279px) {
+    .msgViewItem:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    .weixinMenuName{
+        width: 150px;
+    }
+
+    .msgListItemTitle{
+        width: 102px;
+    }
+
+    .weixinMenuCreate, .weixinMenuPushTime{
+        width: 120px;
+    }
+
+    .msgListItemCreate, .msgListItemPush{
+        width: 110px;
+    }
+}

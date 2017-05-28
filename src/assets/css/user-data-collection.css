@@ -1,0 +1,396 @@
+/**
+  * @name 用户资料收集样式
+  * @author 杨建
+  * @datetime 2016-7-25
+*/
+.dc-work-info {
+    padding: 20px;
+    height: 60px;
+    background-color: #fff;
+    border-bottom: solid 1px #e7e7e7;
+}
+
+.dc-work-info dl {
+    margin: 0;
+}
+
+.dc-work-info dl dt {
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
+.dc-work-info dl dd {
+    padding: 6px 0;
+    padding-left: 20px;
+    float: left;
+    margin: 0;
+}
+
+.dc-work-info dl dd p {
+    margin: 0;
+    line-height: 24px;
+}
+
+.dc-work-info dl dd p.title {
+    font-size: 14px;
+    color: #333;
+}
+
+.dc-work-info dl dd p.time {
+    font-size: 12px;
+    color: #9eb0c3;
+}
+
+.dc-work-info .fr {
+    font-size: 12px;
+    color: #333;
+    line-height: 24px;
+    padding: 18px 0;
+}
+
+.dc-work-info .fr span {
+    color: #9eb0c3;
+    padding-right: 12px;
+}
+
+.dc-work-info .fr span:last-child {
+    color: #333;
+}
+
+.work-data {
+    position: relative;
+    background-color: #fff;
+    padding: 24px 20px;
+    padding-bottom: 48px;
+}
+
+.work-data .title {
+    position: relative;
+    color: #9eb0c3;
+    font-size: 12px;
+    height: 24px;
+}
+
+.work-data .title .title-pv , .work-data .title .title-nums, .work-data .title  .title-label {
+    height: 24px;
+    background-color: #fafafa;
+}
+
+.work-data .title-pv {
+    float: left;
+    width: 172px;
+}
+
+.work-data .title-pv ul li {
+    float: left;
+    width: 50%;
+    line-height:24px;
+    text-align: center;
+    position: relative;
+}
+
+.work-data .title .title-pv ul li {
+    background: url(../images/user/line.png) right center no-repeat;
+}
+
+.work-data .title .title-pv ul li:last-child {
+    background: none;
+}
+
+.work-data .title .title-pv ul li i {
+    cursor: pointer;
+    display: block;
+    font-style: normal;
+    text-align: right;
+    padding-right: 30px;
+    width: 56px;
+    background: url(../images/user/arrow-down.png) 62px 9px no-repeat;
+}
+
+.work-data .title .title-pv ul li ul {
+    width: 86px;
+    position: absolute;
+    left: 0;
+    top: 24px;
+}
+
+.work-data .title .title-pv ul li ul, .work-data .title .title-label ul li ul {
+    border: solid 1px #e7e7e7;
+    box-sizing: border-box;
+    z-index: 99;
+}
+
+.work-data .title .title-pv ul li ul li, .work-data .title .title-label ul li ul li {
+    background: #fff;
+    width:84px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.work-data .title .title-pv ul li ul li:hover, .work-data .title .title-label ul li ul li:hover {
+    background: #e6e7ec;
+}
+
+.work-data .title .title-pv ul li ul li.on, .work-data .title .title-label ul li ul li.on {
+    background: #1E90FF;
+    color: #FFF;
+}
+
+.work-data .title .title-nums ul li ul {
+    display: none;
+    width: 86px;
+    position: absolute;
+    left: 0;
+    top: 24px;
+}
+
+.work-data .title .title-nums ul li:hover ul {
+    display: block;
+}
+
+.work-data .title-nums ul li ul li {
+    background: #e7e7e7;
+    width:86px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.work-data .title-nums ul li ul li:hover {
+    background: #1E90FF;
+    color: #FFF;
+}
+
+.work-data .title-nums {
+    float: right;
+    width: 255px;
+}
+
+.work-data .title-nums ul li {
+    width: 33.3%;
+    text-align: center;
+    float: left;
+    line-height:24px;
+    background-image: url(../images/user/line.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.work-data .title .title-nums ul li:last-child {
+    background-image: none;
+}
+
+.work-data .title-label {
+    position: absolute;
+    left: 50%;
+    margin-left: -126px;
+    top: 0;
+    width: 240px;
+}
+
+.work-data .title-label span.up, .work-data .title-label span.down , .work-data .title-label span.flat {
+    display: inline-block;
+    padding: 0 18px;
+}
+
+.work-data .title-label span.up {
+    background: url(../images/user/up.png) right 5px no-repeat;
+}
+
+.work-data .title-label span.down {
+    background: url(../images/user/dm.png) right 5px no-repeat;
+}
+
+.work-data .title-label span.flat {
+    /*background: url(../images/user/flat.png) right 5px no-repeat;*/
+}
+
+.work-data .title .title-label ul li {
+    width: 50%;
+    line-height:24px;
+    text-align: center;
+    display: block;
+    background: url(../images/user/line.png) left center no-repeat;
+    float: left;
+}
+
+.work-data .title .title-label ul li:first-child {
+    background-image: none;
+}
+
+.work-data .title .title-label ul li i {
+    cursor: pointer;
+    display: block;
+    font-style: normal;
+    float: left;
+    text-align: center;
+    padding: 0 20px;
+    width: 120px;
+    box-sizing: border-box;
+    background: url(../images/user/arrow-down.png) 98px 9px no-repeat;
+}
+
+
+.work-data .title .title-label ul li ul {
+    width: 120px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 24px;
+}
+
+.work-data .title .title-label ul li ul li {
+    width:118px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.work-data .data {
+    position: relative;
+    margin-top: 10px;
+    height: auto;
+    overflow: hidden;
+}
+
+.work-data .data ul li {
+    font-size: 14px;
+    color: #333;
+}
+
+.work-data .data .title-label ul li {
+    width: 50%;
+    line-height:24px;
+    text-align: center;
+    float: left;
+}
+
+.work-data .data .title-nums ul li {
+    background-image: none;
+}
+
+.show-data {
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    bottom: 0;
+    width: 100px;
+    height: 24px;
+}
+
+.show-data a {
+    color: #9eb0c3;
+    font-size: 12px;
+    width: 120px;
+    padding-left: 16px;
+    box-sizing: border-box;
+    height: 24px;
+    line-height: 24px;
+    display: block;
+    background-color: #fafafa;
+    background-position: 93px center;
+    background-repeat: no-repeat;
+}
+
+.show-data a.open {
+    background-image: url(../images/user/x.png);
+}
+.show-data a.expand {
+        color: #fff;
+        background-color: #1abc9c;
+    background-image: url(../images/user/expand-data.png);
+}
+
+.show-data a.close {
+    background-image: url(../images/user/s.png);
+}
+
+.data-table {
+    padding: 16px 20px;
+    padding-right: 24px;
+    background: #fafafa;
+}
+
+.userdata-select {
+    height: 24px;
+    line-height: 24px;
+    border: none;
+}
+
+.select-pv {
+    width: 86px;
+}
+
+.select-type {
+    width: 120px;
+}
+
+.userdata-select .rc-select-selection {
+    height: 24px;
+    line-height: 24px;
+    border: none;
+    border-radius: 0;
+    background: none;
+}
+
+.userdata-select .rc-select-selection--single , .userdata-select .rc-select-arrow{
+    height: 24px;
+}
+
+.userdata-select .rc-select-selection--single .rc-select-selection__rendered {
+    border:none;
+    height:  24px;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.userdata-select .rc-select-selection--single .rc-select-selection-selected-value {
+    width: 100%;
+    line-height: 20px;
+    text-align: center;
+    color: #9eb0c3;
+}
+
+li.rc-select-dropdown-menu-item {
+    text-align: center;
+    color: #9eb0c3;
+}
+
+li.rc-select-dropdown-menu-item-selected {
+    color: #fff !important;
+    background-color: #1E90FF !important;
+}
+
+li.rc-select-dropdown-menu-item-active {
+    background-color: #e6e7ec;
+    color: #9eb0c3;
+    cursor: pointer;
+}
+
+.rc-select-focused .rc-select-selection, .rc-select-enabled .rc-select-selection:hover {
+    box-shadow: none;
+}
+
+.userdata-select .rc-select-arrow b {
+    width: 8px;
+    height: 5px;
+    border: none;
+    background: url(../images/user/arrow-down.png) no-repeat;
+    margin-top: -4px;
+    margin-left: -8px;
+}
+
+.type-select-down {
+    width: 120px !important;
+}
+
+@media screen and (min-width: 960px) and ( max-width: 1279px) {
+
+    .work-data .title .title-label, .work-data .data .title-label {
+        margin-left: -168px;
+    }
+
+}

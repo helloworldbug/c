@@ -1,0 +1,179 @@
+/**
+  * @name       helper.css
+  * @author     misterY
+  * @datetime   2015-10-28
+  * @descript   帮助中心式样
+*/
+
+#helper {
+    max-width: 1408px;
+    margin: auto;
+    position: relative;
+}
+
+#helper li, #helper p {
+    line-height: 24px;
+    margin: 9px 0px;
+}
+
+#helper .slideHeader {
+    height: initial;
+    line-height: 2.2em;
+    background-color: rgb(76, 94, 112);
+    height: 70px;
+    padding-top: 10px;
+}
+
+.slideHeader {
+    background-color: rgb(76, 94, 112) !important;
+    cursor: default !important;
+}
+
+.slideHeader:hover {
+    background-color: rgb(76, 94, 112) !important;
+}
+
+#helper .slideHeader:not(nth-child(1)
+
+)
+:hover {
+    background-color: rgb(30, 30, 30);
+}
+
+#helper div > span {
+    padding-left: 0px;
+}
+
+#helper .selected0 > div:nth-child(2),
+#helper .selected1 > div:nth-child(3),
+#helper .selected2 > div:nth-child(4),
+#helper .selected3 > div:nth-child(5),
+#helper .selected4 > div:nth-child(6),
+#helper .selected5 > div:nth-child(7) {
+    color: #fff;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.helperBox {
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.helper_content {
+    width: 1168px;
+    position: relative;
+    top: 81px;
+    margin-left: 238px;
+}
+
+.helperBoxTitle {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    text-indent: 20px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.helperBoxTitleBtn {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 24px;
+    top: 28px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/helper/down.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.helperBoxTitleBtn.active {
+    background-image: url("../images/helper/up.png");
+}
+
+.helperBoxContent {
+    border-top: 1px solid #ccc;
+    padding: 30px 36px 10px;
+    color: #333;
+    font-size: 14px;
+}
+
+.helperBoxContent > *:nth-child(1) {
+    margin-top: 0px;
+}
+
+#helperBoxContent iframe {
+    border: 0px;
+}
+
+#helperBoxContent iframe::-webkit-scrollbar {
+    width: 2px;
+    cursor: pointer;
+}
+
+/* 这是针对缺省样式 (必须的) */
+
+#helperBoxContent iframe::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+/* 滚动条的滑轨背景颜色 */
+
+#helperBoxContent iframe:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#helperBoxContent iframe::-webkit-scrollbar-thumb {
+    background-color: #fff;
+}
+
+/* 滑块颜色 */
+
+#helperBoxContent iframe::-webkit-scrollbar-button {
+    background-color: #fff;
+}
+
+/* 滑轨两头的监听按钮颜色 */
+
+#helperBoxContent iframe::-webkit-scrollbar-corner {
+    background-color: #28292a;
+}
+
+/* 横向滚动条和纵向滚动条相交处尖角的颜色 */
+@media screen and (max-width: 1500px) {
+    #helper {
+        max-width: 1170px;
+    }
+
+    .helper_content {
+        max-width: 930px;
+    }
+}
+
+/*@media screen and (min-width: 960px) and ( max-width: 1279px){
+    #helper{
+    max-width: 1170px;
+  }
+}*/
+
+#userSlide > div {
+    height: 60px;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 60px;
+    padding-left: 22px;
+    cursor: pointer;
+}
+
+.slideHeader {
+    background-color: #4c5e70 !important;
+    cursor: default !important;
+}
+
+#helper div > span {
+    padding-left: 0;
+}

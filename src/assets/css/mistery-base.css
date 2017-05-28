@@ -1,0 +1,66 @@
+/**
+  * @name       mistery-base.css
+  * @author     misterY
+  * @datetime   2015-10-19
+  * @descript   我的基式样
+*/
+
+.clear_l{
+    clear: left;
+}
+.clear_r{
+    clear: right;
+}
+.clear{
+    clear: both;
+}
+
+.f_l{
+    float:left;
+}
+
+.radius{
+    box-sizing: border-box;
+    border-radius: 25.5px;
+    border: 2px solid rgba(0,0,0,.5);
+}
+.radius_h{
+    border-radius: 50%;
+}
+
+.bg{
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.tc{
+    text-align: center;
+}
+.fixed{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+.p_ab{
+    position: absolute;
+    width:100%;
+}
+.p_re{
+    position: relative;
+    width:100%;
+    height:100%;
+}
+
+.c_pointer{
+    cursor: pointer;
+}
+.nav{
+    margin: auto;
+}
+.nav ul{
+    width: 100%;
+} 
+.nav ul li{
+    float: left;
+}
+

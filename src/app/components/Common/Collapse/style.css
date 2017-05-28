@@ -1,0 +1,44 @@
+.me-collapse {
+  background-color: #f4f4f4;
+  border-radius: 3px;
+}
+.me-collapse-anim-active {
+  transition: height 0.2s ease-out;
+}
+.me-collapse > .me-collapse-item {
+  border-top: 1px solid #f4f4f4;
+}
+
+.me-collapse > .me-collapse-item > .me-collapse-header {
+ width: 100%;
+ height: 32px;
+ font-size: 14px;
+ text-align: left;
+ background-color: #fff;
+  color: #666;
+  cursor: pointer;
+  
+}
+.me-collapse > .me-collapse-item > .me-collapse-header .arrow {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background: url(./arrow-packup.png) no-repeat center;
+  transition: transform .24s ease;
+}
+.me-collapse-content {
+  overflow: hidden;
+  background-color: #f4f4f4;
+}
+.me-collapse-content-inactive {
+  display: none;
+}
+.me-collapse-item:last-child > .me-collapse-content {
+  border-radius: 0 0 3px 3px;
+}
+.me-collapse > .me-collapse-item-active > .me-collapse-header .arrow {
+     transform: rotate(90deg);
+}

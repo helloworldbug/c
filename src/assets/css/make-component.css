@@ -1,0 +1,117 @@
+.make-component{
+    width: 244px;
+    height: 100%;
+    position: relative;
+    background-color: #f4f4f4;
+    z-index: 2;
+}
+
+.make-component-tab{
+    width: 100%;
+    height: 36px;
+    background-color: #d3d4d6;
+}
+
+.make-component-tab > span{
+    width: 50%;
+    height: 100%;
+    line-height: 36px;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.make-component-tab > span.active{
+    background-color: #f4f4f4;
+}
+
+.make-component-list{
+    width: 196px;
+    padding: 0 24px;
+}
+
+.make-component-list > div.list-item{
+    width: 86px;
+    height: 110px;
+    margin-top: 24px;
+    display: inline-block;
+    margin-right: 24px;
+    text-align: center;
+
+}
+
+.make-component-list > div:nth-child(2n){
+    margin-right : 0px;
+}
+
+.make-component-list > div.list-item > div{
+    width: 86px;
+    height: 86px;
+    cursor: pointer;
+}
+
+.make-component-list > div.list-item > span{
+    margin-top: 12px;
+    font-size: 12px;
+}
+
+.make-component-list > div.list-item .tumo{
+    background: url("../images/make/component/tumo.png") no-repeat center;
+}
+
+.make-component-list > div.list-item .zhiwen{
+    background: url("../images/make/component/zhiwen.png") no-repeat center;
+}
+
+.make-component-list > div.list-item .ditu{
+    background: url("../images/make/component/ditu.png") no-repeat center;
+}
+
+.make-component-list > div.list-item .yaoyiyao{
+    background: url("../images/make/component/yaoyiyao.png") no-repeat center;
+}
+
+.make-component-list > div.list-item .yijianbohao{
+    background: url("../images/make/component/yijianbohao.png") no-repeat center;
+}
+
+.make-component-list > div.list-item .biaoqian{
+    background: url("../images/make/component/biaoqian.png") no-repeat center;
+}
+
+.make-component-list > div.list-item .fuceng{
+    background: url("../images/make/component/fuceng.png") no-repeat center;
+}
+
+.make-component-list > div.list-item .tuji{
+    background: url("../images/make/component/tuji.png") no-repeat center;
+}
+
+.make-component-list > div.list-item .dashang{
+    background: url("../images/make/component/dashang.png") no-repeat center;
+}
+
+.make-component-list > div.list-item .toupiao{
+    background: url("../images/make/component/toupiao.png") no-repeat center;
+}
+
+.make-component-list > div.list-item .hongbao{
+    background: url("../images/make/component/hongbao.png") no-repeat center;
+}
+
+.make-component-list > div.list-item .svg{
+    background: url("../images/make/component/svg.png") no-repeat center;
+}
+
+.make-component-list > div.list-item .panorama{
+    background: url("../images/make/component/panorama.png") no-repeat center;
+}
+
+.make-component-list > div.list-item .ar{
+    background: url("../images/make/component/ar.png") no-repeat center;
+}
+
+.make-component-list > div.list-item .vr{
+    background: url("../images/make/component/vr.png") no-repeat center;
+}

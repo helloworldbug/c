@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>ME | 人人都是自媒体</title>
+    <meta name="application-name" content="ME-PC" />
+    <meta name="keywords" content="Me,移动新媒体,H5新媒体,H5自媒体,微出版,移动营销工具,H5广告,me,HTML5,H5场景,H5创作工具, H5工具,H5设计,H5电子杂志,移动海报,动态海报,电子贺卡"
+    />
+    <meta name="description" content="ME(agoodme)是传媒领域最有范儿HTML5创作平台，同时也是最新潮的新媒体门户。用户可通过PC和移动端进行商业营销，产品介绍，艺术创作微杂志，并分享到微信朋友圈、QQ空间、微博等社会化媒体平台。"
+    />
+    <meta property="qc:admins" content="3453345054617774556375" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        window.version = {
+            mebook: "v4.3.4.3",
+            metpl: "1.0.1"
+        }
+        window.fmawr = "0"
+        __REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__
+
+    </script>
+    <!--所有向后端数据库的接口-->
+    <script src="/vendor/fmacapi/fmacapi.interface.min.js"></script>
+
+    <!--<script src="app/utils/fmacapi.interface.min.js"></script>-->
+    <script>
+        if (window.fmawr != "0") {
+            console.log = function () {
+            }
+        }
+        /**
+         * 获取用户模板
+         * user_id
+         */
+        function getUserTpls(user_id, cb_ok, cb_err) {
+
+            if (!user_id) {
+                cb_err("user_id参数为空！");
+                return;
+            }
+            var queryTpl = new AV.Query("user_tpl");
+            queryTpl.equalTo("user_id", user_id);
+            queryTpl.find({
+                success: function (objs) {
+                    if (objs) {
+                        var ids = "";
+                        for (var i = 0; i < objs.length; i++) {
+                            ids += "'" + objs[i].get("tpl_id") + "',";
+                        }
+                        if (ids.length > 0) {
+                            ids = ids.substring(0, ids.length - 1);
+                            //查询模板表
+                            var strCQL = " select * from tplobj where tpl_type=10 and tpl_delete=0 and tpl_state=2 and tpl_id in (" + ids + ") ";
+                            AV.Query.doCloudQuery(strCQL).then(function (data) {
+                                if (data.results) {
+                                    cb_ok(data.results);
+                                } else {
+                                    cb_ok([]);
+                                }
+                            }, cb_err);
+                        } else {//没有兑换码的模板数据
+                            cb_ok([]);
+                        }
+                    } else {
+                        cb_ok([]);
+                    }
+                },
+                error: cb_err
+            });
+        }
+
+    </script>
+    <script>
+
+    if(isMobilePreview()){
+        //http://localhost:8000/preview5/tid=156a157693ae78fe
+        var hash=location.hash;
+        if(hash.substring(0,2)!="#/"){
+            //新路由就是/开始
+            hash = location.pathname;
+       }else{
+            //老路由，路由地址写在#/之后
+            hash = hash.substring(1);
+       }
+
+        //新路由就是/开始
+        var value=hash.substring("/preview".length);
+
+
+        var tid = getParameterByName('tid', value);
+        location.href = "http://" + location.host + "/" + tid + "/shareme.html?tid=" + tid + "&dataFrom=pc2-0";
+//      location.href = 'http://'+location.host+'/views/mobile.html?tid=' + tid + '&dataFrom=pc2-0';
+//          if(window.fmawr == "999"){
+//            location.href = 'http://'+location.host+'/views/mobile.html?tid=' + tid + '&dataFrom=pc2-0';
+//          }else{
+//            location.href =  "http://www.agoodme.com/mobile/views/mobile.html?tid=" + tid + "&dataFrom=pc2-0";
+//         }
+    }else{
+
+     //非移动端跳转
+     var hash=location.hash;
+     if(hash.substring(0,2)=="#/"){
+         var path=location.hash.substring(1);
+         location.href=location.origin+path
+     }
+}
+
+    function getParameterByName(name, queryString) {
+        var param = {};
+        queryString=queryString.substring(queryString.indexOf("/")+1);
+        var queryStringArray = queryString.split('&');
+        queryStringArray.forEach(function (str) {
+            var values = str.split('=');
+            param[values[0]] = values[1];
+        });
+        return param[name];
+    }
+
+    function isMobilePreview(){
+        var prefixHash = '/preview';
+          if (location.href.indexOf(prefixHash) > -1 && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                return true
+            }
+            return false;
+        }
+
+    </script>
+    <script src="/vendor/base64/base64.min.js"></script>
+    <script src="/vendor/qiniu/qiniu.js"></script>
+    <script src="/vendor/pc2-0-crop-prev/pixi.dev.js"></script>
+    <script src="/vendor/pc2-0-crop-prev/engine.js"></script>
+    <script src="/vendor/promise/promise-7.0.4.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/vendor/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/vendor/ueditor/ueditor.all.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/vendor/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script src="/assets/app.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=VzFAGGC7tDTFzqKKIsTI7GRV"></script>
+    <script src="/vendor/my97-date-picker/WdatePicker.js"></script>
+    <script src="http://cd.gli.cn/rd/1_ME/js/Mask.guide.gli.dev.js"></script>
+</body>
+
+</html>

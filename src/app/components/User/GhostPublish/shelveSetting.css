@@ -1,0 +1,338 @@
+/**
+ * @description 上架设置页面样式
+ * @time 2016-12-6
+ * @author fishYu
+ **/
+
+.shelve-setting-dialog-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: 99;
+}
+
+.shelve-setting-dialog-wrap{
+    width: 512px;
+    height: 402px;
+    background: #fff;
+    box-sizing: border-box;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.shelve-setting-dialog-title{
+    width: 100%;
+    height: 48px;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    padding: 0 24px;
+    color: #ccc;
+    font-size: 14px;
+    position: relative;
+    line-height: 48px;
+}
+.shelve-setting-current-tab{
+    color: #333;
+}
+
+.shelve-setting-dialog-close{
+    position: absolute;
+    right: 24px;
+    top: 18px;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    background: url("../../../../assets/images/dataProcessing/close.png") center no-repeat;
+}
+
+.shelve-setting-dialog-content{
+    width: 100%;
+    height: 354px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+/**
+*信息编辑设置样式
+*/
+.info-setting-wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.info-setting-content{
+    width: 100%;
+    height: 256px;
+    margin-bottom: 20px;
+}
+.info-setting-content:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.info-setting-left{
+    width: -webkit-calc(100% - 198px);
+    width: calc(100% - 198px);
+    height: 100%;
+    float: left;
+    padding-right: 24px;
+    box-sizing: border-box;
+    position: relative;
+}
+.info-setting-common-div{
+    width: 100%;
+    height: 24px;
+    margin-bottom: 16px; 
+    position: relative;
+    font-size: 12px;
+    color: #1e1e1e;
+    line-height: 24px;
+    text-align: left;
+}
+.info-setting-common-div span{
+    display: inline-block;
+    width: -webkit-calc(100% - 206px);
+    width: calc(100% - 206px);
+    height: 100%;
+}
+.info-setting-common-div input{
+    width: 206px;
+    height: 100%;
+    background: transparent;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    outline: none;
+}
+#info-setting-cover{
+    height: 45px;
+}
+#info-setting-cover span{
+    float: left;
+}
+#info-setting-cover div{
+    width: 206px;
+    float: right;
+    color: #999;
+}
+#info-setting-cover .upload-cover{
+    width: 88px;
+    height: 24px;
+    background: url(../../../../assets/images/user/upload.png) 9px center no-repeat;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    text-align: center;
+    float: left;
+    text-indent: 18px;
+    color: #1e1e1e;
+    line-height: 22px;
+    box-sizing: border-box;
+}
+
+#info-setting-brief{
+    height: 115px;
+}
+#info-setting-brief span{
+    vertical-align: top;
+}
+#info-setting-brief textarea{
+    width: 206px;
+    height: 100%;
+    resize: none;
+    background: transparent;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.info-setting-right{
+    width: 198px;
+    float: left;
+    height: 100%;
+    background-color: #f4f4f4; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.info-setting-bottom{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+}
+.info-setting-bottom span{
+    width: 96px;
+    height: 30px;
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #e7e7eb;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 12px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.info-setting-bottom .button-next{
+    color: #fff;
+    background: #1abc9c;
+}
+/**
+*上架设置样式
+*/
+.shelve-setting-common-div{
+    width: 100%;
+    height: 24px;
+    margin-bottom: 16px; 
+    position: relative;
+    font-size: 12px;
+    color: #1e1e1e;
+    line-height: 24px;
+    text-align: left;
+}
+#shelve-programa select{
+    width: 178px;
+    float: right;
+    height: 100%; 
+    border: 1px solid #e7e7eb;
+    box-sizing: border-box;
+    background-color: transparent;
+    outline: none;
+}
+
+.shelve-label-wrap{
+    margin-left: 16px; 
+    height: 100%;
+    display: inline-block;
+}
+
+.shelve-label-wrap span{
+    display: inline-block;
+    margin-right: 8px;
+
+}
+.add-label{
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    line-height: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.recommend-labels{
+    width: 100%;
+    height: 96px;
+    padding: 12px;
+    border: 1px solid #e7e7eb;
+    box-sizing: border-box;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.recommend-labels span{
+    display: inline-block;
+    padding: 7px 4px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+.shelve-label-selected{
+    background: #333;
+    color: #fff;
+}
+
+.shelve-setting-range{
+    width: 128px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 16px; 
+}
+
+.shelve-setting-percent{
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    line-height: 22px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 0 4px;
+    margin-left: 6px;
+}
+.shelve-setting-percent:after{
+    content : "%";
+    position: absolute;
+    top: 0;
+    right: 4px;
+    display: block;
+}
+
+.shelve-setting-money{
+    width: 128px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 16px; 
+    box-sizing: border-box;
+    border: 1px solid #e7e7eb;
+    background-color: transparent;
+    outline: none;
+    margin-right: 6px; 
+}
+
+/**
+*发布完成设置样式
+*/
+.publish-setting-content{
+    width: 100%;
+    padding-top: 179px;
+    text-align: center;
+    background: url('../../../../assets/images/user/11.png') center  16px  no-repeat;
+    box-sizing: border-box;
+}
+.publish-setting-titel{
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 13px;
+}
+
+.publish-setting-brief{
+    font-size: 12px;
+    line-height: 21px;
+    color: #999;
+}
+.publish-setting-button{
+    width: 96px;
+    height: 30px;
+    background: #1abc9c;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    border: 1px solid #e7e7eb;
+    box-sizing: border-box;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.button-hover:hover{
+    opacity: .8;
+}
+

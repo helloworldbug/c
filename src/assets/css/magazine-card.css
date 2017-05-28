@@ -1,0 +1,150 @@
+/*MagazineCard 样式*/
+.magazine-card {
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 17px;
+    width: 270px;
+    height: 559px;
+    position: relative;
+    box-shadow: 0 3px 7px 2px rgba(4, 0, 0, .2);
+}
+
+.magazine-card:nth-child(4n+1) {
+    margin-left: 0;
+}
+
+.magazine-card .card-image, .magazine-card .card-image img {
+    display: block;
+    width: 100%;
+    height: 425px;
+    position: relative;
+    overflow: hidden;
+}
+
+.magazine-card .card-image img {
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -o-transition: transfrom 1s;
+    transition: transform 1s;
+}
+
+.magazine-card .card-image img:hover {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transfrom: scale(1.2);
+    transfrom: scale(1.2);
+}
+
+.magazine-card .avatar, .magazine-card .info {
+    display: inline-block;
+}
+
+.magazine-card .avatar {
+    position: relative;
+    z-index: 10;
+    left: 12px;
+    top: -12px;
+    overflow: hidden;
+}
+
+.magazine-card .info {
+    position: relative;
+    top: -20px;
+    left: 24px;
+}
+
+.magazine-card .info .author {
+    color: #0064B8;
+    font-size: 16px;
+    margin-top: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.magazine-card .info .date {
+    font-size: 14px;
+}
+
+.magazine-card .avatar img {
+    object-fit: cover;
+    display: inline-block;
+    padding: 3px;
+    width: 62px;
+    height: 62px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.magazine-card .card-content {
+    position: relative;
+    height: 56px;
+}
+
+.magazine-card .magazine-qr-code {
+    width: 32px;
+    height: 32px;
+    background: url(../images/main/code_mini.png) center/32px 32px no-repeat;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.magazine-card .card-divider {
+    height: 1px;
+    width: 87%;
+    margin: 0 10px 10px;
+    background-color: #eee;
+}
+
+.magazine-card .card-action {
+    padding: 0 10px;
+}
+
+.magazine-card .card-action .name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.magazine-card .card-action .number {
+    margin-top: 10px;
+}
+
+.magazine-card .card-action .star {
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    cursor: pointer;
+    bottom: 10px;
+    right: 20px;
+    background-image: url(../images/main/reStar.png);
+}
+
+.magazine-card .card-action .star.active, .magazine-card .card-action .star:hover {
+    background-image: url(../images/main/start.png);
+}
+
+.magazine-card .qr-code-image {
+    width: 100%;
+    height: 425px;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.magazine-card .qr-code-image.active {
+    display: block;
+}
+
+.magazine-card .qr-code-image canvas {
+    padding: 15px;
+    background: #fff;
+    margin-top: 80px;
+}

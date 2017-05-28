@@ -1,0 +1,18 @@
+/*OtherMagazineCards 样式*/
+.other-magazine-cards {
+    position: relative;
+}
+
+.other-magazine-cards .segment-container {
+    position: relative;
+    background-color: #ececec;
+    width: 1173px;
+    margin: 0 auto;
+}
+
+.other-magazine-cards .tab-header-bar {
+    height: 88px;
+    width: 100%;
+    position: absolute;
+    background-color: #ececec;
+}

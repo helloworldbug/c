@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+
+
+<span id="qqLoginBtn"></span>
+
+<script type="text/javascript">
+   
+
+    var getinfo = function () {
+
+        window.open("https://graph.qq.com/oauth2.0/authorize?response_type=token&client_id=101178983&redirect_uri="+location.origin+"/qq/qq.html&scope=get_user_info", "_self");
+    }
+</script>
+</head>
+<body>
+    <input type="button" value="info" onclick="getinfo()"/>
+</body>
+</html>

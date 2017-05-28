@@ -1,0 +1,140 @@
+/*TemplateCardGrid 样式*/
+.template-card-grid {
+    /* width: 1180px;
+    margin: 0 auto; */
+}
+
+.template-card-grid:after {
+    display: block;
+    clear: both;
+    content: "\0020";
+    font-size: 0;
+    visibility: hidden;
+    height: 0;
+}
+
+/*TemplateCard 样式*/
+.template-card {
+    float: left; 
+    margin: 15px;
+    width: 188px;
+    height: 188px;
+    position: relative;
+    /*box-shadow: 0 3px 7px 2px rgba(4, 0, 0, .2);*/
+}
+
+.template-card:nth-child(4n+1) {
+    margin-left: 0;
+}
+
+.template-card .card-image, .template-card .card-image img {
+    display: block;
+    width: 188px;
+    height: 188px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.template-card .card-image img {
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -o-transition: transfrom 1s;
+    transition: transform 1s;
+}
+
+.template-card .card-image img:hover {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transfrom: scale(1.2);
+    transfrom: scale(1.2);
+}
+
+.template-card .avatar, .template-card .info {
+    display: inline-block;
+}
+
+.template-card .avatar img {
+    width: 62px;
+    height: 62px;
+    border-radius: 100%;
+}
+
+.template-card .title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.template-card .card-content div {
+    margin: 10px 15px;
+}
+
+.template-card .card-divider {
+    height: 1px;
+    width: 87%;
+    margin: 10px 15px;
+    background-color: #D5D5D5;
+}
+
+.template-card .card-action {
+    position: relative;
+}
+
+.template-card .use-template-button {
+    width: 128px;
+    height: 32px;
+    border: 1px solid #ccc;
+    margin-top: 12px;
+    margin-left: 16px;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.template-card .use-template-button:hover {
+    background-color: #666;
+}
+
+.template-card .use-template-button a {
+    transition: .3s ease-in-out;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 6px;
+    text-decoration: none;
+    display: block;
+}
+
+.template-card .use-template-button:hover a {
+    color: #fff;
+}
+
+.template-card .template-qr-code {
+    width: 32px;
+    height: 32px;
+    background: url(../images/main/code_mini.png) center/32px 32px no-repeat;
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+
+.template-card .qr-code-image {
+    width: 100%;
+    height: 425px;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.template-card .qr-code-image.active {
+    display: block;
+}
+
+.template-card .qr-code-image canvas {
+    padding: 15px;
+    background: #fff;
+    margin-top: 80px;
+}

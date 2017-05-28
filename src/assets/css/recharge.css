@@ -1,0 +1,450 @@
+.recharge-view{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.recharge-header-div{
+    background: rgba(30, 30, 30, 1) !important;
+}
+
+.rechargeHeaderClearfix{
+    width: 950px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.rechargeHeader-logo{
+    width: 129px;
+    height: 100%;
+    background: url("../images/recharge/recharge-header-logo.png") no-repeat center;
+}
+
+.recharge-container{
+    padding-top: 0px;
+    background-color: #ffffff;
+    height: 100%;
+    position: relative;
+    width: 950px;
+    margin: 0 auto;
+}
+
+.recharge-container-left{
+    margin-top: 54px;
+    width: 256px;
+    float: left;
+    border-right: 1px solid #e7e7eb;
+    box-sizing: border-box;
+    height: calc(100% - 54px);
+}
+
+.recharge-user-div{
+    border-bottom: 1px solid #e7e7eb;
+    box-sizing: border-box;
+    margin: 0 16px;
+    margin-top: 24px;
+}
+
+.recharge-user-div span{
+    font-size: 14px;
+    color: #333;
+}
+
+.recharge-user-header-div{
+    margin-top: 24px;
+}
+
+.recharge-user-header-img{
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    margin:  0 auto;
+}
+
+.recharge-user-vip-icon{
+}
+
+.recharge-user-name{
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 32px;
+}
+
+.recharge-use-desc{
+    margin: 0 16px;
+    margin-top: 24px;
+    word-break: break-all;
+    font-size: 14px;
+    color: #999;
+    line-height: 22px;
+}
+
+.recharge-use-desc li{
+    list-style: disc;
+    margin-bottom: 24px;
+}
+
+.recharge-use-desc li:last-child{
+    margin-bottom: 0px;
+}
+
+.service-number{
+    margin-top: 32px;
+}
+
+.service-number .phone-icon{
+    width: 12px;
+    height: 22px;
+    background: url("../images/recharge/phone-icon.png") no-repeat center;
+    vertical-align: top;
+    margin-right: 4px;
+}
+
+.service-number div{
+    display: inline-block;
+}
+
+.service-number div span{
+    display: block;
+}
+
+.recharge-container-right{
+    margin-top: 54px;
+    width: calc(100% - 256px);
+    float: left;
+    font-size: 14px;
+    color: #333;
+}
+
+.recharge-amount{
+    margin-top: 60px;
+    margin-left: 80px;
+}
+
+.recharge-title{
+    display: inline-block;
+    width: 60px;
+}
+
+.recharge-select-btn{
+    width: 120px;
+    height: 42px;
+    display: inline-block;
+    border: 1px solid #e7e7eb;
+    line-height: 42px;
+    text-align: center;
+    margin-left: 24px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #f4f4f4;
+}
+
+.recharge-select-btn.selected{
+    border: 1px solid #d65645;
+    background: url("../images/recharge/btn-selected.png") no-repeat right bottom;
+    background-color: #ffffff;
+}
+
+.recharge-amount-input-div{
+    margin-top: 24px;
+    margin-left: 84px;
+}
+
+.recharge-amount-input{
+    width: 256px;
+    height: 42px;
+    line-height: 42px;
+    border: 1px solid #e7e7eb;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.recharge-amount-input.selected{
+    border: 1px solid #d65645;
+    background-color: #ffffff;
+}
+
+.amount-tip{
+    font-size: 12px;
+    color: #D65645;
+    margin-left: 12px;
+}
+
+.recharge-pay-type, .recharge-payments{
+    margin-top: 40px;
+    margin-left: 80px;
+}
+
+.recharge-payments-txt{
+    display: inline-block;
+    margin-left: 24px;
+    font-size: 18px;
+    color: rgba(216,86,69,1);
+}
+
+.recharge-clause-div{
+    margin-top: 32px;
+    margin-left: 84px;
+}
+
+.recharge-clause-div span{
+    display: inline-block;
+    vertical-align: middle;
+    height: 16px;
+    line-height: 16px;
+    margin-right: 5px;
+    font-size: 12px;
+    color: #999;
+}
+
+.recharge-checkBox{
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    border: 1px solid #CCCCCC;
+    cursor: pointer;
+}
+
+.recharge-checkBox.selected{
+    background: url("../images/recharge/checkbox-selected.png") no-repeat center;
+}
+
+.recharge-blue-color{
+    color: #459ae9 !important;
+    cursor: pointer;
+}
+
+.recharge-btn-div{
+    margin-top: 24px;
+    margin-left: 84px;
+}
+
+.recharge-btn-sure{
+    width: 120px;
+    height: 42px;
+    line-height: 42px;
+    background-color: #D65645;
+    color: #ffffff;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.recharge-btn-sure-disable{
+    background-color: #CCCCCC;
+    cursor : none;
+}
+
+.recharge-btn-tip{
+    margin-left: 12px;
+    font-size: 12px;
+    color: #999;
+}
+
+.recharge-amount-input::-webkit-outer-spin-button,
+.recharge-amount-input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+.recharge-amount-input[type="number"]{-moz-appearance:textfield;}
+
+
+
+/**微信支付页面**/
+.weChat-payment-view{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.weChat-payment-container{
+    padding-top: 0px;
+    height: 100%;
+    width: 950px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.weChat-payment-info{
+    width: 100%;
+    height: 64px;
+    margin-top: 54px;
+    line-height: 64px;
+}
+
+.weChat-payment-info-title{
+    display: inline-block;
+    font-size: 16px;
+    color: #333;
+    margin-right: 32px;
+}
+.weChat-payment-info-company{
+    display: inline-block;
+    font-size: 12px;
+    color: #666;
+}
+
+.weChat-payment-info-money{
+    display: inline-block;
+    float: right;
+    color: #333;
+    font-size: 12px;
+}
+
+.weChat-payment-info-money span{
+    color: #d65645;
+    font-size: 18px;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.weChat-payment-main{
+    width: 100%;
+    height: 526px;
+    background-color: #ffffff;
+    position: relative;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.weChat-payment-main-icon{
+    width: 110px;
+    height: 30px;
+    position: absolute;
+    left: 32px;
+    top: 32px;
+    background: url("../images/recharge/WePayLogo.png") no-repeat center;
+}
+
+.weChat-payment-main-title{
+    display: inline-block;
+    width: 100%;
+    margin-top: 72px;
+}
+
+.weChat-payment-main-money{
+    font-size: 24px;
+    font-weight: bolder;
+    color: #D65645;
+    margin-top: 16px;
+}
+
+.weChat-payment-qrCode-div{
+    width: 182px;
+    height: 234px;
+    margin: 0 auto;
+    margin-top: 32px;
+    border: 1px solid #e7e7eb;
+}
+
+.weChat-payment-qrCode-img{
+    width: 168px;
+    height: 168px;
+    margin: 7px;
+    margin-bottom: 0px;
+}
+
+.weChat-payment-qrCode-info{
+    width: calc(100% - 28px);
+    height: 59px;
+    padding: 0 14px;
+}
+
+.weChat-payment-qrCode-info-icon{
+    width: 28px;
+    height: 100%;
+    background: url("../images/recharge/saoyisao.png") no-repeat center;
+    float: left;
+}
+
+.weChat-payment-qrCode-info-txt{
+    float: left;
+    width: calc(100% - 38px);
+    margin-left: 10px;
+    margin-top: 14px;
+    text-align: left;
+}
+
+.weChat-payment-qrCode-info-txt span{
+    display: inline-block;
+}
+
+.weChat-payment-txt-tip{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 32px;
+    color: #999;
+}
+
+.weChat-payment-img-tip{
+    top: 72px;
+    left: calc(50% + 108px);
+    width: 204px;
+    height: 183px;
+    background: url("../images/recharge/saoyisao-tip.png") no-repeat center;
+    position: absolute;
+}
+
+
+/*****支付完成页面*****/
+.payment-success-view{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.payment-view-container{
+    padding-top: 0px;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.payment-view-title{
+    margin-top: 102px;
+    font-size: 20px;
+    color: #333;
+}
+
+.payment-view-main{
+    width: 290px;
+    height: 300px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    margin-top: 48px;
+    position: relative;
+}
+
+.payment-view-icon{
+    width: 88px;
+    height: 176px;
+    background: url("../images/recharge/success-icon.png") no-repeat bottom center;
+    margin: 0 auto;
+}
+
+.payment-view-name{
+    display: block;
+    margin-top: 24px;
+    font-size: 14px;
+    color: #333;
+}
+
+.payment-view-countdown{
+    display: block;
+    bottom: 16px;
+    font-size: 12px;
+    color: #999;
+    position: absolute;
+    width: 100%;
+}

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>微博浏览</title>
+    <link href="css/style.css" rel="stylesheet"/>
+    <style>
+        #news-list {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            padding-bottom: 50px;
+        }
+
+        #news-list::-webkit-scrollbar {
+            width: 6px;
+            cursor: pointer;
+        }
+
+        #news-list::-webkit-scrollbar-track {
+            background-color: #fff;
+        }
+
+        #news-list:hover::-webkit-scrollbar-thumb {
+            background-color: transparent;
+        }
+
+        #news-list::-webkit-scrollbar-thumb {
+            background-color: rgb(136, 136, 136);
+            border-radius: 3px;
+        }
+
+        #news-list::-webkit-scrollbar-button {
+            background-color: #fff;
+        }
+
+        #phone-container {
+            font-size: 10px;
+        }
+
+        .container img {
+            max-width: 100%;
+        }
+
+        .news-item {
+            padding: 50px 30px 0 30px;
+        }
+
+        .news-item .title {
+            font-size: 4.8em;
+            line-height: 64px;
+            color: rgb(51, 51, 51);
+        }
+
+        .news-item .time {
+            font-size: 3.6em;
+            color: rgb(153, 153, 153);
+            margin-top: 30px;
+        }
+
+        .news-item .cover {
+            max-width: -webkit-calc(100% - 0px);
+            margin-top: 56px;
+        }
+
+        .news-item .content {
+            margin-top: 28px;
+            line-height: 30px;
+            font-size: 2.4em;
+        }
+
+        .news-item .link_a {
+            font-size: 28px;
+            color: rgb(96, 127, 166);
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<script>
+    //获取消息ID
+    var msgID = getPar("gid");// "c557158f-4cac-11e6-9716-00163e001113";//"4477f1df-4b33-11e6-8c55-00163e001113";//
+    //     var msgID = "c557158f-4cac-11e6-9716-00163e001113";
+
+    /**
+     * 判断浏览设备
+     */
+    function isMobileDevice() {
+        var userAgent = navigator.userAgent;
+        return /android/i.test(userAgent) || /iphone|ipad|ipod/i.test(userAgent);
+    }
+
+    if (isMobileDevice()) {
+        location.href = location.origin + "/views/pushing/index.html?gid=" + msgID || '';
+    }
+    function getPar(par) {
+        //获取当前URL
+        var local_url = document.location.href;
+        //获取要取得的get参数位置
+        var get = local_url.indexOf(par + "=");
+        if (get == -1) {
+            return false;
+        }
+        //截取字符串
+        var get_par = local_url.slice(par.length + get + 1);
+        //判断截取后的字符串是否还有其他get参数
+        var nextPar = get_par.indexOf("&");
+        if (nextPar != -1) {
+            get_par = get_par.slice(0, nextPar);
+        }
+        return get_par;
+    }
+</script>
+<body>
+<div class="main">
+
+    <div class="left-top" id="author-info">
+        <div class="user-info">
+            <!---->
+        </div>
+    </div>
+
+    <a href="/" class="me-logo" target="_blank">主页</a>
+
+    <span href="javascript:;" class="full-screen">全屏</span>
+    <span href="javascript:;" class="sc-exitFullScreen">退出全屏</span>
+
+    <div class="middle">
+        <div id="phone-container">
+
+        </div>
+        <div class="app-code"><img src="images/app.png" width="280" height="280" alt="APP下载" /> </div>
+        <div id="middle-code"></div>
+    </div>
+
+    <!--<span class="page-ctrl">
+        <span class="page-prev"></span>
+        <span class="page-next"></span>
+    </span>-->
+    <div class="fr-code">
+        <dl>
+            <dt></dt>
+        </dl>
+    </div>
+    <div class="fr-app-down">
+        APP下载
+    </div>
+</div>
+</body>
+<!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
+<script src="js/jquery-1.12.1.min.js"></script>
+<script src="js/jquery.qrcode.js"></script>
+<script type="text/javascript">
+
+
+    var url = "/v1/sm/pushing/group/" + msgID + "/articles";
+    var domTitle = "";
+    exchangeRESTfulData(url, function (data) {
+        domTitle = data.group.title;
+        document.title = domTitle;
+        var phoneContainer = document.getElementById("phone-container");
+        var newsHTML;
+
+        var news = [];
+        if (data && data.group && data.group.articles)
+            news = data.group.articles;
+            newsHTML = spliceHtml(news);
+
+        phoneContainer.innerHTML = newsHTML;
+
+        var authorInfo = generatorAuthorInfo(news);
+        var authorInfoDom = document.getElementById('author-info');
+        authorInfoDom.innerHTML = authorInfo;
+
+
+        /*var mainHeight = $('.middle').innerHeight();
+         var $container = $('.container');
+         var itemHeight = $container.innerHeight();
+         var $newsList = $('#news-list');
+         //通过内容高度判断按钮可用状况
+         if(itemHeight < mainHeight) {
+         $('.page-prev, .page-next').addClass('disable');
+         }else {
+         $('.page-prev').addClass('disable');
+         $('.page-next').removeClass('disable');
+         }
+
+         var scrolltop = $newsList.scrollTop(); //向上偏移高度
+         var isBottom = false; //到底了
+
+         $('.page-next').bind('click', function() { //向下滚动事件
+
+         if(!isBottom){
+         if(itemHeight - scrolltop > mainHeight) {
+         scrolltop = scrolltop + mainHeight;
+         $('.page-prev').removeClass('disable');
+         $newsList.animate({
+         scrollTop: scrolltop }, 300);
+         }else {
+         scrolltop = itemHeight - mainHeight;
+         isBottom = true;
+         $('.page-next').addClass('disable');
+         $newsList.animate({
+         scrollTop: itemHeight }, 300);
+         }
+         }
+
+         });
+
+         $('.page-prev').bind('click', function() { //向上滚动事件
+         if( scrolltop != 0 ){
+         if(scrolltop > mainHeight) {
+         scrolltop = scrolltop - mainHeight;
+         $('.page-next').removeClass('disable');
+         $('.page-prev').removeClass('disable');
+         isBottom = false;
+         }else {
+         scrolltop = 0;
+         $('.page-prev').addClass('disable');
+         }
+
+         $newsList.animate({
+         scrollTop: scrolltop }, 300);
+         }
+
+         });*/
+
+
+    }, function (err) {
+        document.getElementById("phone-container").innerHTML = "";
+    });
+    //生成消息列表dom
+    function spliceHtml(data) {
+        console.log(data);
+        if (data.length <= 0) {
+            return "";
+        }
+        var html = [];
+        html.push('<div id="news-list">');
+        html.push('<div class="container">');
+        for (var i = 0; i < data.length; i++) {
+            var d = new Date(data[i].created_at);
+            var time = formatTimeToStr(d, 'yyyy-MM-dd');
+            var title = data[i].title || '';
+            var author = data[i].author || "";
+            html.push('<div class="news-item">');
+            html.push('<p class="title">' + title + '</p>');
+            html.push('<p class="time"><span class="time_sp">' + time + '</span>&nbsp;<span>' + author + '</span></p>');
+            if (data[i].show_cover_pic && data[i].thumb_media != "") {
+                html.push('<img src="' + data[i].thumb_media + '" class="cover">');
+            }
+            html.push('<div class="content">');
+            html.push(data[i].content);
+            html.push('</div>');
+            if (data[i].content_source_url != "") {
+                html.push('<a href="' + data[i].content_source_url + '" class="link_a">阅读全文</a>');
+            }
+            html.push('</div>');
+        }
+        html.push('</div>');
+        html.push('<div class="wb-me-logo"></div>');
+        html.push('</div>');
+        return html.join(' ');
+    }
+
+    /**
+     *  生成个人信息dom
+     */
+    function generatorAuthorInfo(data) {
+        if (data.length <= 0) {
+            return "";
+        }
+        var d = new Date(data[0].created_at);
+        var createdAt = formatTimeToStr(d, 'yyyy-MM-dd');
+        var html = [];
+        html.push('<div class="user-info"><dl>');
+        html.push('<dt><img class="face" src="images/logo.png" width="50" height="50" /> </dt>');
+        html.push('<dd>');
+        html.push('<p class="title">' + data[0].title + '</p>');
+        html.push(data[0].author + ' | ' + createdAt);
+        html.push('</dd>');
+        html.push('</dl>');
+        html.push('<div class="summary">' + data[0].digest || "" + '+</div>');
+        html.push('</div>');
+
+        return html.join(' ');
+    }
+
+    /**
+     * 获取和提交RESTful数据接口
+     * @param url 接口地址gru
+     * @param data  传输数据 如果contentType = "application/json"，data可以用Object或json string,其他类型data只能为string
+     * @param success 成功回调
+     * @param error  失败回调
+     * @param type  取数据type = "GET"，提交数据type = "POST"
+     * @param dataType 成功返回数据的格式dataType= "json"或dataType= "text"等ajax支持的格式
+     */
+    function exchangeRESTfulData(url, success, error) {
+        var server = "http://api.test.agoodme.com";//serverurl.api;
+        var contentType = "application/json";
+        $.ajax({
+            type       : "GET",
+            url        : server + "" + url,
+            contentType: contentType,
+            success    : function (result) {
+                success && success(result);
+            },
+            error      : function (msg) {
+                error && error(msg);
+            },
+            dataType   : "json"
+        });
+    }
+
+    /*-----------------实现1--------------------*/
+    //格式化时间显示 add gy guYY 2016/7/8
+    function formatTimeToStr(time, format) {
+        var t = new Date(time);
+        var tf = function (i) {
+            return (i < 10 ? '0' : '') + i
+        };
+        return format.replace(/yyyy|MM|dd|HH|mm|ss/g, function (a) {
+            switch (a) {
+                case 'yyyy':
+                    return tf(t.getFullYear());
+                    break;
+                case 'MM':
+                    return tf(t.getMonth() + 1);
+                    break;
+                case 'mm':
+                    return tf(t.getMinutes());
+                    break;
+                case 'dd':
+                    return tf(t.getDate());
+                    break;
+                case 'HH':
+                    return tf(t.getHours());
+                    break;
+                case 'ss':
+                    return tf(t.getSeconds());
+                    break;
+            }
+        })
+    }
+
+
+    //控制内容部分宽高
+    function changeMiddleSize(fullScreen) {
+        var middle = $(".middle"),
+                middleWidth = middle[0].clientWidth,
+                middleHeight = middleWidth / 0.63492,
+                container = "#phone-container",
+                scale = middleWidth / 640;
+        var bodyHeight;
+        if (fullScreen) {
+            //全屏，按高度==窗口高度计算缩放值
+            bodyHeight = $("body")[0].clientHeight;
+            middleWidth = middleWidth / (middleHeight / bodyHeight);
+            middleHeight = bodyHeight;
+            scale = middleHeight / 1008;
+
+            middle.css({
+                width : middleWidth,
+                height: middleHeight
+            });
+
+            $(container).css({
+                "width"            : 640,
+                "height"           : 1008,
+                "-webkit-transform": "scale3d(" + scale + ", " + scale + ", 1)",
+                "transform"        : "scale3d(" + scale + ", " + scale + ", 1)",
+                "transform-origin" : "0 0"
+            });
+
+            $(window).resize(function () {
+                bodyHeight = $("body")[0].clientHeight;
+                middleWidth = middleWidth / (middleHeight / bodyHeight);
+                middleHeight = bodyHeight;
+                scale = middleHeight / 1008;
+                middle.css({width: middleWidth, "height": middleHeight});
+                $(container).css({
+                    "-webkit-transform": "scale3d(" + scale + ", " + scale + ", 1)",
+                    "transform"        : "scale3d(" + scale + ", " + scale + ", 1)"
+                });
+            });
+        } else {
+            //不全屏时，根据自适应宽度计算高度
+            middle.css({width: "25%"});
+            middleWidth = middle[0].clientWidth;
+            middleHeight = middleWidth / 0.63492;
+            scale = middleWidth / 640;
+            middle.css({height: middleHeight});
+
+            $(container).css({
+                "width"            : 640,
+                "height"           : 1008,
+                "-webkit-transform": "scale3d(" + scale + ", " + scale + ", 1)",
+                "transform"        : "scale3d(" + scale + ", " + scale + ", 1)",
+                "transform-origin" : "0 0"
+            });
+
+            $(window).resize(function () {
+                middleWidth = middle[0].clientWidth;
+                middleHeight = middleWidth / 0.63492;
+                scale = middleWidth / 640;
+                middle.css({height: middleHeight});
+                $(container).css({
+                    "-webkit-transform": "scale3d(" + scale + ", " + scale + ", 1)",
+                    "transform"        : "scale3d(" + scale + ", " + scale + ", 1)"
+                });
+            });
+        }
+    }
+
+    changeMiddleSize();
+
+    $(function () {
+        $('.full-screen').bind('click', function () {
+            changeMiddleSize(true)
+            $(this).hide();
+            $('.sc-exitFullScreen').show();
+            $('.user-info, .me-logo, .page-ctrl, .fr-code, .fr-app-down').hide();
+        })
+        $('.sc-exitFullScreen').bind('click', function () {
+            changeMiddleSize()
+            $(this).hide();
+            $('.user-info, .me-logo, .page-ctrl, .fr-code, .fr-app-down').show();
+            $('.full-screen').show();
+        });
+
+        var $appCode = $('.app-code');
+        $('.fr-app-down').hover(function() {
+            $appCode.fadeIn(300)
+        }, function() {
+            $appCode.fadeOut(300);
+        });
+
+        var $middleCode = $('#middle-code');
+        $('.fr-code dl dt').hover(function() {
+            $middleCode.fadeIn(300);
+        }, function() {
+            $middleCode.fadeOut(300);
+        })
+
+        $('.fr-code dl dt, #middle-code').qrcode(location.origin + "/views/pushing/index.html?gid=" + msgID);
+
+    })
+
+</script>
+</html>

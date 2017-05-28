@@ -1,0 +1,1130 @@
+/**
+ *@ create by Yj
+ *@ 2015/10/19
+**/
+
+.work-detail {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #333;
+}
+
+/*基本信息*/
+.work-detail .left-top {
+    width: 435px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    font-size: 14px;
+    color: #999;
+    line-height: 24px;
+    letter-spacing: 1.4px;
+}
+.work-detail .draft-tips{
+    text-align: center;
+    color: #fff;
+    margin-top: 16px;
+}
+
+.work-detail .user-info {
+    height: 50px;
+    font-size: 14px;
+}
+
+.work-detail .user-info dl dt {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+.work-detail .user-info dl dd, .user-info dl dd p {
+    margin: 0;
+    padding: 0;
+}
+
+.work-detail .user-info dl dd .title {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.work-detail .user-info dl dd p a{
+    color: #999;
+}
+
+.work-detail .user-info dl dt div {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 16px;
+    height: 16px;
+}
+
+.work-detail .user-info dl dt div.v1 {
+    background: url(../images/preview/newPreview/v1.png) center center no-repeat;
+}
+
+.work-detail .user-info dl dt img.face {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.work-detail .user-info dl dd {
+    width: 365px;
+    padding: 1px 0;
+    float: right;
+}
+
+.work-detail .work-label {
+    /*height: 18px;*/
+    height: auto;
+    overflow: hidden;
+    padding-top: 13px;
+}
+
+.work-detail .work-label ul li {
+    list-style: none;
+    float: left;
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    letter-spacing: 1.4px;
+    padding-right: 10px;
+    margin: 5px 0;
+    margin-right: 14px;
+    background: url(../images/preview/newPreview/ar-ri.png) right center no-repeat;
+}
+
+.work-detail .work-label ul li span {
+    padding-left: 4px;
+    display: block;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.work-detail .work-info {
+    padding-top: 10px;
+}
+
+.short-url {
+    padding-top: 12px;
+}
+
+.short-url span {
+    padding-right: 20px;
+}
+
+.short-url a {
+    width: 88px;
+    height: 32px;
+    line-height:30px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    border-radius: 16px;
+}
+
+.short-url a.copy-url:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.work-detail .other-work {
+    position: absolute;
+    left: 36px;
+    bottom: 36px;
+    height: 148px;
+    color: #999;
+    line-height: 24px;
+    letter-spacing: 1.4px;
+}
+
+.work-detail .other-work h3.work-title {
+    height: 44px;
+    line-height: 44px;
+    padding-left: 4px;
+    font-weight: normal;
+    margin: 0;
+    font-size: 14px;
+}
+
+.work-detail .other-work-lists {
+    height: 104px;
+}
+
+.work-detail .other-work-lists ul li {
+    list-style: none;
+    float: left;
+    margin-right: 6px;
+    width: 96px;
+    height: 96px;
+    border: solid 4px #333;
+    position: relative;
+}
+
+.work-detail .other-work-lists ul li:hover {
+    border-color: #666;
+}
+
+.work-detail .other-work-lists ul li a {
+    width: 96px;
+    height: 96px;
+    display: block;
+    overflow: hidden;
+}
+
+.work-detail .other-work-lists ul li img {
+    /*margin-top: -28px;*/
+    object-fit: cover;
+}
+
+.work-detail .other-work-lists ul li .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: block;
+}
+
+.work-detail .other-work-lists ul li:hover .cover {
+    display: none;
+}
+
+/*分享*/
+.work-detail .share {
+    position: absolute;
+    right: 130px;
+    top: 40px;
+    height: 36px;
+    text-align: right;
+}
+
+.work-detail .share ul li {
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.work-detail .share ul li span {
+    width: 36px;
+    height: 36px;
+    display: block;
+}
+
+.work-detail .share ul li span:hover {
+    cursor: pointer;
+}
+
+.work-detail .share ul li span.kxw {
+    background: url(../images/preview/newPreview/kaixinwang.png) center center no-repeat;
+}
+
+.work-detail .share ul li span.kxw:hover {
+    background: url(../images/preview/newPreview/kaixingwang-cur.png) center center no-repeat;
+}
+
+.work-detail .share ul li.cur span.kxw {
+    background: url(../images/preview/newPreview/kaixingwang-cur.png) center center no-repeat;
+}
+
+.work-detail .share ul li span.qq-wb {
+    background: url(../images/preview/newPreview/qq-weibo.png) center center no-repeat;
+}
+
+.work-detail .share ul li span.qq-wb:hover {
+    background: url(../images/preview/newPreview/qq-weibo-cur.png) center center no-repeat;
+}
+
+.work-detail .share ul li.cur span.qq-wb {
+    background: url(../images/preview/newPreview/qq-weibo-cur.png) center center no-repeat;
+}
+
+.work-detail .share ul li span.rr {
+    background: url(../images/preview/newPreview/renren.png) center center no-repeat;
+}
+
+.work-detail .share ul li span.rr:hover {
+    background: url(../images/preview/newPreview/renren-cur.png) center center no-repeat;
+}
+
+.work-detail .share ul li.cur span.rr {
+    background: url(../images/preview/newPreview/renren-cur.png) center center no-repeat;
+}
+
+.work-detail .share ul li span.baidu {
+    background: url(../images/preview/newPreview/baidutieba.png) center center no-repeat;
+}
+
+.work-detail .share ul li span.baidu:hover {
+    background: url(../images/preview/newPreview/baidutieba-cur.png) center center no-repeat;
+}
+
+.work-detail .share ul li.cur span.baidu {
+    background: url(../images/preview/newPreview/baidutieba-cur.png) center center no-repeat;
+}
+
+.work-detail .share ul li span.qq-kj {
+    background: url(../images/preview/newPreview/qq-kongjian.png) center center no-repeat;
+}
+
+.work-detail .share ul li span.qq-kj:hover {
+    background: url(../images/preview/newPreview/qq-kongjian-cur.png) center center no-repeat;
+}
+
+.work-detail .share ul li.cur span.qq-kj {
+    background: url(../images/preview/newPreview/qq-kongjian-cur.png) center center no-repeat;
+}
+
+.work-detail .share ul li span.qq {
+    background: url(../images/preview/newPreview/qq.png) center center no-repeat;
+}
+
+.work-detail .share ul li span.qq:hover {
+    background: url(../images/preview/newPreview/qq-cur.png) center center no-repeat;
+}
+
+.work-detail .share ul li.cur span.qq {
+    background: url(../images/preview/newPreview/qq-cur.png) center center no-repeat;
+}
+
+.work-detail .share ul li span.wb {
+    background: url(../images/preview/newPreview/weibo.png) center center no-repeat;
+}
+
+.work-detail .share ul li span.wb:hover {
+    background: url(../images/preview/newPreview/weibo-cur.png) center center no-repeat;
+}
+
+.work-detail .share ul li.cur span.wb {
+    background: url(../images/preview/newPreview/weibo-cur.png) center center no-repeat;
+}
+
+.work-detail .share ul li span.wx {
+    background: url("../images/preview/newPreview/weixin.png") center center no-repeat;
+}
+
+.work-detail .share ul li span.wx:hover {
+    background: url(../images/preview/newPreview/weixin-cur.png) center center no-repeat;
+}
+
+.work-detail .share ul li.cur span.wx {
+    background: url(../images/preview/newPreview/weixin-cur.png) center center no-repeat;
+}
+
+/*页码*/
+.work-detail .cur-page {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    color: #fffefe;
+    letter-spacing: 1.8px;
+    height: 18px;
+    line-height: 18px;
+}
+
+/*收藏按钮*/
+.work-detail .sc-div {
+    width: 110px;
+    height: 52px;
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    padding: 5px 0;
+    margin-top: -26px;
+    z-index: 10;
+    font-size: 14px;
+    color: #999;
+    line-height: 24px;
+    letter-spacing: 1.4px;
+    display: table;
+}
+
+.work-detail .sc-div a, .work-detail .sc-div .sc-toMake {
+    width: 56px;
+    height: 48px;
+    line-height: 38px;
+    border-radius: 26px;
+    padding-left: 50px;
+    border: solid 2px rgba(0, 0, 0, .2);
+    color: #999;
+    display: block;
+    background: #333;
+    cursor: pointer;
+}
+
+.work-detail .sc-div a {
+    line-height: 48px;
+}
+
+.sc-toMake p {
+    margin: 0;
+}
+
+.sc-toMake p.price {
+    display: block;
+}
+
+.sc-toMake p.buy {
+    display: none;
+}
+
+.work-detail .sc-div .sc-toMake:hover {
+    height: 54px;
+}
+
+.sc-toMake:hover p.price {
+    display: none;
+}
+
+.sc-toMake:hover p.buy {
+    display: block;
+}
+
+.work-detail .sc-div .sc-btn {
+    background: #333333 url(../images/preview/newPreview/no-cel.png) 24px center no-repeat;
+}
+
+.work-detail .sc-div .sc-btn:hover {
+    background: #292929 url(../images/preview/newPreview/no-cel.png) 24px center no-repeat;
+}
+
+.work-detail .sc-div .sc-btn-cur {
+    width: 68px;
+    background: #292929 url(../images/preview/newPreview/cel.png) 24px center no-repeat;
+}
+
+.work-detail .sc-div .sc-toMake {
+    width: 106px;
+    text-align: center;
+    display: table-cell;
+    box-sizing: border-box;
+    height: 50px;
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+.work-detail .sc-div .sc-toMake span {
+    display: block;
+    line-height: 20px;
+}
+
+.work-detail .sc-div .sc-toMake span.cost {
+    font-size: 14px;
+    color: #fff;
+}
+
+.work-detail .sc-div .sc-toMake span.rrp {
+    font-size: 12px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.work-detail .sc-div .sc-toMake:hover {
+    background: #292929;
+    padding-left: 0;
+}
+
+.work-detail .sc-div .user-model-btn {
+    width: 110px;
+    height: 52px;
+    line-height: 48px;
+    text-align: center;
+    border-radius: 26px;
+    color: #999;
+    display: block;
+    background: rgba(0, 0, 0, .2);
+}
+
+.work-detail .sc-div .sc-play {
+    background: #333333 url(../images/preview/newPreview/play.png) 24px center no-repeat;
+}
+
+.work-detail .sc-div .sc-play:hover {
+    background: #292929 url(../images/preview/newPreview/play.png) 24px center no-repeat;
+}
+
+.work-detail .sc-div .sc-pause {
+    background: #333333 url(../images/preview/newPreview/pause.png) 24px center no-repeat;
+}
+
+.work-detail .sc-div .sc-pause:hover {
+    background: #292929 url(../images/preview/newPreview/pause.png) 24px center no-repeat;
+}
+
+.work-detail .sc-div .sc-exitFullScreen {
+    background: #333333 url(../images/preview/newPreview/exitFullScreen.png) 24px center no-repeat;
+}
+
+.work-detail .sc-div .sc-exitFullScreen:hover {
+    background: #292929 url(../images/preview/newPreview/exitFullScreen.png) 24px center no-repeat;
+}
+
+.work-detail .sc-div .sc-btn:hover {
+    background: #292929 url(../images/preview/newPreview/no-cel.png) 24px center no-repeat;
+}
+
+/*二维码*/
+.work-detail .fr-code {
+    width: 132px;
+    /*padding-top: 32px;*/
+    height: 164px;
+    position: absolute;
+    top: 50%;
+    margin-top: -62px;
+    right: 40px;
+    z-index: 10;
+    color: #999;
+    line-height: 24px;
+    letter-spacing: 1.4px;
+}
+
+.work-detail .fr-code dl {
+    margin: 0;
+}
+
+.work-detail .fr-code dl dt {
+    width: 112px;
+    height: 112px;
+    padding: 10px;
+    background: #fff;
+}
+
+.work-detail .fr-code dl dd {
+    height: 32px;
+    line-height: 32px;
+    letter-spacing: 0;
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+}
+
+.fr-app-down {
+    position: absolute;
+    right: 51px;
+    top: 50%;
+    margin-top: 110px;
+    width: 110px;
+    height:52px;
+    line-height:50px;
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 1.4px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.fr-app-down:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.work-detail .middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25%;
+    height: 90%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.work-detail .middle .preview-phone {
+    background: none;
+    width: 100%;
+    height: 100%;
+}
+
+.work-detail .middle .preview-phone .title {
+    display: none;
+}
+
+.work-detail .middle #phone-music {
+    right: 12px;
+    top: 12px;
+}
+
+.work-detail .middle .loading-spinner {
+    margin-top: -20px;
+}
+
+.work-detail .middle .QRCodeBox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .6);
+    -webkit-animation-duration: .2s;
+    animation-duration: .2s;
+}
+
+.work-detail .middle .QRCode {
+    width: 306px;
+    height: 306px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 30px;
+    position: absolute;
+}
+
+.work-detail .middle .APPCode {
+    width: 306px;
+    height: 306px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-image: url("../images/preview/1464919586.png");
+    background-repeat: no-repeat;
+    background-size: 90% 90%;
+    background-position: center center;
+    background-color: #fff;
+    padding: 30px;
+    position: absolute;
+}
+
+/*目录栏*/
+.work-detail .dire-le, .work-detail .dire-ri {
+    position: absolute;
+    width: 25%;
+    top: 50%;
+    margin-top: -120px;
+    height: 240px;
+    z-index: 1;
+}
+
+.work-detail .dire-lists {
+    width: 100%;
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.work-detail .dire-le {
+    left: 150px;
+    direction: rtl;
+}
+
+.work-detail .dire-ri {
+    right: 150px;
+}
+
+.work-detail .dire-le .line, .work-detail .dire-ri .line {
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 120px;
+    z-index: 1;
+}
+
+.work-detail .dire-le .line {
+    background: -webkit-linear-gradient(left, #333, #474747);
+    background: -ms-linear-gradient(left,#333 0%,#474747 100%);
+}
+
+.work-detail .dire-ri .line {
+    background: -webkit-linear-gradient(right, #333, #474747);
+    background: -ms-linear-gradient(right,#333 0%,#474747 100%);
+}
+
+.work-detail .dire-list {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+}
+
+.work-detail .dire-le .dire-list {
+    margin-left: -21px;
+    text-align: right;
+
+}
+
+.work-detail .dire-ri .dire-list {
+    margin-left: 21px;
+    text-align: left;
+}
+
+.work-detail .dire-list ul li {
+    list-style: none;
+    display: inline-block;
+    width: 96px;
+    height: 96px;
+    background: url(../images/preview/newPreview/dian.png) center center no-repeat;
+    margin: 0 1px;
+    position: relative;
+    cursor: pointer;
+}
+.work-detail .dire-list ul li.disable{
+    cursor: default;
+}
+
+.work-detail .dire-list ul li .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 96px;
+    height: 96px;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    overflow: hidden;
+}
+
+.work-detail .dire-list ul li:hover .img {
+    opacity: 0.8;
+    top: -72px;
+}
+
+.work-detail .dire-list ul li .img img {
+    /*margin-top: -28px;*/
+}
+
+.work-detail .arrow-le, .work-detail .arrow-ri {
+    position: absolute;
+    top: 50%;
+    margin-top: -34px;
+    width: 21px;
+    height: 70px;
+    background-color: #F00;
+    z-index: 8;
+    cursor: pointer;
+}
+
+.work-detail .arrow-le {
+    right: 0;
+    background: url(../images/preview/newPreview/arrow-left.png) center center no-repeat #333;
+}
+
+.work-detail .arrow-le:hover {
+    background: url(../images/preview/newPreview/arrow-left-on.png) center center no-repeat #333;
+}
+
+.work-detail .arrow-le.disable {
+    right: -1px;
+}
+
+.work-detail .arrow-le.disable:hover {
+    background: url(../images/preview/newPreview/arrow-left.png) center center no-repeat #333;
+    cursor: default;
+}
+
+.work-detail .arrow-ri {
+    left: 0;
+    background: url(../images/preview/newPreview/arrow-right.png) center center no-repeat #333;
+}
+
+.work-detail .arrow-ri:hover {
+    background: url(../images/preview/newPreview/arrow-right-on.png) center center no-repeat #333;
+}
+
+.work-detail .arrow-ri.disable:hover {
+    background: url(../images/preview/newPreview/arrow-right.png) center center no-repeat #333;
+    cursor: default;
+}
+
+.work-detail .tool-bar {
+    position: absolute;
+    left: 50%;
+    bottom: 52px;
+    width: 435px;
+    margin-left: -172px;
+    color: #999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.work-detail .full-screen {
+    display: inline-block;
+    background: url("../images/preview/newPreview/fullScreen.png") no-repeat left center;
+    padding-left: 30px;
+    position: absolute;
+    bottom: 39px;
+    right: 350px;
+    color: #999;
+}
+
+.work-detail .full-screen:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.work-detail .tool-bar .report {
+    display: inline-block;
+    background: url("../images/preview/newPreview/report.png") no-repeat left center;
+    padding-left: 30px;
+    float: left;
+}
+
+.work-detail .tool-bar .report:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.work-detail .tool-bar .reward {
+    display: inline-block;
+    background: url("../images/preview/newPreview/reward.png") no-repeat left center;
+    margin-left: 220px;
+    padding-left: 30px;
+    float: left;
+}
+
+.work-detail .tool-bar .reward:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.work-detail .auto-play {
+    width: 240px;
+    float: left;
+    position: absolute;
+    bottom: 39px;
+    right: 88px;
+    padding-top: 25px;
+}
+
+.work-detail .auto-play .line {
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin: 11px 0 0 0;
+    z-index: -1;
+    background: -webkit-linear-gradient(left, #333, #474747, #333);
+}
+
+.work-detail .auto-play span {
+    opacity: 0;
+    position: absolute;
+    top: 25px;
+    transition: all .3s;
+}
+
+.work-detail  .auto-play:hover span {
+    opacity: 1;
+    top: 4px;
+    transition: all .2s;
+}
+
+.work-detail  .auto-play div {
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+
+.work-detail .auto-play div:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.work-detail  .auto-play .minus {
+    margin-left: 42px;
+    background: url("../images/preview/newPreview/dian.png") no-repeat center;
+}
+
+.work-detail .auto-play .plus {
+    margin-right: 42px;
+    background: url("../images/preview/newPreview/dian.png") no-repeat center;
+}
+
+.work-detail .auto-play .play {
+    margin: 0 48px;
+    background: url("../images/preview/newPreview/play.png") no-repeat center;
+}
+
+.work-detail .auto-play .pause {
+    margin: 0 48px;
+    background: url("../images/preview/newPreview/pause.png") no-repeat center;
+}
+
+.work-detail .middle .fullScreenBar{
+    width: 100%;
+    height: 58px;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: all .2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.work-detail .middle .fullScreenBar:hover {
+    opacity: 1;
+    transition: all .2s;
+    background: rgba(0,0,0,.5);
+}
+.work-detail .middle .fullScreenBar .content {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    left: 25%;
+}
+
+.work-detail .middle .fullScreenBar .content div{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    color: #ccc;
+    top: 28px;
+    z-index: 2;
+}
+
+.work-detail .middle .fullScreenBar .content div:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.work-detail .middle .fullScreenBar .content .line {
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin: 9px 0 0 0;
+    z-index: 1;
+    background: -webkit-linear-gradient(left, rgba(153,153,153,0), rgba(255,255,255,1), rgba(153,153,153,0));
+}
+
+.work-detail .middle .fullScreenBar .content .minus {
+    left: 33%;
+    background: url("../images/preview/newPreview/dian_white.png") no-repeat center;
+}
+
+.work-detail .middle .fullScreenBar .content .plus {
+    right: 33%;
+    background: url("../images/preview/newPreview/dian_white.png") no-repeat center;
+}
+
+.work-detail .middle .fullScreenBar .content .play {
+    left: 50%;
+    margin-left: -10px;
+    background: url("../images/preview/newPreview/play.png") no-repeat center;
+}
+
+.work-detail .middle .fullScreenBar .content .pause {
+    left: 50%;
+    margin-left: -10px;
+    background: url("../images/preview/newPreview/pause.png") no-repeat center;
+}
+
+.work-detail .middle .fullScreenBar .content span {
+    position: absolute;
+    top: -24px;
+}
+
+.work-detail .reward-cover{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    background: rgba(0,0,0,.5);
+}
+
+.work-detail .reward-code{
+    width: 230px;
+    height: 230px;
+    padding: 20px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.work-detail .reward-code .description{
+    margin-top: 24px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.work-detail  .page-ctrl{
+    display: inline-block;
+    width: 136px;
+    height: 52px;
+    position: absolute;
+    bottom:-16px;
+    left: 101px;
+    border-radius: 25px;
+    overflow: hidden;
+
+}
+.work-detail .page-ctrl span{
+    background-color: rgba(0,0,0,0.2);
+    width: 68px;
+    height: 52px;
+    display: inline-block;
+    cursor: pointer;
+}
+.work-detail .page-ctrl span:hover{
+    background-color: rgba(0,0,0,0.5);
+}
+.work-detail .page-ctrl span.disable{
+    /*opacity:0.5;*/
+    cursor: default;
+}
+.work-detail  .page-ctrl .page-next{
+    background-image: url("../images/preview/newPreview/next-page.png") ;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+.work-detail  .page-ctrl .page-next.disable{
+    background-image: url("../images/preview/newPreview/pre-page-disable.png");
+    transform: rotate(180deg);
+}
+.work-detail  .page-ctrl .page-prev.disable{
+    background-image: url("../images/preview/newPreview/pre-page-disable.png");
+}
+.work-detail  .page-ctrl .page-prev{
+    background-image: url("../images/preview/newPreview/prev-page.png");
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
+/**/
+.preview-me-logo {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    width: 80px;
+    height: 36px;
+    line-height:34px;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    padding-left: 34px;
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 20px;
+    background-image: url("../images/preview/logo.png");
+    background-repeat:no-repeat;
+    background-position: 10px center;
+}
+
+.preview-me-logo:hover {
+    cursor: pointer;
+    background-color: #292929;
+}
+
+#copyUrl {
+    outline: none;
+}
+
+.report-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+
+.report-box {
+    width: 512px;
+    padding-bottom: 24px;
+    height: auto;
+    overflow: hidden;
+    background: #fff;
+    position: fixed;
+    left: 50%;
+    margin-left: -256px;
+    top:50%;
+    margin-top: -116px;
+}
+
+.report-box .title {
+    height: 44px;
+    line-height: 44px;
+    background: #f4f4f4;
+    padding: 0 14px 0 24px;
+    font-size: 14px;
+    color: #333;
+}
+
+.report-box .title span.close {
+    width: 24px;
+    height:24px;
+    margin: 10px 0;
+    cursor: pointer;
+    background: url(../images/preview/newPreview/close.png) center center no-repeat;
+}
+
+.report-box .lists {
+    padding: 28px 0 0 14px;
+    height: auto;
+    overflow: hidden;
+}
+
+.report-box .lists label { 
+    display: block;
+    float: left;
+    width: 138px;
+    padding: 0 20px 0 10px;
+    font-size: 12px;
+    color: #222;
+    height: 24px;
+    line-height: 24px;
+    margin: 6px 0;
+}
+
+.report-box .lists label input {
+    float: left;
+    margin: 6px 8px 0 0;
+}
+
+.report-box .lists label:nth-child(3n) {
+    padding-right: 0;
+}
+
+.report-box .btns {
+    height: 30px;
+    text-align: right;
+    padding: 28px 14px 0 0;
+}
+
+.report-box .btns a {
+    display: inline-block;
+    width: 96px;
+    height: 30px;
+    text-align: center;
+    line-height: 28px;
+    border: solid 1px #e7e7eb;
+    box-sizing: border-box;
+    margin: 0 10px;
+    font-size: 12px;
+    color: #333;
+}
+
+.report-box .btns a:hover {
+    background: #333;
+    color: #fff;
+}

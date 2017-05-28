@@ -1,0 +1,186 @@
+
+
+/********************************/
+/* start of styles in block.xsl */
+
+.formalpara-title {
+  font-weight: bold;
+}
+
+div.blockquote-title {
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+span.msgmain-title {
+  font-weight: bold;
+}
+
+span.msgsub-title {
+  font-weight: bold;
+}
+
+span.msgrel-title {
+  font-weight: bold;
+}
+
+div.msglevel, div.msgorig, div.msgaud {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+span.msglevel-title, span.msgorig-title, span.msgaud-title {
+  font-weight: bold;
+}
+
+div.msgexplan {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+span.msgexplan-title {
+  font-weight: bold;
+}
+
+/* end of styles in block.xsl */
+/********************************/
+
+/********************************/
+/* start of styles in autotoc.xsl */
+
+
+/* end of styles in autotoc.xsl */
+/********************************/
+
+/********************************/
+/* start of styles in formal.xsl */
+
+div.figure-title {
+  font-weight: bold;
+}
+
+div.example-title {
+  font-weight: bold;
+}
+
+div.equation-title {
+  font-weight: bold;
+}
+
+div.table-title {
+  font-weight: bold;
+}
+
+div.sidebar-title {
+  font-weight: bold;
+}
+
+
+/* end of styles in formal.xsl */
+/********************************/
+
+/********************************/
+/* start of styles in verbatim.xsl */
+
+div.programlisting {
+  white-space: pre;
+  font-family: monospace;
+}
+
+div.screen {
+  white-space: pre;
+  font-family: monospace;
+}
+
+div.synopsis {
+  white-space: pre;
+  font-family: monospace;
+}
+
+/* end of styles in verbatim.xsl */
+/********************************/
+
+/* footnote rule */
+hr.footnote-hr {
+  width: 100;
+}
+
+    body {
+    font-family:"宋体",Tahoma, Helvtica, Arial,  Microsoft YaHei, SimSun;
+    font-size: 100%;
+    margin: 0;
+    }
+    p {
+    text-indent: 2em;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    }
+    table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top-width: 1px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: solid;
+    border-top-color: #aaa;
+    border-right-color: #aaa;
+    border-bottom-color: #aaa;
+    border-left-color: #aaa;
+    font-size: 100%;
+    line-height: 150%;
+    text-align: center;
+    }
+    th, td {
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-right-color: #aaa;
+    border-bottom-color: #aaa;
+    padding: 6px;
+    }
+    td p {
+    text-indent: 0;
+    }
+    .align_right { text-align: right; }
+    .align_center { text-align: center; }
+    .align_justify { text-align: justify; }
+    .symbol { font-family: Symbol; }
+    .webdings { font-family: Webdings; }
+    .wingdings { font-family: Wingdings; }
+    .kingsoft_phonetic_plain { font-family: Kingsoft Phonetic Plain; }
+h1.title{
+  margin: 36px 0 34px 0;
+  font-size: 28px;
+}
+h2.title{
+    font-size: 21px;
+}
+body{
+ padding: 0 59px 0 36px;
+  
+}
+a:-webkit-any-link{
+  color: #67b0f1 ;
+}
+a>sup{
+  font-size:12px;
+  color: #67b0f1 ;
+}
+a>img{
+  height: auto !important;
+  max-width: 100%
+}
+p {
+  margin: 25px 0;
+}
+.footnote>p{
+  margin-top:21px; 
+  margin-bottom: 25px;
+}

@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+#header .logo {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#header .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 999;
+    background: url(../images/nav_bg.jpg) center/cover no-repeat !important;
+    overflow: hidden;
+}
+
+#header .nav > div {
+    z-index: 10;
+}
+
+#header .nav .container {
+    width: 1170px;
+    height: 100%;
+    position: relative;
+}
+
+#header .nav li {
+    float: left;
+    line-height: 80px;
+    font-size: 18px;
+}
+
+#header .nav li a {
+    display: block;
+    padding: 0 10px;
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+}
+
+#header .nav li a:before,
+#header .nav li a:after {
+    position: absolute;
+    width: 100%;
+    content: "\0020";
+    height: 2px;
+    left: 0;
+    background-color: #fff;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+#header .nav li a:hover:before,
+#header .nav li a:hover:after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#header .nav li a:before {
+    top: 20px;
+    transform: translateY(10px);
+}
+
+#header .nav li a:after {
+    bottom: 20px;
+    transform: translateY(-10px);
+}
+
+#header .nav .active {
+    color: #ff0;
+}

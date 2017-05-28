@@ -1,0 +1,143 @@
+/***********************add by guyy 2015/8/12************************/
+@-webkit-keyframes scaleElastic{
+    0%{-webkit-transform:scale(0.1);transform:scale(0.1);}
+    20%,22%{-webkit-transform:scale(1.35);transform:scale(1.35);}
+    40%{-webkit-transform:scale(0.95);transform:scale(0.95);}
+    60%,62%{-webkit-transform:scale(1.1);transform:scale(1.1);}
+    80%{-webkit-transform:scale(0.9);transform:scale(0.9);}
+    100%{-webkit-transform:scale(1);transform:scale(1);}
+}
+@keyframes scaleElastic{
+    0%{-webkit-transform:scale(0.1);transform:scale(0.1);}
+    20%,22%{-webkit-transform:scale(1.35);transform:scale(1.35);}
+    40%{-webkit-transform:scale(0.95);transform:scale(0.95);}
+    60%,61%{-webkit-transform:scale(1.1);transform:scale(1.1);}
+    80%{-webkit-transform:scale(0.9);transform:scale(0.9);}
+    100%{-webkit-transform:scale(1);transform:scale(1);}
+}
+/*放大伸缩*/
+.scaleElastic{
+    -webkit-animation-name:scaleElastic; animation-name:scaleElastic;
+}
+@-webkit-keyframes directWhirlIn{
+    0%{-webkit-transform:rotateZ(0deg);transform:rotateZ(0deg);}
+    100%{-webkit-transform:rotateZ(360deg);transform:rotateZ(360deg);}
+}
+@keyframes directWhirlIn{
+    0%{-webkit-transform:rotateZ(0deg);transform:rotateZ(0deg);}
+    100%{-webkit-transform:rotateZ(360deg);transform:rotateZ(360deg);}
+}
+/*顺时针旋转*/
+.directWhirlIn{-webkit-animation-name:directWhirlIn; animation-name:directWhirlIn;}
+@-webkit-keyframes inverseWhirlIn{
+    0%{-webkit-transform:rotateZ(360deg);transform:rotateZ(360deg);}
+    100%{-webkit-transform:rotateZ(0deg);transform:rotateZ(0deg);}
+}
+@keyframes inverseWhirlIn{
+    0%{-webkit-transform:rotateZ(360deg);transform:rotateZ(360deg);}
+    100%{-webkit-transform:rotateZ(0deg);transform:rotateZ(0deg);}
+}
+/*逆时针旋转*/
+.inverseWhirlIn{-webkit-animation-name:inverseWhirlIn; animation-name:inverseWhirlIn;}
+@-webkit-keyframes enlargeMinify{
+    0%{-webkit-transform:scale(1);transform:scale(1);}
+    50%{-webkit-transform:scale(1.5);transform:scale(1.5);}
+    100%{-webkit-transform:scale(1);transform:scale(1);}
+}
+@keyframes enlargeMinify{
+    0%{-webkit-transform:scale(1);transform:scale(1);}
+    50%{-webkit-transform:scale(1.5);transform:scale(1.5);}
+    100%{-webkit-transform:scale(1);transform:scale(1);}
+}
+/*放大缩小*/
+.enlargeMinify{-webkit-animation-name:enlargeMinify; animation-name:enlargeMinify;}
+@-webkit-keyframes minifyEnlarge{
+    0%{-webkit-transform:scale(1);transform:scale(1);}
+    50%{-webkit-transform:scale(0.8);transform:scale(0.8);}
+    100%{-webkit-transform:scale(1);transform:scale(1);}
+}
+@keyframes minifyEnlarge{
+    0%{-webkit-transform:scale(1);transform:scale(1);}
+    50%{-webkit-transform:scale(0.8);transform:scale(0.8);}
+    100%{-webkit-transform:scale(1);transform:scale(1);}
+}
+/*缩小放大*/
+.minifyEnlarge{-webkit-animation-name:minifyEnlarge; animation-name:minifyEnlarge;}
+@-webkit-keyframes driftUpDown{
+    0%{-webkit-transform:translateY(0);transform:translateY(0);}
+    40%{-webkit-transform:translateY(-8%);transform:translateY(-8%);}
+    90%{-webkit-transform:translateY(2%);transform:translateY(2%);}
+    100%{-webkit-transform:translateY(0%);transform:translateY(0%);}
+}
+@keyframes driftUpDown{
+    0%{-webkit-transform:translateY(0);transform:translateY(0);}
+    40%{-webkit-transform:translateY(-8%);transform:translateY(-8%);}
+    90%{-webkit-transform:translateY(2%);transform:translateY(2%);}
+    100%{-webkit-transform:translateY(0%);transform:translateY(0%);}
+}
+/*上下浮动*/
+.driftUpDown{-webkit-animation-name:driftUpDown; animation-name:driftUpDown;
+    -webkit-animation-timing-function:linear;animation-timing-function:linear;}
+@-webkit-keyframes sway{
+    0%{-webkit-transform:translateY(-10%);transform:translateY(-10%);}
+    10%{-webkit-transform:translateX(3%);transform:translateX(3%);}
+    20%{-webkit-transform:translateY(10%);transform:translateY(10%);}
+    30%{-webkit-transform:translateX(-7%);transform:translateX(-7%);}
+    40%{-webkit-transform:translateY(10%);transform:translateY(10%);}
+    50%{-webkit-transform:translateX(5%);transform:translateX(5%);}
+    60%{-webkit-transform:translateY(4);transform:translateY(4);}
+    70%{-webkit-transform:translateY(-10%);transform:translateY(-10%);}
+    80%{-webkit-transform:translate(0);transform:translate(0);}
+    90%{-webkit-transform:translateX(-2%);transform:translateX(-2%);}
+    100%{-webkit-transform:translateY(-8%);transform:translateY(-8%);}
+}
+@keyframes sway{
+    0%{-webkit-transform:translateY(-10%);transform:translateY(-10%);}
+    10%{-webkit-transform:translateX(3%);transform:translateX(3%);}
+    20%{-webkit-transform:translateY(10%);transform:translateY(10%);}
+    30%{-webkit-transform:translateX(-7%);transform:translateX(-7%);}
+    40%{-webkit-transform:translateY(10%);transform:translateY(10%);}
+    50%{-webkit-transform:translateX(5%);transform:translateX(5%);}
+    60%{-webkit-transform:translateY(4);transform:translateY(4);}
+    70%{-webkit-transform:translateY(-10%);transform:translateY(-10%);}
+    80%{-webkit-transform:translate(0);transform:translate(0);}
+    90%{-webkit-transform:translateX(-2%);transform:translateX(-2%);}
+    100%{-webkit-transform:translateY(-8%);transform:translateY(-8%);}
+}
+/*晃动*/
+.sway{-webkit-animation-name:sway; animation-name:sway;}
+@-webkit-keyframes pulseScale {
+    from { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); }
+    20% { -webkit-transform: scale3d(1.15, 1.15, 1.15);  transform: scale3d(1.15, 1.15, 1.15); }
+    100% { -webkit-transform: scale3d(1, 1, 1);transform: scale3d(1, 1, 1);}
+}
+@keyframes pulseScale {
+    from { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); }
+    20% { -webkit-transform: scale3d(1.15, 1.15, 1.15);  transform: scale3d(1.15, 1.15, 1.15); }
+    100% { -webkit-transform: scale3d(1, 1, 1);transform: scale3d(1, 1, 1);}
+}
+/*心脏跳动*/
+.pulseScale {
+    -webkit-animation-name: pulseScale;
+    animation-name: pulseScale;
+    -webkit-animation-timing-function:ease-out;
+    animation-timing-function:ease-out;
+}
+@-webkit-keyframes swingAround{
+    0%{-webkit-transform:rotateZ(-5deg);transform:rotateZ(-5deg); transform-origin:center 100%;}
+    20%{-webkit-transform:rotateZ(3deg);transform:rotateZ(3deg); transform-origin:center 100%;}
+    40%{-webkit-transform:rotateZ(-4deg);transform:rotateZ(-4deg); transform-origin:center 100%;}
+    60%{-webkit-transform:rotateZ(2deg);transform:rotateZ(2deg); transform-origin:center 100%;}
+    80%{-webkit-transform:rotateZ(-4deg);transform:rotateZ(-4deg); transform-origin:center 100%;}
+    100%{-webkit-transform:rotateZ(0deg);transform:rotateZ(0deg); transform-origin:center 100%;}
+}
+@keyframes swingAround{
+    0%{-webkit-transform:rotateZ(-5deg);transform:rotateZ(-5deg); transform-origin:center 100%;}
+    20%{-webkit-transform:rotateZ(3deg);transform:rotateZ(3deg); transform-origin:center 100%;}
+    40%{-webkit-transform:rotateZ(-4deg);transform:rotateZ(-4deg); transform-origin:center 100%;}
+    60%{-webkit-transform:rotateZ(2deg);transform:rotateZ(2deg); transform-origin:center 100%;}
+    80%{-webkit-transform:rotateZ(-4deg);transform:rotateZ(-4deg); transform-origin:center 100%;}
+    100%{-webkit-transform:rotateZ(0deg);transform:rotateZ(0deg); transform-origin:center 100%;}
+}
+/*左右摆动(随机)*/
+.swingAround{-webkit-animation-name:swingAround; animation-name:swingAround;}

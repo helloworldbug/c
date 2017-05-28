@@ -1,0 +1,3 @@
+[submodule "display_engine"]
+	path = display_engine
+	url = http://192.168.6.20/display-module/display_engine.git
