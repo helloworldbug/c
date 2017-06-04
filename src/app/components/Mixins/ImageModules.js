@@ -64,7 +64,7 @@ module.exports = {
             'invite-code' : require('../../../assets/images/invite/weixin-code.png'),
             'defaultPageBgPic': require('../../../assets/images/designerTribe/banner.jpg'),
             'singerMusic' : require('../../../assets/images/make/musicIco.png'),
-            'publish-parnter' : require('../../../assets/images/dataProcessing/parnter.png')    //add by fishYu 2016-11-9 增加一键出版的合伙人
+            'publish-parnter' : require('../../../assets/images/dataProcessing/parnter.png')    //add by tony 2016-11-9 增加一键出版的合伙人
         };
     },
 

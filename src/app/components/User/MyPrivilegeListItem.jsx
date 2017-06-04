@@ -1,7 +1,7 @@
 /**
  * @description 我的特权列表Item
  * @time 2016-09-09
- * @author zhao
+ * @author tony
  */
 
 'use strict';

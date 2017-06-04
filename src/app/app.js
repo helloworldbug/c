@@ -103,10 +103,10 @@ var AuthSuccess = require("./components/User/ThirdPartyPlatformMsg/AuthSuccess")
 
 var ExchangeActivity = require('./components/ExchangeActivity/Exchange');// 新书兑换模板
 
-// 一键转档页面， add by fishYu 2016-11-7
+// 一键转档页面， add by tony 2016-11-7
 var DataProcessing = require('./components/DataProcessing/dataProcessing');
 
-// 图书预览页面， add by fishYu 2016-11-25
+// 图书预览页面， add by tony 2016-11-25
 var BookPreview = require('./components/BookPreview/bookPreview');
 
 

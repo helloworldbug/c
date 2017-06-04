@@ -157,7 +157,7 @@ module.exports.uploadMaterialByBase64 = function (callback, uids, materialType, 
     }
 }
 
-/****获取PC端微杂志素材
+/****获取PC端H5微场景素材
  多条件参数查询作品数据
  uids， 用户id
 
@@ -294,7 +294,7 @@ module.exports.update_tplobj_Userinfo = function (cloumn, val) {
 }
 
 /** 用户收藏
- fav_type: 收藏类型(1.微杂志，2.其它定义, 3. XXXX)，
+ fav_type: 收藏类型(1.H5微场景，2.其它定义, 3. XXXX)，
  fav_id  ：收藏作品id，
  fav_exp ：收藏的备注，不能超过200个字，
  user_id ：用户id，

@@ -63,7 +63,7 @@ var ShareProduct = React.createClass({
                 desc: " ",
                 summary: " ",
                 flash: "",
-                site: "ME微杂志"
+                site: "H5微场景"
             }
         };
     },

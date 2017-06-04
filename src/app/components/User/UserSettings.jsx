@@ -473,7 +473,7 @@ var setting = React.createClass({
         }
     },
     /**
-     * 提交职业信息 add by fishYu 2016-11-30
+     * 提交职业信息 add by tony 2016-11-30
      */
     handleCareerSubmit() {
         var  enterpriseName, enterpriseEmail;

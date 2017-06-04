@@ -672,7 +672,7 @@ export default class ConvertRecords extends React.Component{
                     console.log(data, "删除分组");
                     var oldNames = self.state.groupNames;
                     oldNames = self.removeItem(oldNames, self.groupName);
-                    //add by fishYu 2016-12-14 增加选中
+                    //add by tony 2016-12-14 增加选中
                     var curIndex = _index - 1 > 0 ? _index - 1 : 0;
                     var _oldFilter = oldNames[curIndex];
                     _oldFilter = _oldFilter == "默认分组" ? "def" : _oldFilter;
@@ -691,7 +691,7 @@ export default class ConvertRecords extends React.Component{
             });
         }
         if(this.state.fileHashs.length > 0){    //更新所有记录的组名到默认组
-            // 本地修改 modify by fishYu 2016-12-14
+            // 本地修改 modify by tony 2016-12-14
             
             self.localOprationRecords("update", {classification : "def", isSelected : false});
         }
@@ -724,7 +724,7 @@ export default class ConvertRecords extends React.Component{
                     groupNames : oldNames,
                     currentGroup : name
                 });
-                //add by fishYu 2016-12-14 增加分组的时候默认选中
+                //add by tony 2016-12-14 增加分组的时候默认选中
                 self.filterRecordsByGroupName(name);
             },
             error: function (err) {

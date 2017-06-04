@@ -1,6 +1,6 @@
 // 文件名：RechargeView.jsx
 //
-// 创建人：zhao
+// 创建人：tony
 // 创建日期：2016/9/8 10:27
 // 描述： 充值
 
@@ -302,7 +302,7 @@ var RechargeView = React.createClass({
                                 <span>我已阅读</span><a href="/helper?type=ME充值服务协议" target="_blank"><span className="recharge-blue-color">ME充值服务协议</span></a></div>
                             <div className="recharge-btn-div">
                                 <span className={btnClass} onClick={this.onConfirmHandler}>确定充值</span>
-                                <span className="recharge-btn-tip" style={{display: btnEnable ? "inline-block" : "none"}}>请核准收款人为：上海精灵天下数字技术有限公司</span>
+                                <span className="recharge-btn-tip" style={{display: btnEnable ? "inline-block" : "none"}}>请核准收款人为：H5微场景</span>
                             </div>
                         </div>
                     </div>

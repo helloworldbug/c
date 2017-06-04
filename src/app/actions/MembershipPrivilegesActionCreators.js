@@ -2,7 +2,7 @@
  * @module MembershipPrivilegesActionCreators
  * @description 会员特权
  * @time 2016-09-09 9:40
- * @author zhao
+ * @author tony
  **/
 
 var MeDispatcher = require('../dispatcher/MeDispatcher');

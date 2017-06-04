@@ -235,7 +235,7 @@ export default class DataProcessing extends React.Component {
     addItemsHandler(obj, isOld = false) {
         var self = this;
         if(!isOld){ //新上传的文件
-            //TODO需要先判断用户的用量和文件个数,用于收费计算  modify by fishYu 2016-11-28 obj为对象
+            //TODO需要先判断用户的用量和文件个数,用于收费计算  modify by tony 2016-11-28 obj为对象
             var len = obj.length;   //本次需要上传的文件个数
             var sumSize = 0;    //本次上传的文件总容量，用于判断流量和容量
             for(var i = 0; i < len; i++){
@@ -244,7 +244,7 @@ export default class DataProcessing extends React.Component {
             }
             sumSize = (Math.ceil(sumSize * 100 / (1024 * 1024)) / 100); //转换成MB 所有都通过MB判断1GB = 1024MB
             console.log("需要先判断用户当月的可用流量，可传文件个数，中转空间的容量大小", obj, len, sumSize);
-            //请求数据库，比对用户信息, 查询转档次数 add by fishYu 2016-12-8
+            //请求数据库，比对用户信息, 查询转档次数 add by tony 2016-12-8
             MakeWebAPIUtils.getRESTfulData({
                 url: "/v1/useritem/own/external/Svc_BookTransferCount", 
                 success: (data) => {

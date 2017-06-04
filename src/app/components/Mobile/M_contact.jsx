@@ -16,14 +16,14 @@ var Register =  MePC.inherit(MSuper,React.createClass({
 			<div id='contactFrame'>
 				<div id='contactHeader'>
 					<img src={this.defineImageModules()["mobileContactUs"]}/>
-					<span>上海精灵天下数字技术有限公司</span>
+					<span>H5微场景</span>
 					<span>www.agoodme.com</span>
 					<img src={this.defineImageModules()["mobileLogo"]}/>
 				</div>
 				<div id='contactContent'>
 					<div><img src={this.defineImageModules()["contactPhone"]}/>联系电话：<a href="tel:4008-868-110">4008-868-110</a></div>
 					<div><img src={this.defineImageModules()["contactQQ"]}/>商务合作QQ：2102534037</div>
-					<div><img src={this.defineImageModules()["contactWX"]}/>微信公众号：ME微杂志</div>
+					<div><img src={this.defineImageModules()["contactWX"]}/>微信公众号：H5微场景</div>
 					<div><img src={this.defineImageModules()["contactAddress"]}/>上海市浦东新区祖冲之路1559号 创意大厦4001</div>
 				</div>
 			</div>

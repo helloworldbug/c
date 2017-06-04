@@ -259,7 +259,7 @@ var Preview = React.createClass({
                             <div className="qrcode">
                                 {CommonUtils.generateQRCode(CommonUtils.generateViewTemplateUrl(this.props.params.tid), 158)}
                             </div>
-                            <Link to="/create" className="fork">创建我的微杂志</Link>
+                            <Link to="/create" className="fork">创建我的H5微场景</Link>
                         </div>
 
                     </div>

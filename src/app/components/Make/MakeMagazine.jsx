@@ -247,7 +247,7 @@ var MakeMagazine = React.createClass({
         var loadText = $(".loadText"),
             fileLength = files.length, successNum = 0, errorNum = 0,
             userID = GlobalFunc.getUserObj().objectId;
-        loadText.html("正在生成微杂志，成功导入 " + successNum + "/" + fileLength + "张");
+        loadText.html("正在生成H5微场景，成功导入 " + successNum + "/" + fileLength + "张");
         for (var i = 0; i < files.length; i++) {
             var fileName = files[i].name.substring(0, files[i].name.indexOf("."));
             var fileType;
@@ -316,7 +316,7 @@ var MakeMagazine = React.createClass({
         function successCallBack(obj) {
 
             successNum++;
-            loadText.html("正在生成微杂志，成功导入 " + successNum + "/" + fileLength + "张");
+            loadText.html("正在生成H5微场景，成功导入 " + successNum + "/" + fileLength + "张");
             console.log(obj.attributes.material_src);
             var src = obj.attributes.material_src,
                 image = new Image();

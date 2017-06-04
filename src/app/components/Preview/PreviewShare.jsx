@@ -47,7 +47,7 @@ var PreviewShare = React.createClass({
                 desc   : " ",
                 summary: " ",
                 flash  : "",
-                site   : "ME微杂志"
+                site   : "H5微场景"
             },
             renren: { //人人网
                 resourceUrl: encodeURIComponent(window.location.href),

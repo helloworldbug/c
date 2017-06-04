@@ -53,7 +53,7 @@ var Share = React.createClass({
                 desc   : " ",
                 summary: " ",
                 flash  : "",
-                site   : "ME微杂志"
+                site   : "H5微场景"
             }, 
             tsina: { //新浪
                 url   : encodeURIComponent(window.location.href),

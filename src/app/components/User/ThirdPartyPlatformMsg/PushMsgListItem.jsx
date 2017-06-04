@@ -1,7 +1,7 @@
 /**
  * @description 推送消息管理--消息List样式
  * @time 2016-07-04
- * @author zhao
+ * @author tony
  */
 
 'use strict';

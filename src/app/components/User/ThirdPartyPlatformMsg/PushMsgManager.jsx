@@ -1,7 +1,7 @@
 /**
  * @description 推送消息管理
  * @time 2016-07-01
- * @author zhao
+ * @author tony
  */
 
 'use strict';

@@ -512,7 +512,7 @@ module.exports = {
     /**
      * 收藏
      *
-     * @params type {string} 收藏类型 ---1.微杂志，2.其它定义, 3. XXXX
+     * @params type {string} 收藏类型 ---1.H5微场景，2.其它定义, 3. XXXX
      * @params uid {string} 用户id
      * @params wid {string} 作品id
      * @params deal {boolean} 判断收藏还是取消收藏 ---0.add，1.delete

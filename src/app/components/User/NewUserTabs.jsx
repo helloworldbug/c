@@ -134,7 +134,7 @@ var UserTabs = React.createClass({
         var loadMoreArr = [TabIndex.MYPRODUCT, TabIndex.MYDRAFT, TabIndex.RECYCLE, TabIndex.MYCOLLECTION, TabIndex.MYMODE,
         TabIndex.WEIXINMGR, TabIndex.WEIXINMGRDRAFT, TabIndex.WEIXINMGRREC, TabIndex.USERDATACOLLECTION, TabIndex.ILLEGALWORK];
         var loadMoreState = loadMoreArr.indexOf(this.props.tabIndex) >= 0 ? true : false;
-        //TODO 那些需要添加滚动事件的，  modify by fishYu 2016-12-8 过滤下只是需要增加滚轮的才增加
+        //TODO 那些需要添加滚动事件的，  modify by tony 2016-12-8 过滤下只是需要增加滚轮的才增加
         if (loadMoreState) {  //增加滚动
             this.bindWindowScrollEvent();
         } else {  //移除滚动
@@ -220,7 +220,7 @@ var UserTabs = React.createClass({
             changeViewFun={this.changeViewState} msgData={unpublishMsgData} />;
         tabs[TabIndex.WEIXINMGRREC] = <WeiXinMGR tabIndex={TabIndex.WEIXINMGRREC} viewStatus={this.state.viewlist}
             changeViewFun={this.changeViewState} msgData={recycleMsgData} />;
-        //add by fishYu 2016-11-2 增加一键发布页面
+        //add by tony 2016-11-2 增加一键发布页面
         tabs[TabIndex.CONVERTRECORDS] = <ConvertRecords />; //转档管理
         tabs[TabIndex.ONLINEREAD] = <OnlineReadManager />;     //在线阅读管理
         tabs[TabIndex.MYBOOKRACK] = <MyBookrank />;     //我的书架
@@ -306,7 +306,7 @@ var UserTabs = React.createClass({
     //改变父组件slidebar
     changeParentState: function (state) {
         this.props.callbackParent(state);
-        //deleted by zhao
+        //deleted by tony
         // MeStore.addChangeListener(this._onChange);
     },
 
@@ -520,7 +520,7 @@ var UserTabs = React.createClass({
 
         this.setState({
             isShowNoMore: false,
-            //add by zhao 切换tab时 loading为false
+            //add by tony 切换tab时 loading为false
             isLoading: false
         }, function () {
             console.log("false");

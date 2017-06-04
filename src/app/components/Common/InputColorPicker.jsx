@@ -1,7 +1,7 @@
 /**
  * @description 输入颜色选择器
  * @date 2016 7/8
- * @author zhao
+ * @author tony
  **/
 
 'use strict';

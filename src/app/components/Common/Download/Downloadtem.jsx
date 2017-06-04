@@ -1,7 +1,7 @@
 /**
  * @description 一键出版的下载内容通用页面
  * @time 2016-11-10
- * @author fishYu
+ * @author tony
  **/
 'use strict';
 

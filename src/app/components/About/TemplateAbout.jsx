@@ -19,7 +19,7 @@ var TemplateAbout = React.createClass({
 
 					{/* 每一项 */}
 					<div className="about-column">
-						<h3 className="tit">1.在ME微杂志制作平台之引用行业模板或个人模板</h3>
+						<h3 className="tit">1.在H5微场景制作平台之引用行业模板或个人模板</h3>
 						<div className="content">
 							<p className="summary"></p>
 

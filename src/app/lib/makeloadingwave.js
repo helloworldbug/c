@@ -427,7 +427,7 @@
             shadow = document.createElement("div");
 
             //meDiv = document.createElement("div");
-            ////modify by fishYu
+            ////modify by tony
             //meDiv.className = "loading-wave-me-make fadeInUp animated";
             //meDiv.innerHTML = "使用ME制作";
 

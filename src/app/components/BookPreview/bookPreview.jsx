@@ -1,7 +1,7 @@
 /**
  * @description 书籍预览界面
  * @time 2016-11-25
- * @author fishYu
+ * @author tony
  */
 
 'use strict';

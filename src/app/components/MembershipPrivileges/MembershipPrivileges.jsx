@@ -1,6 +1,6 @@
 // 文件名：MembershipPrivileges.jsx
 //
-// 创建人：zhao
+// 创建人：tony
 // 创建日期：2016/9/8 10:27
 // 描述： 会员特权
 
@@ -135,7 +135,7 @@ var MembershipPrivileges = React.createClass({
         var list = this.state.list || [];
         list = this.sortList(list);
         var self = this;
-        //modify by fishYu 2016-12-7 增加转档特权
+        //modify by tony 2016-12-7 增加转档特权
         var h5List = list.filter((item) => item.custom_code != BookTransferCount);
         var privilegeItemComponents1 = h5List.map(function(good, index){
             return <PrivilegeItem key={index}  good={good} onBuyHandler={self.onBuyHandler} />

@@ -30,7 +30,7 @@ export default class Feedback extends Component {
         var f_screenshots = this.state.imgs.map(item => item.url).join("|")
         var feedbackobj = fmacloud.Object.extend("feedback_obj");
         var feedback = new feedbackobj();
-        feedback.set("fb_type", parseInt(6)); //,类别：0-反馈信息，其他为举报信息：1-app微杂志，2-众创，3-pc微杂志，4-页举报，5-评论举报,6-mebook反馈
+        feedback.set("fb_type", parseInt(6)); //,类别：0-反馈信息，其他为举报信息：1-appH5微场景，2-众创，3-pcH5微场景，4-页举报，5-评论举报,6-mebook反馈
         feedback.set("fb_fromuser", fmacloud.User.current().id);
         feedback.set("fb_user_pointer", fmacloud.User.current());
         feedback.set("f_username", fmacloud.User.current().get("username"));

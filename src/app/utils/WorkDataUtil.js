@@ -493,7 +493,7 @@ var WorkDataUtil = {
     initTplWithObj: function (templateObject, user) {
         templateObject.set("effect_img", templateObject.get("effect_img"));
         templateObject.set("tiny_img", templateObject.get("tiny_img"));
-        templateObject.set("brief", templateObject.get("brief") == "/" ? "我刚刚制作了一份微杂志，快来看看！" : templateObject.get("brief")); //作品简介 , 在发布时会更改
+        templateObject.set("brief", templateObject.get("brief") == "/" ? "我刚刚制作了一份H5微场景，快来看看！" : templateObject.get("brief")); //作品简介 , 在发布时会更改
         templateObject.set("tpl_class", "0"); //模板类型（0:个人模板,1:企业模板） 在发布时会更改
         templateObject.set("tpl_type", "10"); //默认为10  在保存时会更改
         templateObject.set("tpl_privacy", templateObject.get("tpl_privacy") || "private"); //tpl_privacy 是否公开，public|private
@@ -567,7 +567,7 @@ var WorkDataUtil = {
         var data = {};
         data.tplObj = WorkDataUtil.avosTpl2Json(tpl);
         data.tplData = WorkDataUtil.avosTplData2Json(tplData);
-        var tpl_id = data.tplObj.tpl_id || "ME微杂志作品json数据";
+        var tpl_id = data.tplObj.tpl_id || "H5微场景作品json数据";
         var jsonInfo = data || "";
         var textInfo = JSON.stringify(jsonInfo);
         var b64 = Base64.encode(textInfo);
@@ -599,7 +599,7 @@ var WorkDataUtil = {
     //    var success = function (tplDataResult) {
     //        debugger;
     //        data.tplData = MakeWebAPIUtils.convertTplDataToJson(tplDataResult);
-    //        var tpl_id = data.tplObj.tpl_id || "ME微杂志作品json数据";
+    //        var tpl_id = data.tplObj.tpl_id || "H5微场景作品json数据";
     //        var jsonInfo = data || "";
     //        var textInfo = JSON.stringify(jsonInfo);
     //        var b64 = Base64.encode(textInfo);
@@ -683,7 +683,7 @@ var WorkDataUtil = {
                 var covertTplData = function (tplDataResult) {
 
                     data.tplData = MakeWebAPIUtils.convertTplDataToJson(tplDataResult);
-                    var tpl_id = data.tplObj.tpl_id || "ME微杂志作品json数据";
+                    var tpl_id = data.tplObj.tpl_id || "H5微场景作品json数据";
                     var jsonInfo = data || "";
                     var textInfo = JSON.stringify(jsonInfo);
                     var b64 = Base64.encode(textInfo);

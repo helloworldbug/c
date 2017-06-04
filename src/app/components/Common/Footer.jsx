@@ -43,7 +43,7 @@ var Footer = React.createClass({
                     </div>
 
                     <div className="copyright fr">
-                        <p>Copy Right © 2011 - 2016 gli.cn 上海精灵天下数字技术有限公司　 <a href="http://www.miitbeian.gov.cn" target="_blank">沪ICP备14051983号-1</a></p>
+                        <p>Copy Right © 2011 - 2016 gli.cn H5微场景　 <a href="http://www.miitbeian.gov.cn" target="_blank">沪ICP备14051983号-1</a></p>
                     </div>
 
                 </div>

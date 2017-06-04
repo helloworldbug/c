@@ -2,7 +2,7 @@
  * @FileName MakeComponent
  * @description 组件库
  * @create 2016-07-29 9:00
- * @author zhao
+ * @author tony
  **/
 
 var React = require('react');

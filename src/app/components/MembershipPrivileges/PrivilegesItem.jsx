@@ -1,6 +1,6 @@
 // 文件名：PrivilegesItem.jsx
 //
-// 创建人：zhao
+// 创建人：tony
 // 创建日期：2016/9/8 10:27
 // 描述： 特权条目组件
 
@@ -74,7 +74,7 @@ var PrivilegesItem = React.createClass({
            /** 去除原来的逻辑
             * var _unit = "次";
             var _service = data.price_info.goods_list[0].goods.service;
-            if(_service.hasOwnProperty("services")){ //TODO 后期需要去循环获取 modify by fishYu  2016-12-9
+            if(_service.hasOwnProperty("services")){ //TODO 后期需要去循环获取 modify by tony  2016-12-9
                 _unit = _service.services[0].service.unit_name || "次";
             }*/
             // if(data.unit){

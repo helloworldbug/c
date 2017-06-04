@@ -93,7 +93,7 @@ var UserTabs = React.createClass({
                         templates && templates.length > 0 ?
                             <TemplateCardGrid templates={templates} cardType={tab.cardType} templateType={tab.value}/> :
                             <div className="no-works">
-                                <div className="word">没有相关微杂志~~，试着<Link to="/create">创建</Link>一份ME微杂志</div>
+                                <div className="word">没有相关H5微场景~~，试着<Link to="/create">创建</Link>一份H5微场景</div>
                             </div>
                     }
                 </Tab>

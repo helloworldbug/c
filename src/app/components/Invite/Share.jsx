@@ -28,7 +28,7 @@ var Share = React.createClass({
                 desc   : " ",
                 summary: " ",
                 flash  : "",
-                site   : "ME微杂志"
+                site   : "H5微场景"
             },
             tqzone: { //QQ空间
                 url    : encodeURIComponent(window.location.href),

@@ -288,14 +288,14 @@ var User = React.createClass({
     render() {
         var context = this;
 
-        //add by zhao
+        //add by tony
         var hideTitleList = [TabIndex.MYSETTING, TabIndex.DOMAINBIND, TabIndex.AUTH, TabIndex.WEIXINPUSH, TabIndex.WEIXINMGR,
             TabIndex.WEIXINMGRDRAFT, TabIndex.WEIXINMGRREC, TabIndex.WEIXINEDIT, TabIndex.ELECTRICITYSUPPLIER, 
             TabIndex.COLLECT_CONTENT, TabIndex.MY_CONTENT, TabIndex.COLLECT_SETTING, TabIndex.COMPOSE_PRODUCT, TabIndex.UPLOAD_CONTENT];
         var isTitleHide = hideTitleList.indexOf(this.state.tabIndex) >= 0 ? { display: "none" } : {};
         var authentication = null;
 
-        //add by fishYu 2016-11-9 修改顶部的导航, 转换记录的时候
+        //add by tony 2016-11-9 修改顶部的导航, 转换记录的时候
         var hideStyleList = [TabIndex.CONVERTRECORDS, TabIndex.ONLINEREAD, TabIndex.MYBOOKRACK];
         var hideStyle = hideStyleList.indexOf(this.state.tabIndex) >= 0  ?  { display: "none" } : {};
         var ghostPublish = hideStyleList.indexOf(this.state.tabIndex) >= 0  ? (<a href="/dataProcessing" target="_blank">一键出版</a>) : null;
@@ -402,7 +402,7 @@ var User = React.createClass({
                             <li className={[TabIndex.WEIXINMGR, TabIndex.WEIXINMGRDRAFT, TabIndex.WEIXINMGRREC].indexOf(this.state.tabIndex) >= 0 ? "myAccout select" : "myAccout"}
                                 onClick={this.changeTabIndex.bind(this, TabIndex.WEIXINMGR) }><span>推送消息管理</span></li>
                         </ul>
-                        {/* add by fishYu 2016-11-2 增加重庆出版管理*/}
+                        {/* add by tony 2016-11-2 增加重庆出版管理*/}
                         <ul className="userPublish"><span className="title">出版管理</span>
                             <li className={this.state.tabIndex == TabIndex.CONVERTRECORDS ? "select" : ""}
                                 onClick={this.changeTabIndex.bind(this, TabIndex.CONVERTRECORDS) }><span>转档管理</span></li>
@@ -577,7 +577,7 @@ var User = React.createClass({
             }
 
             $("#uploadedImg").css({ width: "auto", height: "auto" });
-            //modify by fishYu 2016-12-7 修改比例
+            //modify by tony 2016-12-7 修改比例
             var _scale = self.isConvertCover ? (self.isConvertCover.width / self.isConvertCover.height) : (1 / 1);  
             $(image).Jcrop({
                 onChange: cropChange,

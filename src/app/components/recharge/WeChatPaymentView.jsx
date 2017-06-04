@@ -1,6 +1,6 @@
 // 文件名：WeChatPaymentView.jsx
 //
-// 创建人：zhao
+// 创建人：tony
 // 创建日期：2016/9/18 13:56
 // 描述： 会员特权
 
@@ -81,7 +81,7 @@ var WeChatPaymentView = React.createClass({
                 <div className="weChat-payment-container">
                     <div className="weChat-payment-info">
                         <span className="weChat-payment-info-title">ME平台充值</span>
-                        <span className="weChat-payment-info-company">收款方：上海精灵天下数字技术有限公司</span>
+                        <span className="weChat-payment-info-company">收款方：H5微场景</span>
                         <div className="weChat-payment-info-money"><span>{this.state.amount}</span>元</div>
                     </div>
                     <div className="weChat-payment-main">

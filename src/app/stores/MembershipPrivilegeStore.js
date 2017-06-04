@@ -2,7 +2,7 @@
  * @module MembershipPrivilegeStore
  * @description 会员特权数据
  * @time 2016-09-09 9:40
- * @author zhao
+ * @author tony
  **/
 'use strict';
 

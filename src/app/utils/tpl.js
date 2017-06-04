@@ -2,7 +2,7 @@
 (function (module) {
     /**
      search 作品或者作者
-     pc端值显示PC端制造的微杂志
+     pc端值显示PC端制造的H5微场景
      **/
     module.get = function (callback, pageNumber, pageSize, sortfield, isdesc, tplClass, search, tplType, tplLabel, option) {
         var limit = pageSize;
@@ -14,7 +14,7 @@
         } else {
             skip = pageNumber;
         }
-        var strCQL = " select count(*),* from tplobj where tpl_state!=1 "; // 上架并且是pc端的微杂志 data_site=1
+        var strCQL = " select count(*),* from tplobj where tpl_state!=1 "; // 上架并且是pc端的H5微场景 data_site=1
         if (search.length > 0) {
             strCQL += " and name like '%" + search + "%' or author_name like '%" + search + "%' ";
         }
@@ -110,7 +110,7 @@
         } else {
             skip = pageNumber;
         }
-        var strCQL = " select count(*),* from tplobj where tpl_delete=0 and author='" + userObjectId + "' "; //and data_site=1 // 上架并且是pc端的微杂志 data_site=1
+        var strCQL = " select count(*),* from tplobj where tpl_delete=0 and author='" + userObjectId + "' "; //and data_site=1 // 上架并且是pc端的H5微场景 data_site=1
         if (search.length > 0) {
             strCQL += " and name like '%" + search + "%'  ";
         }
@@ -251,7 +251,7 @@
         ////    "name": "kenny",
         ////    "group": [
         ////        {
-        ////            "name": "ME泥巴的微杂志"
+        ////            "name": "ME泥巴的H5微场景"
         ////        },
         ////        {
         ////            "cloumn2": "tplname"
@@ -483,7 +483,7 @@
         } else {
             skip = pageNumber;
         }
-        var strCQL; // 上架并且是pc端的微杂志 data_site=1
+        var strCQL; // 上架并且是pc端的H5微场景 data_site=1
         if(tplType=="10"){
             strCQL = " select * from tplobj where approved in (2,3) and tpl_privacy='public' and tpl_state!=1 ";
         }else{
