@@ -449,6 +449,8 @@ var PreviewMain = React.createClass({
         var fileUrlConf = "http://ac-syrskc2g.clouddn.com/";//测试服的jsonurl域名
         if (fmawr === "999") {
             fileUrlConf = "http://ac-hf3jpeco.clouddn.com/";//正式服的jsonurl域名
+        }else if(fmawr=="10000"){
+            fileUrlConf = "http://ac-m1mab2gt.clouddn.com/";
         }
         MakeWebAPIUtils.getTPL(tid || this.props.tid).then(function (tplObjAvos) {
             var tplObj = tplObjAvos.toJSON();

@@ -673,6 +673,8 @@ var MakeWebAPIUtils = {
             var fileUrlConf = "http://ac-syrskc2g.clouddn.com/";//测试服的jsonurl域名
             if (fmawr === "999") {
                 fileUrlConf = "http://ac-hf3jpeco.clouddn.com/";//正式服的jsonurl域名
+            }else if(fmawr=="10000"){
+                fileUrlConf = "http://ac-m1mab2gt.clouddn.com/";
             }
             var url = fileUrlConf + fileName
             //取生成的静态对象文件
