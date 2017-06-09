@@ -642,7 +642,7 @@ var NewPreview = React.createClass({
     setPagePreview(tpl) {
         var now = {
             author_name: '匿名',
-            author_img: 'http://ac-hf3jpeco.clouddn.com/Qy6NxalPv9RwYq9soCsS84PGKMLirVnTLvptSqyh.jpg',
+            author_img: 'http://ac-hf3jpeco.clouddn.com/206ea7bf442919405a7f.jpg',//http://ac-hf3jpeco.clouddn.com/Qy6NxalPv9RwYq9soCsS84PGKMLirVnTLvptSqyh.jpg',
             name: '我刚刚使用ME发布了个人作品，快来看看吧！',
             createdAt: '-',
             page_int: '不祥',
