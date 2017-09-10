@@ -57,10 +57,10 @@ var NavBar = React.createClass({
                                 <li>
                                     <Link to="user" onClick={this.confirm.bind(this,"/user")}>个人中心</Link>
                                 </li>
-                                <li>
+                                {/*<li>
                                     <Link to="invite" onClick={this.confirm.bind(this,"/invite")}>邀请好友</Link>
                                 </li>
-                                {/*<li>
+                                <li>
                                  <Link to="designer">认证设计师</Link>
                                  </li>*/}
                                 <li>
@@ -245,13 +245,13 @@ var NavBar = React.createClass({
 
                         <div id="logo" className="fl">
                             <Link to="/">
-                                <Images src={ this.defineImageModules().websiteLogo } height="35"/>
+                               {/*} <Images src={ this.defineImageModules().websiteLogo } height="35"/>*/}
                             </Link>
                         </div>
 
                         <div id="nav" ref="nav">
                             <ul>
-                                <li ref="create" onMouseOver={ this.handleMouse('create', 'hover') }
+                              {/** <li ref="create" onMouseOver={ this.handleMouse('create', 'hover') }
                                     onMouseOut={ this.handleMouse('create') }>
                                     <Link to="/create" onClick={this.confirm.bind(this,"/create")} activeClassName="active">场景创作</Link>
                                     <span ref="create-line" className="nav-line" ></span>
@@ -292,7 +292,7 @@ var NavBar = React.createClass({
                                     <Link to="/helper" onClick={this.confirm.bind(this,"/helper")} activeClassName="active">帮助中心</Link>
                                     <span ref="helper-line" className="nav-line"
                                           ></span>
-                                </li>
+                                </li>*/}
                             </ul>
                         </div>
 

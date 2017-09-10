@@ -29,7 +29,7 @@ module.exports = React.createClass({
     },
     render           : function () {
         var _href = this._getTplPcPrevHref(this.props.tid);
-        var _host = Base.getTplDomain();
+        var _host =location.host; //Base.getTplDomain();
         return (
             <div className="select-dialog">
                 <div className="finish-dialog">
@@ -38,10 +38,9 @@ module.exports = React.createClass({
                                 value={`http://${_host}/${this.props.tid}/shareme.html?tid=${this.props.tid}&dataFrom=pc2-0`}/>
                     </div>
                     <p className="content">
-                        恭喜！你的作品已经发布成功！优质作品将有机会显示在 <Link to="/discovery" target="_blank">精品推荐</Link> <span id="copyLink"
-                                                                                                       data-clipboard-target="linkContent"
-                                                                                                       onClick={this.copyTip}>复制作品链接</span><a
-                        id="linkContent" href={_href}><span>{_href}</span></a>
+                        恭喜！你的作品已经发布成功！ {/**优质作品将有机会显示在 <Link to="/discovery" target="_blank">精品推荐</Link> 
+                       <span id="copyLink" data-clipboard-target="linkContent" onClick={this.copyTip}>复制作品链接</span>**/}
+                        <a id="linkContent" href={_href}><span>{_href}</span></a>
                     </p>
                     <PreviewShare ref="shareProduct"/>
 

@@ -48,7 +48,7 @@
              * 验证账号是否冻结  --konghuachao-2017-0508--start
              * */
             debugger;
-            fmacloud.Cloud.run('userCheck',{'val':retObj.unionid,'type':"login"},{
+           /** fmacloud.Cloud.run('userCheck',{'val':retObj.unionid,'type':"login"},{
                 success:function(data){
                     //status=data.result.status;
                     //debugger;
@@ -80,7 +80,8 @@
             }).catch(function(error){
                 //debugger;
                 loginuser(retObj)
-            })
+            })**/
+             loginuser(retObj)
             /*
              * 验证账号是否冻结  --konghuachao-2017-0508--end
              * */

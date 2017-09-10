@@ -35,15 +35,18 @@ var Footer = React.createClass({
             <div id="footer" className={this.props.className ? this.props.className + ' clearfix' : 'clearfix'}>
                 <div className="footer clearfix">
                     <div className="fl">
+                       {/**
                         <a href="javascript:;" onClick={this.buildAboutLink('/about/us?action=us', 'us')}>关于我们</a>
                          <i>-</i>
                         <a href="javascript:;" onClick={this.buildAboutLink('/about/join?action=join', 'join')}>加入我们</a>
                         <i>-</i>
                         <a href="javascript:;" onClick={this.buildAboutLink('/about/service?action=service', 'service')}>服务协议</a>
+                        * 
+                        */ }
                     </div>
 
                     <div className="copyright fr">
-                        <p>Copy Right © 2011 - 2016 gli.cn H5微场景　 <a href="http://www.miitbeian.gov.cn" target="_blank">沪ICP备14051983号-1</a></p>
+                        <p></p>
                     </div>
 
                 </div>

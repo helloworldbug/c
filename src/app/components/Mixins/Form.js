@@ -229,7 +229,7 @@ module.exports = {
     externalLogin:function(data){
         var data1=data;
         var _that=this;
-        fmacloud.Cloud.run('userCheck',{'val':data.unionid,'type':"login"},{
+        /**fmacloud.Cloud.run('userCheck',{'val':data.unionid,'type':"login"},{
             success:function(data){
                 debugger;
                 //status=data.result.status;
@@ -263,7 +263,8 @@ module.exports = {
         }).catch(function(error){
             debugger;
             _that.externalLogin1(data1)
-        })
+        })**/
+         _that.externalLogin1(data1)
     },
     /*
      * 验证账号是否冻结  --konghuachao-2017-0508--end

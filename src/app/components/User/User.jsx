@@ -393,7 +393,7 @@ var User = React.createClass({
                                 onClick={this.changeTabIndex.bind(this, TabIndex.COLLECT_SETTING) }><span>采集设置</span></li>
                         </ul>
                         {/* add by gli-cq-gonglong 2017-04-20 内容仓库 End */}
-                        
+                        {/*
                         <ul className="media"><span className="title">自媒体管理</span>
                             <li className={this.state.tabIndex == TabIndex.AUTH ? "myAccout select" : "myAccout"}
                                 onClick={this.changeTabIndex.bind(this, TabIndex.AUTH) }><span>授权管理</span></li>
@@ -403,7 +403,7 @@ var User = React.createClass({
                                 onClick={this.changeTabIndex.bind(this, TabIndex.WEIXINMGR) }><span>推送消息管理</span></li>
                         </ul>
                         {/* add by tony 2016-11-2 增加重庆出版管理*/}
-                        <ul className="userPublish"><span className="title">出版管理</span>
+                       {/* <ul className="userPublish"><span className="title">出版管理</span>
                             <li className={this.state.tabIndex == TabIndex.CONVERTRECORDS ? "select" : ""}
                                 onClick={this.changeTabIndex.bind(this, TabIndex.CONVERTRECORDS) }><span>转档管理</span></li>
                             {/*  注释先不开
@@ -411,13 +411,13 @@ var User = React.createClass({
                                 onClick={this.changeTabIndex.bind(this, TabIndex.ONLINEREAD) }><span>在线阅读管理</span></li>
                             <li className={this.state.tabIndex == TabIndex.MYBOOKRACK ? "select" : ""}
                                 onClick={this.changeTabIndex.bind(this, TabIndex.MYBOOKRACK) }><span>我的书架</span></li>
-                            */}
-                        </ul>
+                           
+                        </ul> */}
                         {/* 暂时屏蔽数据统计功能
                         <ul className="userStatistic"><span className="title">统计</span>
                             <li className={this.state.tabIndex == TabIndex.USERDATACOLLECTION ? "select" : ""}
                                 onClick={this.changeTabIndex.bind(this, TabIndex.USERDATACOLLECTION) }><span>数据统计</span></li>
-                        </ul>*/}
+                        </ul>
 
                         <ul className="userAccout"><span className="title">账户</span>
                             <li className={this.state.tabIndex == TabIndex.MYACCOUNT ? "myAccout select" : "myAccout"}
@@ -426,14 +426,14 @@ var User = React.createClass({
                                 onClick={this.changeTabIndex.bind(this,TabIndex.MYORDER)}><span>我的订单</span></li>
                             <li className={this.state.tabIndex==TabIndex.MYPRIVILEGES?"select":""}
                                 onClick={this.changeTabIndex.bind(this,TabIndex.MYPRIVILEGES)}><span>我的特权</span></li>
-                        </ul>
+                        </ul>*/}
                         <ul className="userSetting"><span className="title">设置</span>
                             <li className={this.state.tabIndex == TabIndex.MYSETTING ? "mySetUp select" : "mySetUp"}
                                 onClick={this.changeTabIndex.bind(this, TabIndex.MYSETTING) }><span>个人资料</span></li>
-                            <li className={this.state.tabIndex == TabIndex.DOMAINBIND ? "mySetUp select" : "mySetUp"}
+                            {/* <li className={this.state.tabIndex == TabIndex.DOMAINBIND ? "mySetUp select" : "mySetUp"}
                                 onClick={this.changeTabIndex.bind(this, TabIndex.DOMAINBIND) }><span>域名绑定</span></li>
                             <li className={this.state.tabIndex == TabIndex.ELECTRICITYSUPPLIER ? "select" : ""}
-                                onClick={this.changeTabIndex.bind(this, TabIndex.ELECTRICITYSUPPLIER) }><span>电商管理</span></li>
+                                onClick={this.changeTabIndex.bind(this, TabIndex.ELECTRICITYSUPPLIER) }><span>电商管理</span></li> */}
                         </ul>
                         {/*<div className="myBack" onClick= { this.handleLogout }><span>退出登录</span></div>*/}
 

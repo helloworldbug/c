@@ -86,26 +86,14 @@ var origin=location.origin;
         return (
             <div className="inner">
                 <Slider ref="slider"/>
+         
                 <div className="home-bg">
-                    {/* 场景 */}
+                   
                     <Scene single="hot" condition={{ 'bannertype =': '\'pc首页banner\'' }} jQPluginMethod={ this.buildJqueryPlugin('.explore-banner') } /> 
-                    {/*
-                    <div className="con">
-                        <p className="p-animate">
-                            <Images src={this.defineImageModules()['banner_text']} />
-                        </p>
-                        <p className="p-link p-animate1">
-                            <Link to="/make" target="_blank" className="a1 btn-navy btn-fill-vert-o">免费制作</Link>
-                            <Link to="/dataProcessing" target="_blank" className="a1 btn-navy btn-fill-vert-o up-icon-new">一键出版</Link>
-                            <Link to="/download" target="_blank" className="a1 btn-navy btn-fill-vert-o">APP下载</Link>
-                        </p>
-                        <p className="p-animate2"><a href="javascript:;" onClick={this.handleClick()}  className="btn-vod">介绍视频</a></p>
-                    </div>
-                    <div className='readmore' onClick = { this.handleClickScroll }></div>
-                    */}
-                    {/*介绍和H5和一键出版*/}
-                    <div className="home-operation-container">
-                        <div className="home-common-operation">
+                 
+                     {/**<div className="home-operation-container">
+                       
+                         <div className="home-common-operation">
                             <div className="home-common-operation-title h5-icon">在线编辑器</div>
                             <div className="home-common-operation-brief">极简制作流程，五分钟创作分享，丰富的在线编辑功能， 数据随时跟踪反馈，永久免费体验！ </div>
                             <Link to="/make" target="_blank" >立即创作</Link>
@@ -115,127 +103,11 @@ var origin=location.origin;
                             <div className="home-common-operation-title book-icon">一键出版</div>
                             <div className="home-common-operation-brief">在线转换文档格式，让出版更加便捷。21天，快速出版。相比传统出版，效率提升8倍！</div>
                             <Link to="/dataProcessing" target="_blank" >一键转档</Link>
-                        </div>
-                    </div>
+                        </div>* 
+                        
+                    </div> */}
                 </div>
-                {!this.state.isShowVideo?null:<div id="video-bg" style={{ display:  'block'  }}>
-                    <div id="close" onClick={this.handleClickClosePlayer()}></div>
-                    <div className="home-video-box">
-                        <video ref="video" controls="controls" preload="auto" id="home-video">
-                            <source src="./video/me.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>}
-
-
-                <div className="works">
-                    <div className="wrod">
-                        <h2>品牌合作案例</h2>
-
-                        <p><Link target="_blank" to="/discovery">浏览更多></Link></p>
-                    </div>
-                    <div className="works-list">
-                        <ul>
-                            <li>
-                                <Images src={this.defineImageModules()['case1']}  width="195" height="195" />
-                                <Link to="/preview/tid=150b293a2547450f" target="_blank">
-                                    <div className="code">
-                                        <div className="qrcode-segent" title="点击或扫描浏览作品">
-                                            { this.generateQRCode(origin+'/preview/tid=150b293a2547450f', 115) }
-                                        </div>
-                                    </div>
-                                </Link>
-                            </li>
-                            <li>
-                                <Images src={this.defineImageModules()['case2']}  width="195" height="195" />
-                                <Link to="/preview/tid=150cbc3f447e0ade" target="_blank">
-                                    <div className="code">
-                                        <div className="qrcode-segent" title="点击或扫描浏览作品">
-                                            { this.generateQRCode(origin+'/preview/tid=150cbc3f447e0ade', 115) }
-                                        </div>
-                                    </div>
-                                </Link>
-                            </li>
-                            <li>
-                                <Images src={this.defineImageModules()['case3']}  width="195" height="195" />
-                                <Link to="/preview/tid=150cc6176eeeb417" target="_blank">
-                                    <div className="code">
-                                        <div className="qrcode-segent" title="点击或扫描浏览作品">
-                                             { this.generateQRCode(origin+'/preview/tid=150cc6176eeeb417', 115) }
-                                        </div>
-                                    </div>
-                                </Link>
-                            </li>
-                            <li>
-                                <Images src={this.defineImageModules()['case4']}  width="195" height="195" />
-                                <Link to="/preview/tid=150f5548a0e2d506" target="_blank">
-                                    <div className="code">
-                                        <div className="qrcode-segent" title="点击或扫描浏览作品">
-                                            { this.generateQRCode(origin+'/preview/tid=150f5548a0e2d506', 115) }
-                                        </div>
-                                    </div>
-                                </Link>
-                            </li>
-                            <li>
-                                <Images src={this.defineImageModules()['case5']}  width="195" height="195" />
-                                <Link to="/preview/tid=150f55e20decf391" target="_blank">
-                                    <div className="code">
-                                        <div className="qrcode-segent" title="点击或扫描浏览作品">
-                                            { this.generateQRCode(origin+'/preview/tid=150f55e20decf391', 115) }
-                                        </div>
-                                    </div>
-                                </Link>
-                            </li>
-                            <li>
-                                <Images src={this.defineImageModules()['case6']}  width="195" height="195" />
-                                <Link to="/preview/tid=150f55526271f64c" target="_blank">
-                                    <div className="code">
-                                        <div className="qrcode-segent" title="点击或扫描浏览作品">
-                                            { this.generateQRCode(origin+'/preview/tid=150f55526271f64c', 115) }
-                                        </div>
-                                    </div>
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="home-parnter">
-                        <div className="parnter-top"></div>
-                        <div id="parnter" ref="parnter" onMouseOver={this.parnterMouseover} onMouseOut={this.parnterMouseout} className="parnter-lists">
-                            <div ref="parnter1">
-                                <Images src={this.defineImageModules()['home-parnter']} width="1170" height="254" />
-                                <Images src={this.defineImageModules()['home-parnter']} width="1170" height="254" />
-                                <Images src={this.defineImageModules()['home-parnter']} width="1170" height="254" />
-                                <Images src={this.defineImageModules()['home-parnter']} width="1170" height="254" />
-                                <Images src={this.defineImageModules()['home-parnter']} width="1170" height="254" />
-                            </div>
-                            <div ref="parnter2"></div>
-                        </div>
-                        <div className="parnter-down"></div>
-                    </div>
-                </div>
-
-                <div className="home-template">
-                    <div className="wrod">
-                        <h2>海量模版库</h2>
-                        <p><Link target="_blank" to="/create">浏览更多></Link></p>
-                    </div>
-                    <div className="tpl">
-                        <Images src={this.defineImageModules()['tpl_image']} />
-                    </div>
-                </div>
-
-                <div className="musics">
-                    <div className="wrod">
-                        <h2>丰富的背景音乐库</h2>
-                        <h3>本地音乐+线上搜索，多一种维度表达</h3>
-                        <p><Link target="_blank" to="/make">体验更多></Link></p>
-                    </div>
-                    <div className="tpl">
-                        <Images src={this.defineImageModules()['music_image']} />
-                    </div>
-                </div>
-
+                
                 <div className="musics2">
                     <div className="wrod">
                         <h2>炫酷动效，极致流畅</h2>
@@ -246,36 +118,25 @@ var origin=location.origin;
                     </div>
                 </div>
 
-                <div className="statistics">
-                    <div className="wrod">
-                        <h2>强大的数据统计</h2>
-                        <h3>掌握最新反馈，全面了解粉丝动态</h3>
-                        <p><Link target="_blank" to="/user?index=4">体验更多></Link></p>
-                    </div>
-                    <div className="tpl">
-                        <Images src={this.defineImageModules()['chart_image']} />
-                    </div>
-                </div>
+               
 
                 <div className="multi-platform">
                     <div className="wrod">
                         <h2>免费在线制作</h2>
                         <h3>APP、PC双端制作浏览,传播力极强</h3>
-                        {/*<div className="down-link">
-                            <a href={this.getAppDownloadURL('ios')} className="ios" target="_blank"></a>
-                            <a href={this.getAppDownloadURL('android')} className="android" target="_blank"></a>
-                        </div>*/}
+                      
                         <p className="p-link">
                             <Link to="/make" target="_blank" className="a1 btn-navy btn-fill-vert-o">免费创作</Link>
                             <Link to="/register" target="_blank" className="a1 btn-navy btn-fill-vert-o">立即注册</Link>
                         </p>
-                        {/*<p><a target="_blank" href="#/register">立即注册></a></p>*/}
+                    
                     </div>
                 </div>
 
                 { this.generateFriendLink() }
-
+  
                 <Footer className="index-footer" />
+                
             </div>
         );
     },

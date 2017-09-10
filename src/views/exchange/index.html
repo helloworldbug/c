@@ -15,7 +15,7 @@
 <header id="header">
     <div class="contain clearfix">
         <div id="logo" class="fl">
-            <a href="/"><img src="images/logo.png" height="35"></a>
+           <!-- <a href="/"><img src="images/logo.png" height="35"></a>-->
         </div>
         <div id="nav"></div>
         <div  id="topUser" class="header-ri fr">
@@ -53,9 +53,9 @@
             <h3>活动规则</h3>
             <p>活动时间：2016年10月8日——2017年10月8日</p>
             <p>活动规则：本活动兑换码随书附赠，只有购买《创意无间-H5微场景设计指南》才能获得活动兑换码，每个兑换码只能使用一
-                次，必须持有ME账户才能领取限量模板，且只能兑换一次。</p>
+                次，必须持有账户才能领取限量模板，且只能兑换一次。</p>
             <p>活动最终解释权在法律规定范围内归H5微场景所有</p>
-            <p>活动客服热线：400-8868-110</p>
+            <p>活动客服热线：400-8868-XXX</p>
         </div>
     </div>
 </div>
@@ -66,7 +66,7 @@
 
         </div>
         <div class="copyright fr">
-            <p>Copy Right © 2011 - 2016 gli.cn H5微场景　 沪ICP备14051983号-1</p>
+            <p>Copy Right © 2011 - 2016</p>
         </div>
     </div>
 </div>
@@ -79,11 +79,11 @@
 
     var nav = document.getElementById('nav');
     var navTpl = '<ul>'+
-            '<li><a href="'+ host +'/create">场景创作</a><span class="nav-line" style="left: -90px;"></span></li>'+
+           /** '<li><a href="'+ host +'/create">场景创作</a><span class="nav-line" style="left: -90px;"></span></li>'+
             '<li><a href="'+ host +'/discovery">精品推荐</a><span class="nav-line" style="left: -90px;"></span></li>'+
             '<li><a href="'+ host +'/designerTribe">设计部落</a><span class="nav-line" style="left: -90px;"></span></li>'+
             '<li><a href="'+ host +'/helper">帮助中心</a><span class="nav-line" style="left: -90px;"></span></li>'+
-            '</ul>';
+           **/ '</ul>';
     nav.innerHTML = navTpl;
 
 
@@ -103,7 +103,7 @@
                 '<div class="sign-down-lists">' +
                 '<ul>' +
                 '<li><a href="'+host+'/user">个人中心</a></li>' +
-                '<li><a href="'+host+'/invite">邀请好友</a></li>' +
+                //'<li><a href="'+host+'/invite">邀请好友</a></li>' +
                 '<li><a href="javascript:loginOutClick();">退出登录</a></li>' +
                 '</ul>' +
                 '</div>'+
@@ -134,7 +134,7 @@
     var footNavTpl = '<a href="'+host+'/about/us?action=us">关于我们</a><i>-</i>' +
             '<a href="'+host+'/about/join?action=join">加入我们</a><i>-</i>' +
             '<a href="'+host+'/about/service?action=service">服务协议</a>';
-    footNav.innerHTML = footNavTpl;
+    footNav.innerHTML = "";//footNavTpl;
 
     var dialogBox = document.getElementById('dialog-box');
 
@@ -154,7 +154,8 @@
     */
     function loginOut() {
         fmacloud.User.logOut();
-        window.location.reload();
+        //window.location.reload();
+        window.location.href="http://"+location.host+"/login";
     }
 
     /**

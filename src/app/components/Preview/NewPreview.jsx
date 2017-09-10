@@ -452,8 +452,8 @@ var NewPreview = React.createClass({
             </div>;
         }
 
-        var meLogo = !this.state.fullScreen ?
-            <a className="preview-me-logo" target="_blank" href={NEW_ORIGIN}>主页</a> : null;
+        var meLogo = !this.state.fullScreen ?"": null;
+           {/* <a className="preview-me-logo" target="_blank" href={NEW_ORIGIN}>主页</a>: null;*/}
 
         var urlState = this.state.showShortUrl ? <div className="short-url">
             <span id="shorturlContent">{this.state.shortUrl}</span>
@@ -492,7 +492,7 @@ var NewPreview = React.createClass({
                             })}
                         </ul>
                     </div>
-                    <div className="work-info" dangerouslySetInnerHTML={{ __html: this.state.brief }}></div>
+                    <div className="work-info" dangerouslySetInnerHTML={{ __html: "我用Hi H5做的H5作品，欢迎来围观哦！" }}></div> 
 
                     {urlState}
 
@@ -643,7 +643,7 @@ var NewPreview = React.createClass({
         var now = {
             author_name: '匿名',
             author_img: 'http://ac-hf3jpeco.clouddn.com/206ea7bf442919405a7f.jpg',//http://ac-hf3jpeco.clouddn.com/Qy6NxalPv9RwYq9soCsS84PGKMLirVnTLvptSqyh.jpg',
-            name: '我刚刚使用ME发布了个人作品，快来看看吧！',
+            name: '我做的H5作品，欢迎来围观哦！',
             createdAt: '-',
             page_int: '不祥',
             read_pv: '0',

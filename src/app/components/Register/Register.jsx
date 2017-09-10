@@ -221,9 +221,11 @@ var _this=this;
                                     </div>
                                     <span className="txt-agreeprotocol">
                                         同意
-                                        <Link target="_blank" to="/about/service?action=service">
+                                       {/**
+                                         <Link target="_blank" to="/about/service?action=service">
                                             <u>应用服务协议</u>
-                                        </Link>
+                                        </Link>* 
+                                        */}
                                     </span>
                                 </div>
                                 <button disabled={this.state.disabled} data-loading={this.state.isShowLoading && 'visible'}

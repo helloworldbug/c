@@ -247,7 +247,7 @@ var Login = React.createClass({
     },
     _userCheck : function (unionid,callback) {
         //调用接口判断用户信息
-        fmacloud.Cloud.run('userCheck',{'val':unionid,'type':'login'},{
+        /**fmacloud.Cloud.run('userCheck',{'val':unionid,'type':'login'},{
             success:function(data){
                 debugger;
                 if(data.status){
@@ -269,7 +269,9 @@ var Login = React.createClass({
                 console.error(err.message);
                 return;
             }
-        });
+        });**/
+        
+         callback.call(this);
     },
 
     render: function () {

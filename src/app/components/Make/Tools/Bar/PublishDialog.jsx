@@ -154,7 +154,7 @@ module.exports = React.createClass({
             cartData: [],
             tplName: tpl.name == "noname" ? GlobalFunc.getUserObj().user_nick : tpl.name,
             tplClass: tpl.tpl_class || 0,
-            tplDescription: tpl.brief == "/" ? "我刚刚使用ME发布了个人作品，快来看看吧！" : tpl.brief,
+            tplDescription: tpl.brief == "/" ? "我做的H5作品，欢迎来围观哦！" : tpl.brief,
             tplMusic: {},
             tplPages: getJsonTplData(),
             tplPagesIndex: 0,
@@ -454,8 +454,9 @@ module.exports = React.createClass({
             <div className="line horizontal summary">
                 <label>作品描述</label>
                 <div>
+                     {/**value={GlobalFunc.htmlDecode(this.state.tplDescription)}**/}
                     <textarea id="tpl-description" placeholder="作品简介" maxLength="100"
-                              value={GlobalFunc.htmlDecode(this.state.tplDescription)}
+                              value="我做的H5作品，欢迎来围观哦！"
                               onChange={this._changeValue.bind(this, "tplDescription")}></textarea>
                 </div>
             </div>
@@ -463,7 +464,9 @@ module.exports = React.createClass({
                 <label>公开作品</label>
                 <div >
                     <Switch checked={this.state.ifPublish} onChange={this.changePrivacy}></Switch>
-                    <span className="tips">查看<a href="/helper?type=ME审核规范" target="_blank">作品审核规则</a></span>
+                    {/**
+                     <span className="tips">查看<a href="/helper?type=ME审核规范" target="_blank">作品审核规则</a></span>* 
+                     */}
                 </div>
             </div>
             <div className="line horizontal">
@@ -567,7 +570,7 @@ module.exports = React.createClass({
                             className="unit">s</span></span> : null} <span className="fee">免费</span></span>
                 </div>
             </Panel>
-            <Panel header="加载设置" key="1">
+          {/** 
                 <div className="line horizontal">
                     <label>加载logo</label>
                     <div>
@@ -604,7 +607,7 @@ module.exports = React.createClass({
                                                                                                         checked={this.state.removeLastPage == "1"}
                                                                                                         value="1"/><span>去除尾页和底标</span></span> {lastPage}
                 </div>
-            </Panel>
+            </Panel>*/}
         </Collapse></div>)
         return (
             <div className="select-dialog">
@@ -802,7 +805,7 @@ module.exports = React.createClass({
     _checkPrivilege:function(){
         var userID = Base.getCurrentUser().id;
         var _that=this;
-        fmacloud.Cloud.run('userCheck',{'val':userID,'type':"make"},{
+        /**  fmacloud.Cloud.run('userCheck',{'val':userID,'type':"make"},{
             success:function(data){
                 //status=data.result.status;
                 //return "kong"
@@ -829,7 +832,8 @@ module.exports = React.createClass({
             _that._checkPrivilege1();
         }).catch(function(){
             _that._checkPrivilege1();
-        })
+        })**/
+          _that._checkPrivilege1();
     },
 
     /*

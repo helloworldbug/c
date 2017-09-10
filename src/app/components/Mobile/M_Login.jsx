@@ -90,7 +90,7 @@ var Login =  MePC.inherit(MSuper,React.createClass({
     var phoneValue=ReactDOM.findDOMNode(phone).value.toString();
     var pwdValue=ReactDOM.findDOMNode(pwd).value.toString();
     var isSubmit=this.validateField(phoneValue,pwdValue);
-    fmacloud.Cloud.run('userCheck',{'val':phone.state.value,'type':"login"},{
+    /**fmacloud.Cloud.run('userCheck',{'val':phone.state.value,'type':"login"},{
         success:function(data){
         },
         error:function(err){
@@ -115,11 +115,11 @@ var Login =  MePC.inherit(MSuper,React.createClass({
         if(isSubmit){
             that.login(phoneValue,pwdValue);
         }
-    })
-    //if(isSubmit){
-    //  this.login(phoneValue,pwdValue);
-    //}
+    })**/
     
+    if(isSubmit){
+      this.login(phoneValue,pwdValue);
+    }
   },
   login:function(phone, password){
     var context = this, currentUser;

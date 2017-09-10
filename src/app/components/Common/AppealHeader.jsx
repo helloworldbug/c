@@ -23,9 +23,9 @@ var AppealHeader = React.createClass({
             <header id="header"  className="clearfix" >
                 <div className="contain clearfix">
 
-                    <div id="logo" className="fl">
+                 <div id="logo" className="fl">
 
-                        <Images src={this.defineImageModules().websiteLogo} height="35" />
+                     {/*   <Images src={this.defineImageModules().websiteLogo} height="35" />*/}
 
                     </div>
                 </div>

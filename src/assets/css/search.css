@@ -156,7 +156,7 @@
     width: 93px;
     height: 102px;
     margin: 16px auto 24px;
-    background: url("../images/nav/searchNothing.png") no-repeat;
+    /**background: url("../images/nav/searchNothing.png") no-repeat;**/
 }
 
 .allLoading {

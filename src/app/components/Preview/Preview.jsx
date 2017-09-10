@@ -125,7 +125,7 @@ var Preview = React.createClass({
         var now = {
             author_name: '',
             author_img : 'http://ac-hf3jpeco.clouddn.com/206ea7bf442919405a7f.jpg',//http://ac-hf3jpeco.clouddn.com/Qy6NxalPv9RwYq9soCsS84PGKMLirVnTLvptSqyh.jpg',
-            name       : '我刚刚使用ME发布了个人作品，快来看看吧！',
+            name       : '我做的H5作品，欢迎来围观哦！',
             createdAt  : '',
             page_int   : '不祥',
             read_pv    : ''

@@ -7621,7 +7621,7 @@ span.btn.hover {
 .no-more>div {
     width: 124px;
     margin: 0 auto;
-    background: url(../images/user/logo.png) left center no-repeat;
+    /**background: url(../images/user/logo.png) left center no-repeat;**/
     padding-left: 12px;
 }
 

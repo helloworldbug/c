@@ -54,7 +54,7 @@ var ImportThirdParty = React.createClass({
         this.setState({
             tplName       : GlobalFunc.getUserObj().user_nick,
             tplClass      : 0,
-            tplDescription: "我刚刚使用ME发布了个人作品，快来看看吧！"
+            tplDescription: "我做的H5作品，欢迎来围观哦！"
         });
         this._showEffectImg()
     },

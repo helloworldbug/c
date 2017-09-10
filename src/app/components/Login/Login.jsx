@@ -56,7 +56,7 @@ var Login = React.createClass({
             this.displayStatusInfo(pwd.state.requiredError || pwd.state.formatedError);
             return;
         }
-        fmacloud.Cloud.run('userCheck',{'val':phone.state.value,'type':"login"},{
+        /**fmacloud.Cloud.run('userCheck',{'val':phone.state.value,'type':"login"},{
             success:function(data){
                 debugger;
                 //status=data.result.status;
@@ -88,7 +88,9 @@ var Login = React.createClass({
             }
         }).catch(function(err){
             that.login(phone.state.value, pwd.state.value,flag)
-        })
+        })**/
+        
+         that.login(phone.state.value, pwd.state.value,flag)
     },
 
     login(phone, password,flag) {
